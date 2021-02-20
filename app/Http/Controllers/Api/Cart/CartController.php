@@ -92,6 +92,17 @@ class CartController extends Controller
     }
 
     /**
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getItemsCount() {
+        $count = $this->repository->getItemsCount();
+
+        return response()->json([
+            'count' => $count,
+        ], 200);
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id

@@ -8,4 +8,6 @@ interface CartRepositoryInterface {
     public function getTotal();
 
     public function getFinalTotal();
+
+    public function getItemsCount();
 }

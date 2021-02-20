@@ -51,4 +51,16 @@ class CartRepository implements CartRepositoryInterface {
             return null;
         }
     }
+
+    /**
+     * @return mixed
+     */
+    public function getItemsCount() {
+        $cart = Cart::restore(csrf_token())->content();
+        if (isset($cart)) {
+            return $cart->count();
+        } else {
+            return null;
+        }
+    }
 }

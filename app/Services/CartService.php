@@ -46,7 +46,12 @@ class CartService {
             }
 
             $cart = Cart::restore(csrf_token());
-            Cart::add($product->id, $product->title, $product->price, 1, [
+            if ($request->get('quantity')) {
+                $quantity = intval($request->get('quantity'));
+            } else {
+                $quantity = 1;
+            }
+            Cart::add($product->id, $product->title, $product->price, $quantity, [
                 'sale_price' => $product->sale_price,
                 'color' => $product->color,
                 'size' => $request->get('size'),

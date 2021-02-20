@@ -30,6 +30,7 @@ Route::resource('cart', CartController::class)
     ]);
 
 Route::get('/cart/get-total', 'App\Http\Controllers\Api\Cart\CartController@getTotal');
+Route::get('/cart/get-count', 'App\Http\Controllers\Api\Cart\CartController@getItemsCount');
 
 Route::get('/get-token', function () {
    return csrf_token();
