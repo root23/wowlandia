@@ -66,6 +66,10 @@ class CartService {
         }
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function removeItem(Request $request) {
         if ($request->get('action') == 'remove') {
             $itemId = $request->get('product_uid');
@@ -100,5 +104,35 @@ class CartService {
                 'data' => 'wrong action type',
             ], 404);
         }
+    }
+
+    public function deleteItem(Request $request) {
+        $itemId = $request->get('product_uid');
+        $cart = Cart::restore(csrf_token())->content();
+
+        if ($cart->has($itemId)) {
+            Cart::remove($itemId);
+            Cart::store(csrf_token());
+
+            return response()->json([
+                'cart' => Cart::content(),
+            ], 200);
+        } else {
+            return response()->json([
+                'data' => 'wrong item uuid',
+            ], 404);
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse\
+     */
+    public function clear(Request $request) {
+        Cart::clear();
+        Cart::store(csrf_token());
+        return response()->json([
+            'cart' => Cart::content(),
+        ], 200);
     }
 }

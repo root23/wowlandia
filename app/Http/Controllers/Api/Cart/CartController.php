@@ -100,25 +100,27 @@ class CartController extends Controller
      *
      * @param Request $request
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id): \Illuminate\Http\JsonResponse
     {
         if ($request->get('action') == 'add') {
             return $this->service->addItem($request);
         } elseif ($request->get('action') == 'remove') {
             return $this->service->removeItem($request);
+        } elseif ($request->get('action') == 'delete') {
+            return $this->service->deleteItem($request);
         }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function destroy($id)
+    public function destroy(Request $request): \Illuminate\Http\JsonResponse
     {
-        //
+        return $this->service->clear($request);
     }
 }

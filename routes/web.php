@@ -26,6 +26,7 @@ Route::resource('cart', CartController::class)
     ->only([
         'index',
         'update',
+        'destroy',
     ]);
 
 Route::get('/get-token', function () {
