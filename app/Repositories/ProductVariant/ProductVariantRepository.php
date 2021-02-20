@@ -7,10 +7,10 @@ use App\Models\ProductVariant;
 class ProductVariantRepository implements ProductVariantRepositoryInterface {
     public function getByid(int $id)
     {
-        $productVariant = ProductVariant::find($id);
+        $productVariant = ProductVariant::where('id', $id)->first();
 
         if ($productVariant) {
-            return $productVariant->first();
+            return $productVariant;
         } else {
             return null;
         }

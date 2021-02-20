@@ -106,6 +106,8 @@ class CartController extends Controller
     {
         if ($request->get('action') == 'add') {
             return $this->service->addItem($request);
+        } elseif ($request->get('action') == 'remove') {
+            return $this->service->removeItem($request);
         }
     }
 
