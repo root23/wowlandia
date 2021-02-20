@@ -22,6 +22,11 @@ class AppServiceProvider extends ServiceProvider
             'App\Repositories\Review\ReviewRepositoryInterface',
             'App\Repositories\Review\ReviewRepository'
         );
+
+        $this->app->bind(
+            'App\Repositories\Cart\CartRepositoryInterface',
+            'App\Repositories\Cart\CartRepository'
+        );
     }
 
     /**

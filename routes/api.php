@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Cart\CartController;
 use App\Http\Controllers\Api\Product\ProductController;
 use App\Http\Controllers\Api\Review\ReviewController;
 use App\Http\Controllers\Api\Nested\ProductReviewController;

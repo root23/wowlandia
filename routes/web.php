@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\Cart\CartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('cart', CartController::class)
+    ->only([
+        'index',
+        'update',
+    ]);
+
+Route::get('/get-token', function () {
+   return csrf_token();
+});
