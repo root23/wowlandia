@@ -79,9 +79,16 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function getTotal(Request $request)
     {
-        //
+        $total = $this->repository->getTotal();
+        $totalFinal = $this->repository->getFinalTotal();
+
+        return response()->json([
+            'total' => $total,
+            'total_final' => $totalFinal,
+        ], 200);
+
     }
 
     /**

@@ -29,6 +29,8 @@ Route::resource('cart', CartController::class)
         'destroy',
     ]);
 
+Route::get('/cart/get-total', 'App\Http\Controllers\Api\Cart\CartController@getTotal');
+
 Route::get('/get-token', function () {
    return csrf_token();
 });
