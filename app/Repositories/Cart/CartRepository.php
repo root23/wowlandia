@@ -6,6 +6,10 @@ use Melihovv\ShoppingCart\Facades\ShoppingCart as Cart;
 
 class CartRepository implements CartRepositoryInterface {
 
+    /**
+     * @param string $token
+     * @return mixed
+     */
     public function getByToken(string $token)
     {
         $cart = Cart::restore($token);
@@ -13,6 +17,9 @@ class CartRepository implements CartRepositoryInterface {
         return $cart;
     }
 
+    /**
+     * @return mixed
+     */
     public function getTotal()
     {
         $cart = Cart::restore(csrf_token());
@@ -24,6 +31,9 @@ class CartRepository implements CartRepositoryInterface {
         }
     }
 
+    /**
+     * @return float|int|null
+     */
     public function getFinalTotal()
     {
         $cart = Cart::restore(csrf_token())->content();
