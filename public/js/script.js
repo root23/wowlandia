@@ -95,7 +95,7 @@ $(document).ready(function(){
 		callbacks: {
 		    open: function() {
 
-		    	fillPopup();
+		    	//fillPopup();
 		    if($(window).width()>=1024){  
 		      $('.grid').masonry({
 				itemSelector: '.grid-item',
