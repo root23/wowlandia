@@ -12,14 +12,14 @@
             от 1490 руб. до 3490 руб.
         </p>
         <div class="c-product__bottom">
-            <a class="button c-product__button-size js-popup open-cart" href="popup--product.html"  role="button">
+            <a class="button c-product__button-size js-popup open-cart" href="#popup--product"  role="button">
                 <svg class="svg-icon svg-icon--size button__svg-icon">
                     <use xlink:href="#size"></use>
                 </svg>
                 <span class="button__caption">Выбрать изделие</span>
             </a>
             <div class="c-product__extra">
-                <a class="button c-product__button-view js-popup button--black open-cart href="popup--product.html"   role="button">
+                <a class="button c-product__button-view js-popup button--black open-cart href="#popup--product"   role="button">
                     <svg class="svg-icon svg-icon--view button__svg-icon">
                         <use xlink:href="#view"></use>
                     </svg>
