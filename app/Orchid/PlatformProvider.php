@@ -46,6 +46,14 @@ class PlatformProvider extends OrchidServiceProvider
                 ->badge(function () {
                     return 6;
                 }),
+
+            ItemMenu::label('Заказы')
+                ->icon('money')
+                ->route('platform.orders.list')
+                ->title('Заказы')
+                ->badge(function () {
+                    return 6;
+                }),
         ];
     }
 

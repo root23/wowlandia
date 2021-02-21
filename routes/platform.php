@@ -9,6 +9,8 @@ use App\Orchid\Screens\Examples\ExampleFieldsScreen;
 use App\Orchid\Screens\Examples\ExampleLayoutsScreen;
 use App\Orchid\Screens\Examples\ExampleScreen;
 use App\Orchid\Screens\Examples\ExampleTextEditorsScreen;
+use App\Orchid\Screens\OrderEditScreen;
+use App\Orchid\Screens\OrderListScreen;
 use App\Orchid\Screens\PlatformScreen;
 use App\Orchid\Screens\ProductEditScreen;
 use App\Orchid\Screens\ProductListScreen;
@@ -121,6 +123,12 @@ Route::screen('review/{review?}', ReviewEditScreen::class)
     ->name('platform.review.edit');
 Route::screen('reviews', ReviewListScreen::class)
     ->name('platform.reviews.list');
+
+// Platform > Orders
+Route::screen('order/{order?}', OrderEditScreen::class)
+    ->name('platform.order.edit');
+Route::screen('orders', OrderListScreen::class)
+    ->name('platform.orders.list');
 
 // Example...
 Route::screen('example', ExampleScreen::class)
