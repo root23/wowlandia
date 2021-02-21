@@ -43,7 +43,7 @@ class PaymentController extends Controller
                 'payment_id' => $payment->getInvoiceId(),
             ], 200);
         } elseif ($action == 'success') {
-            dd($request);
+            dd($request->all());
         }
     }
 
