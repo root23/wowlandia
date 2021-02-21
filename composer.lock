@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bae6db355387428f4e8e814890cd8c8",
+    "content-hash": "68f72bfc6109b41ae5c175ab0f575f04",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -117,6 +117,56 @@
                 }
             ],
             "time": "2021-01-20T22:51:39+00:00"
+        },
+        {
+            "name": "davidnadejdin/laravelrobokassa",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Davidnadejdin/laravel-robokassa.git",
+                "reference": "ee20bd9b804aead883b462d88e2eac459c4a7771"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Davidnadejdin/laravel-robokassa/zipball/ee20bd9b804aead883b462d88e2eac459c4a7771",
+                "reference": "ee20bd9b804aead883b462d88e2eac459c4a7771",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "idma/robokassa": "dev-master",
+                "laravel/framework": "~5.5 || ~6.0 || ~7.0 || ~8.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Davidnadejdin\\LaravelRobokassa\\RobokassaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Davidnadejdin\\LaravelRobokassa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Davidnadejdin",
+                    "email": "Davidnadejdin@gmail.com"
+                }
+            ],
+            "description": "Package for Laravel for working with a robokassa",
+            "support": {
+                "issues": "https://github.com/Davidnadejdin/laravel-robokassa/issues",
+                "source": "https://github.com/Davidnadejdin/laravel-robokassa/tree/master"
+            },
+            "time": "2020-09-07T18:14:56+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1030,6 +1080,55 @@
                 "source": "https://github.com/guzzle/psr7/tree/1.7.0"
             },
             "time": "2020-09-30T07:37:11+00:00"
+        },
+        {
+            "name": "idma/robokassa",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/idma/robokassa.git",
+                "reference": "26b8937871b915a023fc4bd8fb4985207a459fec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/idma/robokassa/zipball/26b8937871b915a023fc4bd8fb4985207a459fec",
+                "reference": "26b8937871b915a023fc4bd8fb4985207a459fec",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Idma\\Robokassa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "JhaoDa",
+                    "email": "jhaoda@gmail.com",
+                    "homepage": "https://github.com/jhaoda",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP library for Robokassa payment system",
+            "homepage": "https://github.com/idma/robokassa",
+            "keywords": [
+                "idma",
+                "payment",
+                "robokassa"
+            ],
+            "support": {
+                "issues": "https://github.com/idma/robokassa/issues",
+                "source": "https://github.com/idma/robokassa"
+            },
+            "time": "2020-02-27T20:15:06+00:00"
         },
         {
             "name": "jms/metadata",
