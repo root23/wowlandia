@@ -41,7 +41,6 @@ class PaymentController extends Controller
                 ->setSum(3)
                 ->setDescription('some description');
 
-
             $order = new Order();
             $order->invoice_id = $payment->getInvoiceId();
             $order->amount = $payment->getSum();
