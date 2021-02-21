@@ -60,7 +60,7 @@ class PaymentController extends Controller
                 env('ROBOKASSA_TEST_MODE')
             );
 
-            if ($payment->validateResult($_GET)) {
+            if ($payment->validateResult($_POST)) {
                 $order = Order::where('invoice_id', $payment->getInvoiceId())->first();
 
                 if (isset($order)) {
