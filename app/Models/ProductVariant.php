@@ -27,10 +27,10 @@ class ProductVariant extends Model
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function product(): \Illuminate\Database\Eloquent\Relations\HasOne
+    public function product(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->hasOne(Product::class);
+        return $this->belongsTo(Product::class);
     }
 }

@@ -56,6 +56,10 @@ class CartService {
                 'color' => $product->color,
                 'size' => $request->get('size'),
                 'type' => $product->type,
+                'weight' => $product->product->delivery_weight,
+                'width' => $product->product->delivery_width,
+                'height' => $product->product->delivery_height,
+                'depth' => $product->product->delivery_depth,
             ]);
 
             Cart::store(csrf_token());
@@ -91,6 +95,10 @@ class CartService {
                         'color' => $cartItem->options['color'],
                         'size' => $cartItem->options['size'],
                         'type' => $cartItem->options['type'],
+                        'weight' => $cartItem->options['weight'],
+                        'width' => $cartItem->options['width'],
+                        'height' => $cartItem->options['height'],
+                        'depth' => $cartItem->options['depth'],
                     ]);
                 }
                 Cart::store(csrf_token());

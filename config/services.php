@@ -30,4 +30,13 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'cdek' => [
+        'account'  => env('CDEK_DELIVERY_TEST_ACCOUNT', ''),
+        'password' => env('CDEK_DELIVERY_TEST_PASSWORD', ''),
+        'guzzle_options' => [ // необязательные параметры
+            'base_uri' => 'https://integration.edu.cdek.ru',
+            'timeout'  => 5,
+        ],
+    ],
+
 ];

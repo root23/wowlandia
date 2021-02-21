@@ -122,6 +122,13 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/global-state" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/melihovv/laravel-shopping-cart" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sanmai/pipeline" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sanmai/cdek-sdk-serializer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sanmai/cdek-sdk" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jms/serializer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/jms/metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpstan/phpdoc-parser" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

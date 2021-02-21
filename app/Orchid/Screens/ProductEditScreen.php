@@ -107,23 +107,19 @@ class ProductEditScreen extends Screen
                 Group::make([
                     Input::make('product.delivery_width')
                         ->title('Ширина (доставка)')
-                        ->help('Ширина товара при доставке')
-                        ->type('number'),
+                        ->help('Ширина товара при доставке'),
 
                     Input::make('product.delivery_height')
                         ->title('Длина (доставка)')
-                        ->help('Длина товара при доставке')
-                        ->type('number'),
+                        ->help('Длина товара при доставке'),
 
                     Input::make('product.delivery_depth')
                         ->title('Глубина (доставка)')
-                        ->help('Глубина товара при доставке')
-                        ->type('number'),
+                        ->help('Глубина товара при доставке'),
 
                     Input::make('product.delivery_weight')
                         ->title('Вес (доставка)')
-                        ->help('Вес товара при доставке')
-                        ->type('number'),
+                        ->help('Вес товара при доставке'),
                 ]),
 
                 Upload::make('product.attachment')

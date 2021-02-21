@@ -32,6 +32,10 @@ Route::resource('cart', CartController::class)
 Route::get('/cart/get-total', 'App\Http\Controllers\Api\Cart\CartController@getTotal');
 Route::get('/cart/get-count', 'App\Http\Controllers\Api\Cart\CartController@getItemsCount');
 
+// CDEK SDK
+Route::get('/cdek/city-autofill', 'App\Http\Controllers\Api\Cdek\CdekController@getCityAutoFill');
+Route::get('/cdek/get-delivery-price', 'App\Http\Controllers\Api\Cdek\CdekController@getDeliveryPrice');
+
 Route::get('/get-token', function () {
    return csrf_token();
 });
