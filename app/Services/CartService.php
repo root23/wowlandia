@@ -148,4 +148,36 @@ class CartService {
             'cart' => Cart::content(),
         ], 200);
     }
+
+    public static function getOptionsForDelivery() {
+        $cart = Cart::restore(csrf_token())->content();
+
+        if (isset($cart)) {
+            $maxWeight = $cart->map(function ($item, $key) {
+                return $item->options['weight'];
+            })->max();
+            $maxWidth = $cart->map(function ($item, $key) {
+                return $item->options['width'];
+            })->max();
+            $maxHeight = $cart->map(function ($item, $key) {
+                return $item->options['height'];
+            })->max();
+            $maxDepth = $cart->map(function ($item, $key) {
+                return $item->options['depth'];
+            })->max();
+
+            return [
+                'weight' => $maxWeight,
+                'width' => $maxWidth,
+                'height' => $maxHeight,
+                'depth' => $maxDepth,
+            ];
+        } else {
+            return null;
+        }
+
+
+
+
+    }
 }

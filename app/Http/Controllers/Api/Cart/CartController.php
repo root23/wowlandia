@@ -141,4 +141,8 @@ class CartController extends Controller
     {
         return $this->service->clear($request);
     }
+
+    public static function getOptionsForDelivery() {
+        return CartService::getOptionsForDelivery();
+    }
 }

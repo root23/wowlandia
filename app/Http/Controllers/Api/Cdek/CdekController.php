@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Cdek;
 
+use App\Services\CartService;
 use CdekSDK\CdekClient;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
@@ -50,22 +51,43 @@ class CdekController {
     }
 
     public function getDeliveryPrice(Request $request) {
+
+        $deliveryOptions = CartService::getOptionsForDelivery();
+
+        $tariffId = $request->get('tariff_id');
+        if (!isset($tariffId)) {
+            $tariffId = 11;
+        }
+
+        $receiverCityPostCode = $request->get('receiver_zip');
+
         $req = new Requests\CalculationWithTariffListRequest();
         $req->setSenderCityPostCode('143962')
-            ->setReceiverCityPostCode('652632')
-            ->addTariffToList(1)
+            ->setReceiverCityPostCode($receiverCityPostCode)
+            ->addTariffToList($tariffId)
             ->addPackage([
-                'weight' => 0.2,
-                'length' => 25,
-                'width' => 15,
-                'height' => 10,
+                'weight' => $deliveryOptions['weight'],
+                'length' => $deliveryOptions['depth'],
+                'width' => $deliveryOptions['width'],
+                'height' => $deliveryOptions['height'],
             ]);
 
         $response = $this->client->sendCalculationWithTariffListRequest($req);
 
         /** @var \CdekSDK\Responses\CalculationWithTariffListResponse $response */
         if ($response->hasErrors()) {
-            dd($response->getErrors());
+
+            $errorsArray = [];
+            foreach ($errors = $response->getErrors() as $error) {
+                array_push($errorsArray, [
+                   'code' => $error->getCode(),
+                   'message' => $error->getMessage()
+                ]);
+            }
+
+            return response()->json([
+                'errors' => $errorsArray
+            ], 404);
         }
 
         $data = [];
