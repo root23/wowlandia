@@ -76,10 +76,7 @@ $(document).ready(function(){
 	  slidesToShow: 2,
 	  fade: false
 	});
-	$('.slideshow__items').slick({
-	  slidesToShow: 1,
-	  fade: false
-	});
+	
 
 	$('.open-cart_2').magnificPopup({
 		type: 'ajax',
@@ -94,6 +91,10 @@ $(document).ready(function(){
 		modal: true,
 		callbacks: {
 		    open: function() {
+				$('.slideshow__items').slick({
+				  slidesToShow: 1,
+				  fade: false
+				});
 
 		    	//fillPopup();
 		    if($(window).width()>=1024){  
