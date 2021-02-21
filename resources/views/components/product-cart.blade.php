@@ -1,5 +1,4 @@
 <!--POPUP-->
-
 <div class="popup__top">
     <a class="popup__link-back js-popup-close" href="#">
         <svg class="svg-icon svg-icon--arrow-left">
@@ -25,61 +24,6 @@
                                 <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
                             </a>
                         </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
-                        <div class="slideshow__item">
-                            <a href="" tabindex="0">
-                                <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-700x700x.png" alt="Пазл «Обольстительная Лисичка»">
-                            </a>
-                        </div>
                     </div>
 
                     <div class="slideshow__nav-items">
@@ -89,39 +33,7 @@
                         <div class="slideshow__nav-item current" tabindex="0">
                             <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
                         </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
-                        <div class="slideshow__nav-item current" tabindex="0">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-1-4620755023343-100x100x.png" alt="Пазл «Обольстительная Лисичка»">
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -129,7 +41,7 @@
         <div class="product__right">
             <div id="product-fox-form">
                 <div class="product__header">
-                    <h1 class="product__title">Пазл «Обольстительная Лисичка»</h1>
+                    <h1 class="product__title">ТЕСТ</h1>
                     <div class="product__rate">
                         <div class="star-rating product__star-rating" title="5">
                             <span class="star-rating__rating" style="width:100%"></span>
@@ -728,5 +640,4 @@
     </a>
 </article>
 <button title="Close (Esc)" type="button" class="mfp-close">×</button>
-
 <!--/POPUP-->

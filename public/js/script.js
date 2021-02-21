@@ -126,21 +126,6 @@ $('.add-to-cart').click(function(){
 	addToCart()
 })
 
-$('.open-cart').click(function () {
-    let productId = $(this).data('product-id');
-    let _url = '/api/products/' + productId;
-
-    $.ajax({
-        url: _url,
-        success: function (data) {
-            console.log(data);
-            $('.popup--product').html('');
-            $('.popup--product').html(data);
-        }
-    })
-
-});
-
 var newJson = {
 	"mainImg": ["img/test-itom-1_1.png","img/test-itom-1_1.png","img/test-itom-1_1.png","img/test-itom-1_1.png"],
 	"navImg": ["img/test-itom-1_1.png","img/test-itom-1_1.png","img/test-itom-1_1.png","img/test-itom-1_1.png"],
