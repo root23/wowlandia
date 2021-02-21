@@ -96,8 +96,8 @@ class ProductEditScreen extends Screen
                 Cropper::make('product.cover_image')
                     ->title('Изображение')
                     ->targetRelativeUrl()
-                    ->width(750)
-                    ->height(250),
+                    ->width(430)
+                    ->height(430),
 
                 Input::make('product.tag')
                     ->title('Тег')
