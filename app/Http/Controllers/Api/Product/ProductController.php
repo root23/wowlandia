@@ -38,7 +38,7 @@ class ProductController extends Controller
      * Display the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\JsonResponse
+     * @return mixed
      */
     public function show(int $id)
     {
@@ -48,7 +48,9 @@ class ProductController extends Controller
                 'data' => 'Not found',
             ], 404);
         } else {
-            return $product;
+//            return $product;
+            return view('components.product-cart')
+                ->with('product', $product)->render();
         }
     }
 

@@ -42,7 +42,7 @@ $(function(){
     		centerPadding: '40px',
     	});
     }
-    if($(window).width()<=740){    	
+    if($(window).width()<=740){
     	$('.product__size-radios').slick({
     		slidesToShow: 2,
     		infinite:false,
@@ -76,7 +76,7 @@ $(document).ready(function(){
 	  slidesToShow: 2,
 	  fade: false
 	});
-	
+
 
 	$('.open-cart_2').magnificPopup({
 		type: 'ajax',
@@ -97,7 +97,7 @@ $(document).ready(function(){
 				});
 
 		    	//fillPopup();
-		    if($(window).width()>=1024){  
+		    if($(window).width()>=1024){
 		      $('.grid').masonry({
 				itemSelector: '.grid-item',
 			  })
@@ -119,13 +119,27 @@ $(document).ready(function(){
 	$(document).on('click', '.js-popup-close', function (e) {
 		e.preventDefault();
 		$.magnificPopup.close();
-	});	
+	});
 })
 
 $('.add-to-cart').click(function(){
 	addToCart()
 })
 
+$('.open-cart').click(function () {
+    let productId = $(this).data('product-id');
+    let _url = '/api/products/' + productId;
+
+    $.ajax({
+        url: _url,
+        success: function (data) {
+            console.log(data);
+            $('.popup--product').html('');
+            $('.popup--product').html(data);
+        }
+    })
+
+});
 
 var newJson = {
 	"mainImg": ["img/test-itom-1_1.png","img/test-itom-1_1.png","img/test-itom-1_1.png","img/test-itom-1_1.png"],
@@ -224,7 +238,7 @@ function  fillPopup(){
 	var descriptionLength = newJson.description.length;
 	var reviewsLength = newJson.reviews.length;
 
-	for (let i = 0; i < sliderLength; i++) { 
+	for (let i = 0; i < sliderLength; i++) {
 	  	$('.slideshow__items').append('<div calss="slideshow__item">');
 	  	$('.slideshow__items div').last().append('<a>');
 		$('.slideshow__items a').last().append('<img class="product-img" src="' + newJson.mainImg[i] + '" alt="'+i+'" data-count="'+i+'">');
@@ -249,7 +263,7 @@ function  fillPopup(){
 
 
 	$('.product__description').append('<h3 class="product__title-3">Описание</h3>');
-	for (let i = 0; i < sliderLength; i++) { 	  	
+	for (let i = 0; i < sliderLength; i++) {
 	  	$('.product__description').append('<p>');
 	  	$('.product__description p').last().text(newJson.description[i]);
 	}
@@ -296,7 +310,7 @@ function addToCart(){
 	let product = {
 		"title": title,
 		"productImg":  productImg,
-		"price": price,		
+		"price": price,
 	}
 
 	cartJson.push(product)
