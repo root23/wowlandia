@@ -42,14 +42,8 @@ class PaymentController extends Controller
                 'payment_url' => $payment->getPaymentUrl(),
                 'payment_id' => $payment->getInvoiceId(),
             ], 200);
-        } elseif ($action == 'check_payment') {
-            $payment = new Payment(
-                env('ROBOKASSA_LOGIN'),
-                env('ROBOKASSA_PASSWORD'),
-                env('ROBOKASSA_PASSWORD2'),
-                env('ROBOKASSA_TEST_MODE')
-            );
-            return $payment->validateResult($data) && $payment->getSum() == $sum;
+        } elseif ($action == 'success') {
+            dd($request);
         }
     }
 
