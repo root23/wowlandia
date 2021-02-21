@@ -53,25 +53,7 @@ class PaymentController extends Controller
         } elseif ($action == 'success') {
             dd($request->all());
         } elseif ($action == 'result') {
-            $payment = new Payment(
-                env('ROBOKASSA_LOGIN'),
-                env('ROBOKASSA_PASSWORD'),
-                env('ROBOKASSA_PASSWORD2'),
-                env('ROBOKASSA_TEST_MODE')
-            );
 
-            if ($payment->validateResult($_POST)) {
-                $order = Order::where('invoice_id', $payment->getInvoiceId())->first();
-
-                if (isset($order)) {
-                    if ($payment->getSum() == $order->amount) {
-                        $order->is_paid = true;
-                        $order->save();
-                    }
-                }
-
-
-            }
         }
     }
 
@@ -139,5 +121,25 @@ class PaymentController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function validateResult(Request $request) {
+        $payment = new Payment(
+            env('ROBOKASSA_LOGIN'),
+            env('ROBOKASSA_PASSWORD'),
+            env('ROBOKASSA_PASSWORD2'),
+            env('ROBOKASSA_TEST_MODE')
+        );
+
+        if ($payment->validateResult($_POST)) {
+            $order = Order::where('invoice_id', $payment->getInvoiceId())->first();
+
+            if (isset($order)) {
+                if ($payment->getSum() == $order->amount) {
+                    $order->is_paid = true;
+                    $order->save();
+                }
+            }
+        }
     }
 }

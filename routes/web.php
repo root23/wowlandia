@@ -37,6 +37,9 @@ Route::get('/cart/get-delivery-options', 'App\Http\Controllers\Api\Cart\CartCont
 Route::get('/cdek/city-autofill', 'App\Http\Controllers\Api\Cdek\CdekController@getCityAutoFill');
 Route::post('/cdek/get-delivery-price', 'App\Http\Controllers\Api\Cdek\CdekController@getDeliveryPrice');
 
+// Payment
+Route::post('/payment/result', 'App\Http\Controllers\Api\Payment\PaymentController@validateResult');
+
 Route::get('/get-token', function () {
    return csrf_token();
 });
