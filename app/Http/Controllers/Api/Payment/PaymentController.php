@@ -44,6 +44,8 @@ class PaymentController extends Controller
             ], 200);
         } elseif ($action == 'success') {
             dd($request->all());
+        } elseif ($action == 'result') {
+            dd($request->all());
         }
     }
 
