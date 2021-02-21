@@ -11,9 +11,10 @@ class Order extends Model
     use HasFactory, AsSource;
 
     protected $fillable = [
-      'invoice_id',
-      'amount',
-      'is_paid',
-      'description',
+        'invoice_id',
+        'amount',
+        'is_paid',
+        'description',
+        'shopping_cart_id',
     ];
 }

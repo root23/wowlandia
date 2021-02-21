@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Api\Payment;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use GuzzleHttp\Client;
 use Idma\Robokassa\Payment;
 use Illuminate\Http\Request;
 use Davidnadejdin\LaravelRobokassa\Robokassa;
+use Melihovv\ShoppingCart\Facades\ShoppingCart as Cart;
 
 class PaymentController extends Controller
 {
@@ -39,11 +41,13 @@ class PaymentController extends Controller
                 ->setSum(3)
                 ->setDescription('some description');
 
+
             $order = new Order();
             $order->invoice_id = $payment->getInvoiceId();
             $order->amount = $payment->getSum();
             $order->description = $payment->getDescription();
             $order->is_paid = false;
+            $order->shopping_cart_id = $request->get('cart_id');
             $order->save();
 
             return response()->json([
