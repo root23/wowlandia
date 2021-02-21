@@ -22,9 +22,11 @@ class ProductRepository implements ProductRepositoryInterface {
      */
     public function getById(int $id)
     {
-        $product = Product::where('id', $id)->first();
+        $product = Product::where('id', $id)
+            ->with('productVariants')
+            ->first();
         if ($product) {
-            return $product->first();
+            return $product;
         } else {
             return null;
         }
