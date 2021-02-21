@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\Cart\CartController;
+use App\Http\Controllers\Api\Payment\PaymentController;
 use App\Http\Controllers\Api\Product\ProductController;
 use App\Http\Controllers\Api\Review\ReviewController;
 use App\Http\Controllers\Api\Nested\ProductReviewController;
@@ -29,6 +30,11 @@ Route::resource('products', ProductController::class)
     ]);
 
 Route::resource('products.reviews', ProductReviewController::class)
+    ->only([
+        'index',
+    ]);
+
+Route::resource('payment', PaymentController::class)
     ->only([
         'index',
     ]);
