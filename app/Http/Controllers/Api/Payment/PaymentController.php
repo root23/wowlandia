@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Payment;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Idma\Robokassa\Payment;
 use Illuminate\Http\Request;
 use Davidnadejdin\LaravelRobokassa\Robokassa;
@@ -38,6 +39,13 @@ class PaymentController extends Controller
                 ->setSum(3)
                 ->setDescription('some description');
 
+            $order = new Order();
+            $order->invoice_id = $payment->getInvoiceId();
+            $order->amount = $payment->getSum();
+            $order->description = $payment->getDescription();
+            $order->is_paid = false;
+            $order->save();
+
             return response()->json([
                 'payment_url' => $payment->getPaymentUrl(),
                 'payment_id' => $payment->getInvoiceId(),
@@ -45,7 +53,25 @@ class PaymentController extends Controller
         } elseif ($action == 'success') {
             dd($request->all());
         } elseif ($action == 'result') {
-            dd($request->all());
+            $payment = new Payment(
+                env('ROBOKASSA_LOGIN'),
+                env('ROBOKASSA_PASSWORD'),
+                env('ROBOKASSA_PASSWORD2'),
+                env('ROBOKASSA_TEST_MODE')
+            );
+
+            if ($payment->validateResult($_GET)) {
+                $order = Order::where('invoice_id', $payment->getInvoiceId())->first();
+
+                if (isset($order)) {
+                    if ($payment->getSum() == $order->amount) {
+                        $order->is_paid = true;
+                        $order->save();
+                    }
+                }
+
+
+            }
         }
     }
 
