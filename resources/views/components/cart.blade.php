@@ -27,6 +27,11 @@
                             @foreach($cart as $item)
                                 <div class="order__item">
                                     <figure class="order__item-picture">
+                                        @foreach($images as $image)
+                                            @if ($image->id == $item->id)
+                                                <img src="{{ $image->cover_image }}" alt="{{ $item->name }}">
+                                            @endif
+                                        @endforeach
 {{--                                        <img src="{{ $item->image }}" alt="{{ $item->name }}">--}}
                                     </figure>
 
@@ -48,7 +53,7 @@
                                     <div class="field field--type-spinner order__item-quantity">
                                         <div class="field__field">
                                             <button class="field__minus" type="button"></button>
-                                            <input type="number" name="quantity[{{ $item->id }}]"
+                                            <input type="number" disabled name="quantity[{{ $item->id }}]"
                                                    value="{{ $item->quantity }}"
                                                    id="form-order-quantity-{{ $item->id }}"
                                                    data-product-unique-id="{{ $item->getUniqueId() }}"

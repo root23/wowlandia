@@ -5,6 +5,7 @@ namespace App\Repositories\ProductVariant;
 use App\Models\ProductVariant;
 
 class ProductVariantRepository implements ProductVariantRepositoryInterface {
+
     public function getByid(int $id)
     {
         $productVariant = ProductVariant::where('id', $id)
@@ -13,6 +14,18 @@ class ProductVariantRepository implements ProductVariantRepositoryInterface {
 
         if ($productVariant) {
             return $productVariant;
+        } else {
+            return null;
+        }
+    }
+
+    public function getImages()
+    {
+        $images = ProductVariant::select('cover_image', 'id')
+            ->groupBy('id')
+            ->get();
+        if ($images) {
+            return $images;
         } else {
             return null;
         }
