@@ -1,12 +1,17 @@
 <!--CART POPUP-->
-
-<div class="popup popup--order mfp-hide" id=cart-popup>
-    <div class="popup__top">
-        <button class="popup__btn-close js-popup-close" type="button" title="Закрыть"></button>
-    </div>
+<div class="popup__top">
+    <a class="popup__link-back js-popup-close" href="#">
+        <svg class="svg-icon svg-icon--arrow-left">
+            <use xlink:href="#arrow-left"></use>
+        </svg>
+        <span>Вернуться в каталог</span>
+    </a>
+    <button class="popup__btn-close js-popup-close" type="button" title="Закрыть"></button>
+</div>
     <article class="order popup__order">
         <div class="order__main">
             <h2 class="order__title">Оформление заказа</h2>
+
             <div id="carteiner">
                 <div class="order__form js-validate" id="form-order" novalidate="true">
                     <div class="order__table">
@@ -18,61 +23,50 @@
                         </div>
                         <div class="order__items">
 
+                            @foreach($cart as $item)
+                                <div class="order__item">
+                                    <figure class="order__item-picture">
+{{--                                        <img src="{{ $item->image }}" alt="{{ $item->name }}">--}}
+                                    </figure>
 
-                            <div class="order__item">
-                                <figure class="order__item-picture">
-                                    <img src="https://unidragon.ru/image/cache/catalog/products2/owl2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-charming-owl-m-1-4620755023381-47x47x.png" alt="Пазл «Чарующая сова»">
-                                </figure>
-
-                                <div class="order__item-info">
-                                    <h3 class="order__item-title">Пазл «Чарующая сова»</h3>
-                                    <p class="order__item-description">Размер: S (A5) – 15x26 см , Деталей: 101 шт.</p>
-                                </div>
-
-                                <div class="order__item-price"><span class="order__item-label">Цена:</span>1490 руб.</div>
-
-                                <div class="field field--type-spinner order__item-quantity">
-                                    <div class="field__field">
-                                        <button class="field__minus" type="button"></button>
-
-                                        <input type="number" name="quantity[42295]" onchange="updateCart('42295',$(this).val()); return false;" value="1" id="form-order-quantity-1">
-
-                                        <button class="field__plus" type="button"></button>
+                                    <div class="order__item-info">
+                                        <h3 class="order__item-title">{{ $item->name }}</h3>
+                                        <p class="order__item-description">Размер: S (A5) – 15x26 см , Деталей: 101 шт.</p>
                                     </div>
-                                </div>
-                                <div class="order__item-price"><span class="order__item-label">Цена:</span>1490 руб.</div>
-                                <a class="order__item-remove" href="#" onclick="removeCart('42295'); return false;" role="button">
-                                    <span class="order__item-remove-caption">Удалить</span>
-                                </a>
-                            </div>
 
-                            <div class="order__item">
-                                <figure class="order__item-picture">
-                                    <img src="https://unidragon.ru/image/cache/catalog/products2/dragon2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-guarding-dragon-m-1-4620755023466-47x47x.png" alt="Пазл «Оберегающий дракон»">
-                                </figure>
-
-                                <div class="order__item-info">
-                                    <h3 class="order__item-title">Пазл «Оберегающий дракон»</h3>
-                                    <p class="order__item-description">Размер: S (A5) – 15x26 см , Деталей: 97 шт.</p>
-                                </div>
-
-                                <div class="order__item-price"><span class="order__item-label">Цена:</span>1490 руб.</div>
-
-                                <div class="field field--type-spinner order__item-quantity">
-                                    <div class="field__field">
-                                        <button class="field__minus" type="button"></button>
-
-                                        <input type="number" name="quantity[42296]" onchange="updateCart('42296',$(this).val()); return false;" value="1" id="form-order-quantity-2">
-
-                                        <button class="field__plus" type="button"></button>
+                                    <div class="order__item-price">
+                                        <span class="order__item-label">Цена:</span>
+                                        @if ($item->options['sale_price'])
+                                            {{ $item->options['sale_price'] }}
+                                        @else
+                                            {{ $item->price }}
+                                        @endif
+                                        руб.
                                     </div>
+
+                                    <div class="field field--type-spinner order__item-quantity">
+                                        <div class="field__field">
+                                            <button class="field__minus" type="button"></button>
+                                            <input type="number" name="quantity[{{ $item->id }}]" value="{{ $item->quantity }}" id="form-order-quantity-{{ $item->id }}">
+                                            <button class="field__plus" type="button"></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="order__item-price">
+                                        <span class="order__item-label">Цена:</span>
+                                        @if ($item->options['sale_price'])
+                                            {{ $item->options['sale_price'] * $item->quantity }}
+                                        @else
+                                            {{ $item->price * $item->quantity }}
+                                        @endif
+                                        руб.
+                                    </div>
+                                    <a class="order__item-remove" href="#" onclick="removeCart('42295'); return false;" role="button">
+                                        <span class="order__item-remove-caption">Удалить</span>
+                                    </a>
+
                                 </div>
-                                <div class="order__item-price">
-                                    <span class="order__item-label">Цена:</span>1490 руб.</div>
-                                <a class="order__item-remove" href="#" onclick="removeCart('42296'); return false;" role="button">
-                                    <span class="order__item-remove-caption">Удалить</span>
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -167,6 +161,5 @@
         </div>
     </article>
     <button title="Close (Esc)" type="button" class="mfp-close">×</button>
-</div>
 
 <!--/CART POPUP-->

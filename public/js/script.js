@@ -13,6 +13,9 @@ $(window).on('scroll', function(){
 $(function(){
     $("a[href^='#']").click(function(){
         var _href = $(this).attr("href");
+        if (_href == '#') {
+            return;
+        }
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
         return false;
     });
@@ -84,11 +87,31 @@ $(document).ready(function(){
 		overflowY: 'scroll'
 	});
 
-    $('.btn-cart').magnificPopup({
-        type: 'ajax',
-        preloader: false,
-        focus: '#cart-popup',
-        modal: true,
+    let csrf = $('input[name=_token]').val();
+
+    $('.btn-cart').click(function () {
+        console.log(csrf);
+        $.ajax({
+            type: 'GET',
+            url: '/ajax/cart',
+            headers: {
+                'X-CSRF-TOKEN': csrf,
+            },
+            success: function (data) {
+                $.magnificPopup.open({
+                    type: 'inline',
+                    modal: true,
+                    items: {
+                        src: data
+                    },
+                    callbacks: {
+                        open: function () {
+
+                        }
+                    },
+                })
+            }
+        });
     });
 
 	$('.open-cart').magnificPopup({

@@ -42,8 +42,9 @@ Route::post('/cdek/get-delivery-price', 'App\Http\Controllers\Api\Cdek\CdekContr
 // Payment
 Route::post('/payment/result', 'App\Http\Controllers\Api\Payment\PaymentController@validateResult');
 
-// Product ajax
+// Ajax
 Route::get('/ajax/product', 'App\Http\Controllers\Web\Product\ProductController@getproductCartAjax');
+Route::get('/ajax/cart', 'App\Http\Controllers\Web\Cart\CartController@getCartAjax');
 
 Route::get('/get-token', function () {
    return csrf_token();
