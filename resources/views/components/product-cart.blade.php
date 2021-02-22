@@ -49,15 +49,21 @@
                     </div>
                 </div>
                 <p class="product__price">
-                    <span class="product__price-value">1490 руб.</span>
+                    <span class="product__price-value">
+                        @if ($product->productVariants[0]->sale_price)
+                            {{ $product->productVariants[0]->sale_price }}
+                        @else
+                            {{ $product->productVariants[0]->price }}
+                        @endif руб.
+                    </span>
                 </p>
                 <div class="product__size">
                     <h3 class="product__title-3">Выберите вариант:</h3>
 
                     <div class="product__size-radios" id="input-option230">
                         @foreach($product->productVariants as $item)
-                            <div class="radio-size radio-size--{{ $loop->iteration }} product__size-radio">
-                                <input type="radio" name="option[230]" id="product-variant-{{ $loop->iteration }}"
+                            <div class="radio-size radio-size--{{ $loop->iteration }} product__size-radio" data-product-id="{{ $item->id }}">
+                                <input type="radio" name="option[230]" class="product-variant-check" id="product-variant-{{ $loop->iteration }}"
                                        value="{{ $item->id }}" @if ($loop->iteration == 1) checked="checked" @endif>
                                 <label class="radio-size__label" for="product-variant-{{ $loop->iteration }}">
                                     <figure class="radio-size__picture">
@@ -66,11 +72,13 @@
                                     <span class="radio-size__ribbon">2x больше S</span>
                                     <div class="radio-size__content">
                                         <div class="radio-size__price">
-                                            <span class="radio-size__price-full">{{ $item->price }} руб.</span>
                                             @if ($item->sale_price)
+                                                <span class="radio-size__price-full">{{ $item->price }} руб.</span>
                                                 <span class="radio-size__price-actual">
                                                     <span class="radio-size__price-value">{{ $item->sale_price }} руб.</span>
                                                 </span>
+                                            @else
+                                                <span class="radio-size__price-value">{{ $item->price }} руб.</span>
                                             @endif
                                         </div>
                                         <ul class="radio-size__list">
