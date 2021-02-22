@@ -302,20 +302,6 @@ $(document).ready(function(){
                     fade: false
                 });
 
-
-
-                // $('.open-success').magnificPopup({
-                //     type: 'ajax',
-                //     modal: true,
-                //
-                //     ajax: {
-                //         settings: null,
-                //         tError: 'Ошибка при загрузке данных. Приносим свои извинения.'
-                //     }
-                //
-                // });
-
-
             },
             close: function() {
                 // Will fire when popup is closed

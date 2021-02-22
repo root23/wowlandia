@@ -98,7 +98,7 @@
                 <section class="order__section" id="delieiner">
                     <h3 class="order__title-2">Доставка</h3>
 
-                    <div class="alert alert-warning">Нет доступных способов доставки, введите город ниже!</div>
+                    <div class="alert alert-warning" style="display: none">Нет доступных способов доставки, введите город ниже!</div>
                     <div class="field field--type-text order__field">
                         <div class="field__field">
                             <input type="text" name="city" value="" placeholder="Начните вводить название населенного пункта..." id="form-order-city" required="required" data-validator-required-message="Обязательное поле" autocomplete="off">
@@ -111,10 +111,16 @@
                     </div>
                     <div class="order__group">
 
-                        <div class="field field--type-radio order__field"><input type="radio" name="shipping_method" id="form-order-delivery-cdek.tariff_137_0" value="cdek.tariff_137_0" checked="checked"><label class="field__label " for="form-order-delivery-cdek.tariff_137_0"><span class="field__check"></span>Доставка курьером СДЭК &nbsp; <span class="color-orange">350 руб.</span></label></div>
+                        <div class="field field--type-radio order__field">
+                            <input type="radio" name="shipping_method" id="form-order-delivery-cdek.tariff_137_0" value="cdek.tariff_137_0" checked="checked">
+                            <label class="field__label " for="form-order-delivery-cdek.tariff_137_0">
+                                <span class="field__check"></span>Доставка курьером СДЭК &nbsp;
+                                <span class="color-orange sdek-price">350 руб.</span>
+                            </label>
+                        </div>
 
                         <div class="order__radio-extras">
-                            <p class="order__radio-hint"> Ориентировочная дата доставки 27.02.2021</p>
+                            <p class="order__radio-hint"> Ориентировочная дата доставки <span class="sdek-delivery-date">27.02.2021</span></p>
 
                             <div class="field field--type-text order__field-extra">
                                 <div class="field__field"><input type="text" name="adres" value="" placeholder="Введите адрес доставки" id="form-order-adres"></div>
@@ -202,6 +208,12 @@
     $('document').ready(function () {
         updateCartCount();
         let csrf = $('input[name=_token]').val();
+
+        var deliveryDate = new Date();
+        deliveryDate.setDate(deliveryDate.getDate() + 1);
+        var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+        $('.sdek-delivery-date').text(deliveryDate.toLocaleDateString('ru-RU', options));
 
         // Minus item
         $('.order__item-quantity').find('.field__minus').on('click', function () {
@@ -367,7 +379,6 @@
                         suggestionsList += '<li data-value="' + cityName + '" data-zipcode="' + zipCode + '"><a class="cityName" href="#">' + cityName + '</a></li>';
                     }
                 }
-                console.log(suggestionsList);
                 $('.dropdown-menu').empty();
                 $('.dropdown-menu').append(suggestionsList);
                 if ($('.dropdown-menu li').length > 0) {
@@ -377,15 +388,36 @@
                     $('.dropdown-menu').css('display', 'none');
                     $('#form-order-city').val($(this).text())
                     $('#city-zipcode').val($(this).parent().attr('data-zipcode'))
-                    console.log($('#city-zipcode').val())
+
+                    var csrf = $('input[name=_token]').val();
+                    $.ajax({
+                        url: '/cdek/get-delivery-price',
+                        method: 'post',
+                        headers: {
+                            'X-CSRF-TOKEN': csrf,
+                        },
+                        data: {
+                            'receiver_zip': $('#city-zipcode').val(),
+                            'tariff_id': 11,
+                        },
+                        success: function (data) {
+                            var deliveryDate = new Date();
+                            deliveryDate.setDate(deliveryDate.getDate() + data.data[0].period_max);
+                            var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+                            $('.sdek-price').text(data.data[0].price + ' руб.');
+                            $('.sdek-delivery-date').text(deliveryDate.toLocaleDateString('ru-RU', options));
+
+                        },
+                        fail: function (data) {
+                            console.log(data);
+                        }
+                    })
+
                 })
             }
         })
     })
-
-
-
-
 
     $('.validation-email').on('blur', function () {
   let email = $(this).val();

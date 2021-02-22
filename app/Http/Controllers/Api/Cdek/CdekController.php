@@ -52,7 +52,7 @@ class CdekController {
 
     public function getDeliveryPrice(Request $request) {
 
-        $deliveryOptions = CartService::getOptionsForDelivery();
+        $deliveryOptions = CartService::getOptionsForDelivery($request);
 
         $tariffId = $request->get('tariff_id');
         if (!isset($tariffId)) {

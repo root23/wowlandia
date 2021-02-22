@@ -155,8 +155,10 @@ class CartService {
         ], 200);
     }
 
-    public static function getOptionsForDelivery() {
-        $cart = Cart::restore(csrf_token())->content();
+    public static function getOptionsForDelivery(Request $request) {
+        $csrf = $request->header('X-CSRF-TOKEN');
+
+        $cart = Cart::restore($csrf)->content();
 
         if (isset($cart)) {
             $maxWeight = $cart->map(function ($item, $key) {
