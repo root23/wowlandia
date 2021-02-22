@@ -4787,6 +4787,9 @@ input:checked+ .radio-size__label::after {
     -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;
 }
+.product__button-cart a:hover{
+    color: #fff;
+}
 
 .product__advantages {
     display: block;

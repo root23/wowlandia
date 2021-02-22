@@ -177,6 +177,12 @@ $(document).ready(function(){
         loadCart();
     });
 
+    $('.btn-goto-cart').click(function () {
+        console.log('ttt');
+        $.magnificPopup.close();
+        loadCart();
+    })
+
 	$('.open-cart').magnificPopup({
         type: 'ajax',
         modal: true,
@@ -187,6 +193,7 @@ $(document).ready(function(){
         },
 
         callbacks: {
+
             parseAjax: function(mfpResponse) {
                 // console.log('Ajax content loaded:', mfpResponse);
             },
@@ -254,6 +261,19 @@ $(document).ready(function(){
                         success: function(data) {
                             $('input[name=quantity]').val(1);
                             updateCartCount();
+
+                            $.ajax({
+                                type: 'GET',
+                                url: '/ajax/cart-success',
+                                headers: {
+                                    'X-CSRF-TOKEN': csrf,
+                                },
+                                success: function (data) {
+                                    $('.mfp-content').empty();
+                                    $('.mfp-content').append(data);
+                                }
+                            })
+
                         },
                         error: function (data) {
                             console.log(data);
@@ -281,6 +301,19 @@ $(document).ready(function(){
                     slidesToShow: 1,
                     fade: false
                 });
+
+
+
+                // $('.open-success').magnificPopup({
+                //     type: 'ajax',
+                //     modal: true,
+                //
+                //     ajax: {
+                //         settings: null,
+                //         tError: 'Ошибка при загрузке данных. Приносим свои извинения.'
+                //     }
+                //
+                // });
 
 
             },

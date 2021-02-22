@@ -103,9 +103,11 @@
                                 <button class="field__plus" type="button"></button>
                             </div>
                         </div>
+
                         <button class="button product__button-cart add-to-cart" id="button-cart" type="submit">
-                            <span class="button__caption">Добавить в корзину</span>
+                                <span class="button__caption">Добавить в корзину</span>
                         </button>
+
                     </div>
                 </div>
                 <input type="hidden" name="product_id" value="51">
