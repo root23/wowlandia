@@ -101,12 +101,10 @@
                     <div class="alert alert-warning">Нет доступных способов доставки, введите город ниже!</div>
                     <div class="field field--type-text order__field">
                         <div class="field__field">
-                            <input type="text" name="city" value="" placeholder="Начните вводить название населенного пункта..." id="form-order-city" required="required" data-validator-required-message="Обязательное поле" autocomplete="off">
-                            <ul class="dropdown-menu"></ul>
+                            <input type="text" name="city" value="" placeholder="Начните вводить название населенного пункта..." id="form-order-city" required="required" data-validator-required-message="Обязательное поле" autocomplete="off"><ul class="dropdown-menu"></ul>
                             <input type="hidden" name="zone_id" value="0" id="form-order-region">
                             <input type="hidden" name="postcode" value="" id="form-order-postcode">
                             <input type="hidden" name="country_id" value="176" id="form-order-country">
-                            <input type="hidden" name="zipcode" id="city-zipcode">
                         </div>
                     </div>
 
@@ -323,12 +321,11 @@
                 data = data[0].geonames;
                 console.log(data);
 
-
                 for (var i = 0; i < data.length; i++) {
                     if (data[i].countryIso == 'RU') {
                         let cityName = data[i].cityName;
                         let zipCode = data[i].postCodeArray[0];
-                        suggestionsList += '<li data-value="' + cityName + '" data-zipcode="' + zipCode + '"><a class="cityName" href="#">' + cityName + '</a></li>';
+                        suggestionsList += '<li data-value="' + cityName + '" data-zipcode="' + zipCode + '"><a href="#">' + cityName + '</a></li>';
                     }
                 }
                 console.log(suggestionsList);
@@ -337,18 +334,9 @@
                 if ($('.dropdown-menu li').length > 0) {
                     $('.dropdown-menu').css('display', 'block');
                 }
-                $('.cityName').click(function(){                    
-                    $('#form-order-city').val($(this).text())
-                    $('#city-zipcode').val($(this).parent().attr('data-zipcode'))
-                    console.log($('#city-zipcode').val())
-                })
             }
         })
     })
-
-
-
-    
 
     $('.validation-email').on('blur', function () {
   let email = $(this).val();
