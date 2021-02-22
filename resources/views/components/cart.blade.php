@@ -101,10 +101,12 @@
                     <div class="alert alert-warning">Нет доступных способов доставки, введите город ниже!</div>
                     <div class="field field--type-text order__field">
                         <div class="field__field">
-                            <input type="text" name="city" value="" placeholder="Начните вводить название населенного пункта..." id="form-order-city" required="required" data-validator-required-message="Обязательное поле" autocomplete="off"><ul class="dropdown-menu"></ul>
+                            <input type="text" name="city" value="" placeholder="Начните вводить название населенного пункта..." id="form-order-city" required="required" data-validator-required-message="Обязательное поле" autocomplete="off">
+                            <ul class="dropdown-menu"></ul>
                             <input type="hidden" name="zone_id" value="0" id="form-order-region">
                             <input type="hidden" name="postcode" value="" id="form-order-postcode">
                             <input type="hidden" name="country_id" value="176" id="form-order-country">
+                            <input type="hidden" name="zipcode" id="city-zipcode">
                         </div>
                     </div>
 
@@ -289,6 +291,8 @@
         })
     })
 
+
+    // Get cart total sum
     function countTotal() {
         let csrf = $('input[name=_token]').val();
         $.ajax({
@@ -304,9 +308,51 @@
         })
     }
 
+    // Delivery city suggestion
+    $('#form-order-city').on('change paste keyup', function () {
+        var city_name = this.value;
+        if (city_name == '') {
+            $('.dropdown-menu').css('display', 'none');
+        }
+        $.ajax({
+            url: 'cdek/city-autofill?city_name=' + this.value,
+            success: function (data) {
+                var suggestionsList = '';
+                var data = JSON.stringify(data);
+                data = JSON.parse(data);
+                data = data[0].geonames;
+                console.log(data);
+
+
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].countryIso == 'RU') {
+                        let cityName = data[i].cityName;
+                        let zipCode = data[i].postCodeArray[0];
+                        suggestionsList += '<li data-value="' + cityName + '" data-zipcode="' + zipCode + '"><a class="cityName" href="#">' + cityName + '</a></li>';
+                    }
+                }
+                console.log(suggestionsList);
+                $('.dropdown-menu').empty();
+                $('.dropdown-menu').append(suggestionsList);
+                if ($('.dropdown-menu li').length > 0) {
+                    $('.dropdown-menu').css('display', 'block');
+                }
+                $('.cityName').click(function(){                    
+                    $('#form-order-city').val($(this).text())
+                    $('#city-zipcode').val($(this).parent().attr('data-zipcode'))
+                    console.log($('#city-zipcode').val())
+                })
+            }
+        })
+    })
+
+
+
+    
+
     $('.validation-email').on('blur', function () {
   let email = $(this).val();
-  
+
   if (email.length > 0
   && (email.match(/.+?\@.+/g) || []).length !== 1) {
     console.log('invalid');
@@ -319,7 +365,6 @@
 });
 
     $('input[name="phone"]').mask('+7 (999) 999-99-99');
-
 
 
 

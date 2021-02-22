@@ -10,6 +10,7 @@ $(window).on('scroll', function(){
   }
 });
 
+
 $(function(){
     $("a[href^='#']").click(function(){
         var _href = $(this).attr("href");
@@ -37,6 +38,16 @@ $(function(){
     	}else{
     		$(this).addClass('active')
     		$('.reviews__add-review').slideDown()
+    	}
+    })
+
+    $('.header__btn-menu').click(function(){
+    	if($(this).hasClass('active')){
+    		$(this).removeClass('active');
+    		$('.header__nav').removeClass('active') 
+    	}else{
+			$(this).addClass('active');
+    		$('.header__nav').addClass('active') 
     	}
     })
 

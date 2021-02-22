@@ -90,3 +90,57 @@ git commit -m "js fix"
 git push
 git pull
 git pull
+ls
+clear
+git status
+git add .
+git commit -m "upd product cart"
+git push
+mc
+htop
+php artisan make:migrate change_column_on_product_variants_table
+php7.4 artisan make:migrate change_column_on_product_variants_table
+php7.4 artisan make:migration change_column_on_product_variants_table
+composer7.4 require doctrine/dbal
+composer7.4 require doctrine/dbal
+php7.4 composer require doctrine/dbal
+composer require doctrine/dbal
+composer install
+composer7.4 install
+composer-php7.4 install
+php7.4 artisan migrate
+composer-php7.4 require doctrine/dbal
+git status
+git add .
+git commit -m "dbal"
+git push
+git pull
+composer-php7.4 install
+php7.4 artisan migrate
+git status
+git add .
+git commit -m "upd product cart show actual price"
+git push
+git status
+git add . 
+git commit -m "prepare cart template"
+git status
+git status
+git add .
+git commit -m "cart template update"
+git push
+git status
+git add .
+git commit -m "cart script upd [front]"
+git push
+php7.4 artisan make:migration add_columns_to_orders_table
+php7.4 artisan migrate
+git status
+git status
+git add .
+git commit -m "add product images output on cart"
+git push
+git status
+git add .
+git commit -m "front-end fixes"
+git push

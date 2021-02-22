@@ -41,7 +41,7 @@ class CdekController {
             $content = json_decode( $response->getBody(), true);
 
             return response()->json([
-                'data' => $content
+                $content
             ], $statusCode);
         } else {
             return response()->json([
