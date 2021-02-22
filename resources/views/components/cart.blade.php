@@ -32,7 +32,6 @@
                                                 <img src="{{ $image->cover_image }}" alt="{{ $item->name }}">
                                             @endif
                                         @endforeach
-{{--                                        <img src="{{ $item->image }}" alt="{{ $item->name }}">--}}
                                     </figure>
 
                                     <div class="order__item-info">
@@ -118,17 +117,17 @@
                     <h3 class="order__title-2">Данные покупателя</h3>
                     <div class="field field--type-text order__field">
                         <div class="field__field">
-                            <input type="text" name="name" placeholder="Введите ваше имя" id="form-order-name" value="" required="required" data-validator-required-message="Обязательное поле">
+                            <input type="text" name="name" required placeholder="Введите ваше имя" id="form-order-name" value="" required="required" data-validator-required-message="Обязательное поле">
                         </div>
                     </div>
                     <div class="field field--type-tel order__field">
                         <div class="field__field ">
-                            <input type="text" name="phone" placeholder="Введите ваш телефон" id="form-order-phone" value="" required="required" class="field__phone" data-validator-required-message="Обязательное поле">
+                            <input type="text" name="phone" required placeholder="Введите ваш телефон" id="form-order-phone" value="" required="required" class="field__phone" data-validator-required-message="Обязательное поле">
                         </div>
                     </div>
                     <div class="field field--type-email order__field">
                         <div class="field__field">
-                            <input type="text" name="email" placeholder="Введите ваш e-mail" id="form-order-email" value="" data-validator-email-message="Неправильный формат Email">
+                            <input type="text" required class="validation-email" name="email" placeholder="Введите ваш e-mail" id="form-order-email" value="" data-validator-email-message="Неправильный формат Email">
                         </div>
                     </div>
                 </section>
@@ -168,6 +167,7 @@
                     <button class="button order__button-submit" id="checkout_button" type="submit">
                         <span class="button__caption">Оформить заказ</span>
                     </button>
+                    <div class="alert smp alert-danger alert-dismissible mail-error"></div>
                 </section>
                 <section class="d-none hidden" id="payment">
                 </section>
@@ -207,14 +207,12 @@
                         success: function (data) {
                             $('.mfp-content').empty();
                             $('.mfp-content').append(data);
-                            $('.products-total-price').text(data.total_final + ' руб.');
-                            $('.all-total-price').text(data.total_final + ' руб.');
+                            countTotal();
                         }
                     })
 
                 },
                 error: function (data) {
-                    console.log(data);
                 }
             });
         });
@@ -247,13 +245,11 @@
                         success: function (data) {
                             $('.mfp-content').empty();
                             $('.mfp-content').append(data);
-                            $('.products-total-price').text(data.total_final + ' руб.');
-                            $('.all-total-price').text(data.total_final + ' руб.');
+                            countTotal();
                         }
                     })
                 },
                 error: function (data) {
-                    console.log(data);
                 }
             });
         });
@@ -283,16 +279,48 @@
                         success: function (data) {
                             $('.mfp-content').empty();
                             $('.mfp-content').append(data);
-                            $('.products-total-price').text(data.total_final + ' руб.');
-                            $('.all-total-price').text(data.total_final + ' руб.');
+                            countTotal();
                         }
                     })
                 },
                 error: function (data) {
-                    console.log(data);
                 }
             });
         })
     })
+
+    function countTotal() {
+        let csrf = $('input[name=_token]').val();
+        $.ajax({
+            url: '/cart/get-total',
+            method: 'get',
+            headers: {
+                'X-CSRF-TOKEN': csrf,
+            },
+            success: function (data) {
+                $('.products-total-price').text(data.total_final + ' руб.');
+                $('.all-total-price').text(data.total_final + ' руб.');
+            },
+        })
+    }
+
+    $('.validation-email').on('blur', function () {
+  let email = $(this).val();
+  
+  if (email.length > 0
+  && (email.match(/.+?\@.+/g) || []).length !== 1) {
+    console.log('invalid');
+    $('.mail-error').text('Е-mail адрес введен неверно!')
+  } else {
+    console.log('valid');
+    //alert('Вы ввели корректный e-mail!');
+    $('.mail-error').text('')
+  }
+});
+
+    $('input[name="phone"]').mask('+7 (999) 999-99-99');
+
+
+
 
 </script>

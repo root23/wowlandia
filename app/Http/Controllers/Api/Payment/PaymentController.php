@@ -41,13 +41,28 @@ class PaymentController extends Controller
                 ->setSum(3)
                 ->setDescription('some description');
 
+            $sameOrders = Order::where('invoice_id', $payment->getInvoiceId())->get();
+            foreach ($sameOrders as $order) {
+                $order->delete();
+            }
+
             $order = new Order();
             $order->invoice_id = $payment->getInvoiceId();
             $order->amount = $payment->getSum();
             $order->description = $payment->getDescription();
             $order->is_paid = false;
             $order->shopping_cart_id = $request->get('cart_id');
+            $order->username = $request->get('username');
+            $order->phone = $request->get('phone');
+            $order->email = $request->get('email');
+            $order->zip_code = $request->get('zip_code');
+            $order->city_name = $request->get('city_name');
+            $order->address = $request->get('address');
+            $order->total = $request->get('total');
             $order->save();
+
+            $payment->setSum($order->total);
+
 
             return response()->json([
                 'payment_url' => $payment->getPaymentUrl(),

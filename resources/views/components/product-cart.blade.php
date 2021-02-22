@@ -99,7 +99,7 @@
                         <div class="field field--type-spinner product__quantity">
                             <div class="field__field">
                                 <button class="field__minus" type="button"></button>
-                                <input type="text" name="quantity" value="1" id="product-fox-quantity">
+                                <input type="text" disabled name="quantity" value="1" id="product-fox-quantity">
                                 <button class="field__plus" type="button"></button>
                             </div>
                         </div>
