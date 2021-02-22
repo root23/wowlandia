@@ -1,5 +1,5 @@
 @if ($product)
-
+@csrf
 <div class="popup__top">-
     <a class="popup__link-back js-popup-close" href="#">
         <svg class="svg-icon svg-icon--arrow-left">
@@ -99,7 +99,7 @@
                         <div class="field field--type-spinner product__quantity">
                             <div class="field__field">
                                 <button class="field__minus" type="button"></button>
-                                <input type="text" name="quantity" value="0" id="product-fox-quantity">
+                                <input type="text" name="quantity" value="1" id="product-fox-quantity">
                                 <button class="field__plus" type="button"></button>
                             </div>
                         </div>

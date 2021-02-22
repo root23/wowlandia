@@ -48,7 +48,7 @@ class CartController extends Controller
         } else {
             return response()->json([
                 'data' => 'Not found',
-            ], 404);
+            ], 200);
         }
     }
 

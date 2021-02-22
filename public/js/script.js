@@ -84,6 +84,13 @@ $(document).ready(function(){
 		overflowY: 'scroll'
 	});
 
+    $('.btn-cart').magnificPopup({
+        type: 'ajax',
+        preloader: false,
+        focus: '#cart-popup',
+        modal: true,
+    });
+
 	$('.open-cart').magnificPopup({
         type: 'ajax',
         modal: true,
@@ -131,7 +138,42 @@ $(document).ready(function(){
                     $('.product__price-value').text(elem);
                 });
 
+                // Change product amount
+                $('.product__quantity').find('.field__minus').on('click', function () {
+                    if ($('input[name=quantity]').val() == 1) {
+                        return;
+                    } else {
+                        $('input[name=quantity]').val(parseInt($('input[name=quantity]').val()) - 1);
+                    }
+                });
+                $('.product__quantity').find('.field__plus').on('click', function () {
+                    $('input[name=quantity]').val(parseInt($('input[name=quantity]').val()) + 1);
+                });
+
                 // Add to cart
+                let csrf = $('input[name=_token]').val();
+                $('#button-cart').on('click', function () {
+                    $.ajax({
+                        url: '/cart/1',
+                        method: 'put',
+                        data: {
+                            'product_id': productId,
+                            'size': 'm',
+                            'action': 'add',
+                            'quantity': $('input[name=quantity]').val(),
+                        },
+                        headers: {
+                            'X-CSRF-TOKEN': csrf,
+                        },
+                        success: function(data) {
+                            console.log(data);
+                        },
+                        error: function (data) {
+                            console.log(data);
+                        }
+                    });
+                })
+
 
 
                 $('.grid').masonry({
@@ -150,13 +192,6 @@ $(document).ready(function(){
         }
     });
 
-		$('.btn-cart').magnificPopup({
-		type: 'inline',
-		preloader: false,
-		focus: '#cart-popup',
-		modal: true
-
-	});
 	$(document).on('click', '.js-popup-close', function (e) {
 		e.preventDefault();
 		$.magnificPopup.close();
