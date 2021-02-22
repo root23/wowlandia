@@ -74,3 +74,19 @@ php7.4 artisan migrate
 ls
 git pull
 logout
+пше ы
+git status
+git status
+git add .
+git commit -m "fix"
+git push
+git pull
+git pull
+php7.4 artisan storage:link
+git pull
+git status
+git add .
+git commit -m "js fix"
+git push
+git pull
+git pull

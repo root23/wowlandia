@@ -85,30 +85,55 @@ $(document).ready(function(){
 	});
 
 	$('.open-cart').magnificPopup({
-		type: 'inline',
-		preloader: false,
-		focus: '#popup--product',
-		modal: true,
-		callbacks: {
-		    open: function() {
-				$('.slideshow__items').slick({
-				  slidesToShow: 1,
-				  fade: false
-				});
+        type: 'ajax',
+        modal: true,
 
-		    	//fillPopup();
-		    if($(window).width()>=1024){
-		      $('.grid').masonry({
-				itemSelector: '.grid-item',
-			  })
-			}
-		    },
-		    close: function() {
-		      // Will fire when popup is closed
-		    }
-		    // e.t.c.
-		  }
-	});
+        ajax: {
+            settings: null,
+            tError: 'Ошибка при загрузке данных. Приносим свои извинения.'
+        },
+
+        callbacks: {
+            parseAjax: function(mfpResponse) {
+                // console.log('Ajax content loaded:', mfpResponse);
+            },
+            ajaxContentAdded: function() {
+              // console.log(this.content);
+                $('.faq__question').click(function(){
+                    var parent = $(this).parent()
+                    if(parent.hasClass('active')){
+                        parent.removeClass('active')
+                        parent.find('.faq__answer').slideUp()
+                    }else{
+                        parent.addClass('active')
+                        parent.find('.faq__answer').slideDown()
+                    }
+                })
+                $('.reviews__add-review-button').click(function(){
+                    if($(this).hasClass('active')){
+                        $(this).removeClass('active')
+                        $('.reviews__add-review').slideUp()
+                    }else{
+                        $(this).addClass('active')
+                        $('.reviews__add-review').slideDown()
+                    }
+                })
+                $('.grid').masonry({
+                    itemSelector: '.grid-item',
+                })
+                $('.slideshow__items').slick({
+                    slidesToShow: 1,
+                    fade: false
+                });
+
+
+            },
+            close: function() {
+                // Will fire when popup is closed
+            }
+        }
+    });
+
 		$('.btn-cart').magnificPopup({
 		type: 'inline',
 		preloader: false,

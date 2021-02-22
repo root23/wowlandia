@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'FiraSansExtraCondensed';
-    src: url('FiraSansExtraCondensed-Bold.eot');
+    src: url('public/fonts/FiraSansExtraCondensed-Bold/FiraSansExtraCondensed-Bold.eot');
     src: local('Fira Sans Extra Condensed Bold'), local('FiraSansExtraCondensed-Bold'),
-        url('FiraSansExtraCondensed-Bold.eot?#iefix') format('embedded-opentype'),
-        url('FiraSansExtraCondensed-Bold.woff2') format('woff2'),
-        url('FiraSansExtraCondensed-Bold.woff') format('woff'),
-        url('FiraSansExtraCondensed-Bold.ttf') format('truetype');
+        url('public/fonts/FiraSansExtraCondensed-Bold/FiraSansExtraCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+        url('public/fonts/FiraSansExtraCondensed-Bold/FiraSansExtraCondensed-Bold.woff2') format('woff2'),
+        url('public/fonts/FiraSansExtraCondensed-Bold/FiraSansExtraCondensed-Bold.woff') format('woff'),
+        url('public/fonts/FiraSansExtraCondensed-Bold/FiraSansExtraCondensed-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -120,12 +120,12 @@
 
 @font-face {
     font-family: 'FiraSansExtraCondensed';
-    src: url('FiraSansExtraCondensed-Light.eot');
+    src: url('public/fonts/FiraSansExtraCondensed-Light/FiraSansExtraCondensed-Light.eot');
     src: local('Fira Sans Extra Condensed Light'), local('FiraSansExtraCondensed-Light'),
-        url('FiraSansExtraCondensed-Light.eot?#iefix') format('embedded-opentype'),
-        url('FiraSansExtraCondensed-Light.woff2') format('woff2'),
-        url('FiraSansExtraCondensed-Light.woff') format('woff'),
-        url('FiraSansExtraCondensed-Light.ttf') format('truetype');
+        url('public/fonts/FiraSansExtraCondensed-Light/FiraSansExtraCondensed-Light.eot?#iefix') format('embedded-opentype'),
+        url('public/fonts/FiraSansExtraCondensed-Light/FiraSansExtraCondensed-Light.woff2') format('woff2'),
+        url('public/fonts/FiraSansExtraCondensed-Light/FiraSansExtraCondensed-Light.woff') format('woff'),
+        url('public/fonts/FiraSansExtraCondensed-Light/FiraSansExtraCondensed-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
@@ -144,24 +144,24 @@
 
 @font-face {
     font-family: 'FiraSansExtraCondensed';
-    src: url('FiraSansExtraCondensed-Medium.eot');
+    src: url('public/fonts/FiraSansExtraCondensed-Medium/FiraSansExtraCondensed-Medium.eot');
     src: local('Fira Sans Extra Condensed Medium'), local('FiraSansExtraCondensed-Medium'),
-        url('FiraSansExtraCondensed-Medium.eot?#iefix') format('embedded-opentype'),
-        url('FiraSansExtraCondensed-Medium.woff2') format('woff2'),
-        url('FiraSansExtraCondensed-Medium.woff') format('woff'),
-        url('FiraSansExtraCondensed-Medium.ttf') format('truetype');
+        url('public/fonts/FiraSansExtraCondensed-Medium/FiraSansExtraCondensed-Medium.eot?#iefix') format('embedded-opentype'),
+        url('public/fonts/FiraSansExtraCondensed-Medium/FiraSansExtraCondensed-Medium.woff2') format('woff2'),
+        url('public/fonts/FiraSansExtraCondensed-Medium/FiraSansExtraCondensed-Medium.woff') format('woff'),
+        url('public/fonts/FiraSansExtraCondensed-Medium/FiraSansExtraCondensed-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'FiraSansExtraCondensed';
-    src: url('FiraSansExtraCondensed-Regular.eot');
+    src: url('public/fonts/FiraSansExtraCondensed-Regular/FiraSansExtraCondensed-Regular.eot');
     src: local('Fira Sans Extra Condensed Regular'), local('FiraSansExtraCondensed-Regular'),
-        url('FiraSansExtraCondensed-Regular.eot?#iefix') format('embedded-opentype'),
-        url('FiraSansExtraCondensed-Regular.woff2') format('woff2'),
-        url('FiraSansExtraCondensed-Regular.woff') format('woff'),
-        url('FiraSansExtraCondensed-Regular.ttf') format('truetype');
+        url('public/fonts/FiraSansExtraCondensed-Regular/FiraSansExtraCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+        url('public/fonts/FiraSansExtraCondensed-Regular/FiraSansExtraCondensed-Regular.woff2') format('woff2'),
+        url('public/fonts/FiraSansExtraCondensed-Regular/FiraSansExtraCondensed-Regular.woff') format('woff'),
+        url('public/fonts/FiraSansExtraCondensed-Regular/FiraSansExtraCondensed-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

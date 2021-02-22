@@ -24,6 +24,7 @@ class ProductRepository implements ProductRepositoryInterface {
     {
         $product = Product::where('id', $id)
             ->with('productVariants')
+            ->with('reviews')
             ->first();
         if ($product) {
             return $product;

@@ -282,9 +282,7 @@
     </div>
 </footer>
 
-<div class="popup popup--product mfp-hide" id="popup--product">
-    @include('components.product-cart')
-</div>
+
 
 <!--CART POPUP-->
 
