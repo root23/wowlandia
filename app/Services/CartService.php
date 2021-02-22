@@ -120,12 +120,18 @@ class CartService {
     }
 
     public function deleteItem(Request $request) {
+        $csrfToken = $request->header('X-CSRF-TOKEN');
+        if ($csrfToken) {
+            $csrf = $csrfToken;
+        } else {
+            $csrf = csrf_token();
+        }
         $itemId = $request->get('product_uid');
-        $cart = Cart::restore(csrf_token())->content();
+        $cart = Cart::restore($csrf)->content();
 
         if ($cart->has($itemId)) {
             Cart::remove($itemId);
-            Cart::store(csrf_token());
+            Cart::store($csrf);
 
             return response()->json([
                 'cart' => Cart::content(),

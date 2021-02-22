@@ -3,24 +3,30 @@
         <div class="footer__row">
             <div class="logo logo--footer footer__logo"><a class="js-scrollto" href="#" data-scroll-destination="0"><img src="img/logo-footer.png" width="105" height="68" alt="unidragon.ru" /></a></div>
             <div class="social social--footer footer__social">
-                <div class="social__buttons"><a class="social__button" href="https://vk.com/unidragon" role="button" target="_blank" rel="nofollow noopener"><svg class="svg-icon svg-icon--social-vk">
+                <div class="social__buttons">
+                    <!--<a class="social__button" href="https://vk.com/unidragon" role="button" target="_blank" rel="nofollow noopener">
+                        <svg class="svg-icon svg-icon--social-vk">
                             <use xlink:href="#social-vk"></use>
-                        </svg></a><a class="social__button" href="https://www.instagram.com/unidragon.puzzles" role="button" target="_blank" rel="nofollow noopener"><svg class="svg-icon svg-icon--social-instagram">
+                        </svg>
+                    </a>-->
+                    <a class="social__button" href="http://instagram.com/wowlandia.ru" role="button" target="_blank" rel="nofollow noopener">
+                        <svg class="svg-icon svg-icon--social-instagram">
                             <use xlink:href="#social-instagram"></use>
-                        </svg></a>
+                        </svg>
+                    </a>
 
                 </div>
-            </div><a class="email email--footer footer__email" href="mailto:care@unidragon.com"><svg class="svg-icon svg-icon--email email__icon">
+            </div><a class="email email--footer footer__email" href="mailto:info@wowlandia.ru"><svg class="svg-icon svg-icon--email email__icon">
                     <use xlink:href="#email"></use>
                 </svg><span class="email__label">E-mail:</span>
-                <div class="email__email">care@unidragon.com</div>
-            </a><a class="phone phone--footer footer__phone" href="tel:88007775762"><svg class="svg-icon svg-icon--phone phone__icon">
+                <div class="email__email">info@wowlandia.ru</div>
+            </a><a class="phone phone--footer footer__phone" href="tel:+79852795948"><svg class="svg-icon svg-icon--phone phone__icon">
                     <use xlink:href="#phone"></use>
                 </svg><span class="phone__label">Телефон:</span>
-                <div class="phone__phone">8 800 777 57 62</div>
+                <div class="phone__phone">+7 985 279 59 48</div>
             </a>
             <div class="footer__legal">
-                <p class="footer__copyright">&copy;2021 unidragon.ru</p>
+                <p class="footer__copyright">&copy;2021 wowlandia.ru</p>
                 <p class="footer__privacy"><a href="/privacy/">Политика конфиденциальности</a></p>
             </div>
         </div>
@@ -32,3 +38,7 @@
         </p>
     </div>
 </div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMR2XS7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->

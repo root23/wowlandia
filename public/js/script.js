@@ -89,8 +89,9 @@ $(document).ready(function(){
 
     let csrf = $('input[name=_token]').val();
 
-    $('.btn-cart').click(function () {
-        console.log(csrf);
+
+
+    function loadCart() {
         $.ajax({
             type: 'GET',
             url: '/ajax/cart',
@@ -98,20 +99,43 @@ $(document).ready(function(){
                 'X-CSRF-TOKEN': csrf,
             },
             success: function (data) {
-                $.magnificPopup.open({
+                var popup = $.magnificPopup.open({
                     type: 'inline',
                     modal: true,
+                    removalDelay: 300,
+                    mainClass: 'mfp-fade',
                     items: {
                         src: data
                     },
                     callbacks: {
-                        open: function () {
+                        change: function() {
 
+                        },
+                        open: function () {
+                            // Get cart total price
+                            $.ajax({
+                                url: '/cart/get-total',
+                                method: 'get',
+                                headers: {
+                                    'X-CSRF-TOKEN': csrf,
+                                },
+                                success: function(data) {
+                                    $('.products-total-price').text(data.total_final + ' руб.');
+                                    $('.all-total-price').text(data.total_final + ' руб.');
+                                },
+                                error: function (data) {
+                                    console.log(data);
+                                }
+                            });
                         }
                     },
                 })
             }
         });
+    }
+
+    $('.btn-cart').click(function () {
+        loadCart();
     });
 
 	$('.open-cart').magnificPopup({
@@ -189,6 +213,7 @@ $(document).ready(function(){
                             'X-CSRF-TOKEN': csrf,
                         },
                         success: function(data) {
+                            $('input[name=quantity]').val(1);
                             console.log(data);
                         },
                         error: function (data) {

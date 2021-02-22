@@ -1702,7 +1702,7 @@ img.mfp-img {
 
 .button--big {
     padding: 17px 40px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
 }
 
@@ -9106,7 +9106,7 @@ input:checked+ .radio-size__label::after {
     .button--big {
         padding-top: 17px;
         padding-bottom: 17px;
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .field__field input,

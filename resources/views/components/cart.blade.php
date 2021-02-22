@@ -1,4 +1,5 @@
 <!--CART POPUP-->
+@csrf
 <div class="popup__top">
     <a class="popup__link-back js-popup-close" href="#">
         <svg class="svg-icon svg-icon--arrow-left">
@@ -47,7 +48,11 @@
                                     <div class="field field--type-spinner order__item-quantity">
                                         <div class="field__field">
                                             <button class="field__minus" type="button"></button>
-                                            <input type="number" name="quantity[{{ $item->id }}]" value="{{ $item->quantity }}" id="form-order-quantity-{{ $item->id }}">
+                                            <input type="number" name="quantity[{{ $item->id }}]"
+                                                   value="{{ $item->quantity }}"
+                                                   id="form-order-quantity-{{ $item->id }}"
+                                                   data-product-unique-id="{{ $item->getUniqueId() }}"
+                                                   data-product-id="{{ $item->id }}">
                                             <button class="field__plus" type="button"></button>
                                         </div>
                                     </div>
@@ -61,7 +66,7 @@
                                         @endif
                                         руб.
                                     </div>
-                                    <a class="order__item-remove" href="#" onclick="removeCart('42295'); return false;" role="button">
+                                    <a class="order__item-remove" href="#" data-product-id="{{ $item->getUniqueId() }}" role="button">
                                         <span class="order__item-remove-caption">Удалить</span>
                                     </a>
 
@@ -137,9 +142,10 @@
                     <h3 class="order__title-2">Итоговая стоимость</h3>
 
                     <div class="order__total-items">
-                        <div class="order__total-item"><span>Общая стоимость товаров </span><span>2980 руб.</span></div>
-
-
+                        <div class="order__total-item">
+                            <span>Общая стоимость товаров </span>
+                            <span class="products-total-price">2980 руб.</span>
+                        </div>
                         <div class="order__total-item">
                             <div class="field__field">
                                 <input type="text" name="coupon" id="input-coupon" placeholder="Введите промо-код">
@@ -149,7 +155,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="order__total-sum"><span>Всего к оплате</span><span>2980 руб.</span></div>
+                    <div class="order__total-sum">
+                        <span>Всего к оплате</span>
+                        <span class="all-total-price">2980 руб.</span>
+                    </div>
 
                     <button class="button order__button-submit" id="checkout_button" type="submit">
                         <span class="button__caption">Оформить заказ</span>
@@ -163,3 +172,122 @@
     <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 <!--/CART POPUP-->
+<script>
+    $('document').ready(function () {
+        let csrf = $('input[name=_token]').val();
+
+        // Minus item
+        $('.order__item-quantity').find('.field__minus').on('click', function () {
+            let field = $(this).parent().find('input');
+            let productId = field.data('product-unique-id')
+            $.ajax({
+                url: '/cart/1',
+                method: 'put',
+                data: {
+                    'product_uid': productId,
+                    'action': 'remove',
+                },
+                headers: {
+                    'X-CSRF-TOKEN': csrf,
+                },
+                success: function(data) {
+                    var magnificPopup = $.magnificPopup.instance;
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '/ajax/cart',
+                        headers: {
+                            'X-CSRF-TOKEN': csrf,
+                        },
+                        success: function (data) {
+                            $('.mfp-content').empty();
+                            $('.mfp-content').append(data);
+                            $('.products-total-price').text(data.total_final + ' руб.');
+                            $('.all-total-price').text(data.total_final + ' руб.');
+                        }
+                    })
+
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        });
+
+        // Plus item
+        $('.order__item-quantity').find('.field__plus').on('click', function () {
+            let field = $(this).parent().find('input');
+            let productId = field.data('product-id')
+            $.ajax({
+                url: '/cart/1',
+                method: 'put',
+                data: {
+                    'product_id': productId,
+                    'action': 'add',
+                    'size': 'm',
+                    'quantity': 1,
+                },
+                headers: {
+                    'X-CSRF-TOKEN': csrf,
+                },
+                success: function(data) {
+                    var magnificPopup = $.magnificPopup.instance;
+
+                    $.ajax({
+                        type: 'GET',
+                        url: '/ajax/cart',
+                        headers: {
+                            'X-CSRF-TOKEN': csrf,
+                        },
+                        success: function (data) {
+                            $('.mfp-content').empty();
+                            $('.mfp-content').append(data);
+                            $('.products-total-price').text(data.total_final + ' руб.');
+                            $('.all-total-price').text(data.total_final + ' руб.');
+                        }
+                    })
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        });
+
+        // Remove item from the cart
+        $('.order__item-remove').on('click', function () {
+            let productId = $(this).data('product-id');
+            let item = $(this);
+
+            $.ajax({
+                url: '/cart/2',
+                method: 'put',
+                headers: {
+                    'X-CSRF-TOKEN': csrf,
+                },
+                data: {
+                    'action': 'delete',
+                    'product_uid': productId,
+                },
+                success: function(data) {
+                    $.ajax({
+                        type: 'GET',
+                        url: '/ajax/cart',
+                        headers: {
+                            'X-CSRF-TOKEN': csrf,
+                        },
+                        success: function (data) {
+                            $('.mfp-content').empty();
+                            $('.mfp-content').append(data);
+                            $('.products-total-price').text(data.total_final + ' руб.');
+                            $('.all-total-price').text(data.total_final + ' руб.');
+                        }
+                    })
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+        })
+    })
+
+</script>
