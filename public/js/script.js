@@ -44,10 +44,10 @@ $(function(){
     $('.header__btn-menu').click(function(){
     	if($(this).hasClass('active')){
     		$(this).removeClass('active');
-    		$('.header__nav').removeClass('active') 
+    		$('.header__nav').removeClass('active')
     	}else{
 			$(this).addClass('active');
-    		$('.header__nav').addClass('active') 
+    		$('.header__nav').addClass('active')
     	}
     })
 
@@ -66,7 +66,23 @@ $(function(){
 
 
 
+
+
 $(document).ready(function(){
+
+
+    updateCartCount();
+
+	$('.videos__item').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+    });
+
 	$('.c-product__images').slick({
 
 	  fade: true,
@@ -100,7 +116,19 @@ $(document).ready(function(){
 
     let csrf = $('input[name=_token]').val();
 
-
+    function updateCartCount() {
+        let csrf = $('input[name=_token]').val();
+        $.ajax({
+            url: '/cart/get-count',
+            method: 'get',
+            headers: {
+                'X-CSRF-TOKEN': csrf,
+            },
+            success: function (data) {
+                $('.btn-cart__quantity').text(data.count);
+            }
+        })
+    }
 
     function loadCart() {
         $.ajax({
@@ -225,15 +253,26 @@ $(document).ready(function(){
                         },
                         success: function(data) {
                             $('input[name=quantity]').val(1);
-                            console.log(data);
+                            updateCartCount();
                         },
                         error: function (data) {
                             console.log(data);
                         }
                     });
-                })
+                });
 
-
+                function updateCartCount() {
+                    $.ajax({
+                        url: '/cart/get-count',
+                        method: 'get',
+                        headers: {
+                            'X-CSRF-TOKEN': csrf,
+                        },
+                        success: function (data) {
+                            $('.btn-cart__quantity').text(data.count);
+                        }
+                    })
+                }
 
                 $('.grid').masonry({
                     itemSelector: '.grid-item',
@@ -257,8 +296,10 @@ $(document).ready(function(){
 	});
 })
 
-$('.add-to-cart').click(function(){
+ $('#form-order-city').on('change paste keyup', function () {
+        var city_name = this.value;
+        if (city_name == '') {
+            $('.dropdown-menu').css('display', 'none');
+        }
 
-});
-
-
+    })

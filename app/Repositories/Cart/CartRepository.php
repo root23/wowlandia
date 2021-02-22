@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Cart;
 
+use Illuminate\Http\Request;
 use Melihovv\ShoppingCart\Facades\ShoppingCart as Cart;
 
 class CartRepository implements CartRepositoryInterface {
@@ -53,10 +54,15 @@ class CartRepository implements CartRepositoryInterface {
     }
 
     /**
+     * @param Request $request
      * @return mixed
      */
-    public function getItemsCount() {
-        $cart = Cart::restore(csrf_token())->content();
+    public function getItemsCount(Request $request) {
+        $csrf = csrf_token();
+        if ($request->header('X-CSRF-TOKEN')) {
+            $csrf = $request->header('X-CSRF-TOKEN');
+        }
+        $cart = Cart::restore($csrf)->content();
         if (isset($cart)) {
             return $cart->count();
         } else {

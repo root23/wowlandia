@@ -40,4 +40,9 @@ class CartController {
             return response()->json('No data', 404);
         }
     }
+
+    public function getItemAddedToCartPopup() {
+        $view = view('components.cart-success')->render();
+        return response()->json($view, 200);
+    }
 }

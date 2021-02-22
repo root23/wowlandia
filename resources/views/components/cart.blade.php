@@ -181,6 +181,7 @@
 <!--/CART POPUP-->
 <script>
     $('document').ready(function () {
+        updateCartCount();
         let csrf = $('input[name=_token]').val();
 
         // Minus item
@@ -210,6 +211,7 @@
                             $('.mfp-content').empty();
                             $('.mfp-content').append(data);
                             countTotal();
+                            updateCartCount()
                         }
                     })
 
@@ -248,6 +250,7 @@
                             $('.mfp-content').empty();
                             $('.mfp-content').append(data);
                             countTotal();
+                            updateCartCount()
                         }
                     })
                 },
@@ -282,6 +285,7 @@
                             $('.mfp-content').empty();
                             $('.mfp-content').append(data);
                             countTotal();
+                            updateCartCount()
                         }
                     })
                 },
@@ -291,6 +295,19 @@
         })
     })
 
+    function updateCartCount() {
+        let csrf = $('input[name=_token]').val();
+        $.ajax({
+            url: '/cart/get-count',
+            method: 'get',
+            headers: {
+                'X-CSRF-TOKEN': csrf,
+            },
+            success: function (data) {
+                $('.btn-cart__quantity').text(data.count);
+            }
+        })
+    }
 
     // Get cart total sum
     function countTotal() {
@@ -337,7 +354,8 @@
                 if ($('.dropdown-menu li').length > 0) {
                     $('.dropdown-menu').css('display', 'block');
                 }
-                $('.cityName').click(function(){                    
+                $('.cityName').click(function(){
+                    $('.dropdown-menu').css('display', 'none');
                     $('#form-order-city').val($(this).text())
                     $('#city-zipcode').val($(this).parent().attr('data-zipcode'))
                     console.log($('#city-zipcode').val())
@@ -348,7 +366,7 @@
 
 
 
-    
+
 
     $('.validation-email').on('blur', function () {
   let email = $(this).val();

@@ -94,8 +94,8 @@ class CartController extends Controller
     /**
      * @return \Illuminate\Http\JsonResponse
      */
-    public function getItemsCount() {
-        $count = $this->repository->getItemsCount();
+    public function getItemsCount(Request $request) {
+        $count = $this->repository->getItemsCount($request);
 
         return response()->json([
             'count' => $count,

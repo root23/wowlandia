@@ -2,6 +2,8 @@
 
 namespace App\Repositories\Cart;
 
+use Illuminate\Http\Request;
+
 interface CartRepositoryInterface {
     public function getByToken(string $token);
 
@@ -9,5 +11,5 @@ interface CartRepositoryInterface {
 
     public function getFinalTotal();
 
-    public function getItemsCount();
+    public function getItemsCount(Request $request);
 }
