@@ -122,14 +122,22 @@
                         <div class="order__radio-extras">
                             <p class="order__radio-hint"> Ориентировочная дата доставки <span class="sdek-delivery-date">27.02.2021</span></p>
 
-                            <div class="field field--type-text order__field-extra">
-                                <div class="field__field"><input type="text" name="adres" value="" placeholder="Введите адрес доставки" id="form-order-adres"></div>
-                            </div>
+
                         </div>
 
 
-                        <div class="field field--type-radio order__field"><input type="radio" name="shipping_method" id="form-order-delivery-russianpost2.rp1" value="russianpost2.rp1"><label class="field__label" for="form-order-delivery-russianpost2.rp1"><span class="field__check"></span>Почта России &nbsp; <span class="color-orange">186 руб.</span></label></div>
+                        <div class="field field--type-radio order__field">
+                            <input type="radio" name="shipping_method" id="form-order-delivery-russianpost2.rp1" value="russianpost2.rp1">
+                            <label class="field__label" for="form-order-delivery-russianpost2.rp1">
+                                <span class="field__check"></span>Почта России &nbsp;
+                                <span class="color-orange">186 руб.</span>
+                            </label>
+                        </div>
 
+                        <hr>
+                        <div class="field field--type-text order__field-extra">
+                            <div class="field__field"><input type="text" name="adres" value="" placeholder="Введите адрес доставки" id="form-order-adres"></div>
+                        </div>
 
                         <p>Стоимость доставки носит справочный характер, может незначительно измениться после подтверждения заказа</p>
 
