@@ -208,48 +208,50 @@
         </div>
     </div>
     <section class="reviews product__reviews" id="reviews">
-        <h2 class="reviews__title">Отзывы покупателей ({{ $product->reviews->count() }})</h2>
+        <h2 class="reviews__title">Отзывы покупателей ({{ $reviews->count() }})</h2>
         <div class="reviews__top">
             <div class="rating reviews__rating">
                 <div class="rating__rating">
-                    <div class="rating__average">5</div>
-                    <div class="rating__base">На основе <b>{{ $product->reviews->count() }} отзывов</b></div>
+                    <div class="rating__average">{{ $reviews->where('is_active', true)->avg('rating') }}</div>
+                    <div class="rating__base">На основе <b>{{ $reviews->count() }} отзывов</b></div>
                 </div>
                 <div class="rating__items">
                     <div class="rating__item">
                         <span class="rating__star">5</span>
                         <span class="rating__progress">
-                <span class="rating__progress-in" style="width:88.636363636364%"></span>
+                <span class="rating__progress-in"
+                      style="width:{{ $reviews->where('rating', 5)->where('is_active', true)->count() / $reviews->count() * 100 }}%">
+                </span>
               </span>
-                        <span class="rating__value rating__value_5">39</span>
+                        <span class="rating__value rating__value_5">{{ $reviews->where('rating', 5)->where('is_active', true)->count() }}</span>
                     </div>
                     <div class="rating__item">
                         <span class="rating__star">4</span>
                         <span class="rating__progress">
-                <span class="rating__progress-in" style="width:11.363636363636%"></span>
+                <span class="rating__progress-in" style="width:{{ $reviews->where('rating', 4)->where('is_active', true)->count() / $reviews->count() * 100 }}%"></span>
               </span>
-                        <span class="rating__value rating__value_4">5</span>
+                        <span class="rating__value rating__value_4">{{ $reviews->where('rating', 4)->where('is_active', true)->count() }}</span>
                     </div>
                     <div class="rating__item">
                         <span class="rating__star">3</span>
                         <span class="rating__progress">
-                <span class="rating__progress-in" style="width:0%"></span>
+                <span class="rating__progress-in" style="width:{{ $reviews->where('rating', 3)->where('is_active', true)->count() / $reviews->count() * 100 }}%"></span>
               </span>
-                        <span class="rating__value rating__value_3">0</span>
+                        <span class="rating__value rating__value_3">{{ $reviews->where('rating', 3)->where('is_active', true)->count() }}</span>
                     </div>
                     <div class="rating__item">
                         <span class="rating__star">2</span>
                         <span class="rating__progress">
-                <span class="rating__progress-in" style="width:0%"></span>
+                <span class="rating__progress-in" style="width:{{ $reviews->where('rating', 2)->where('is_active', true)->count() / $reviews->count() * 100 }}%"></span>
               </span>
-                        <span class="rating__value rating__value_2">0</span>
+                        <span class="rating__value rating__value_2">{{ $reviews->where('rating', 2)->where('is_active', true)->count() }}</span>
                     </div>
                     <div class="rating__item">
                         <span class="rating__star">1</span>
                         <span class="rating__progress">
-                <span class="rating__progress-in" style="width:0%"></span>
+                <span class="rating__progress-in" style="width:{{ $reviews->where('rating', 1)->where('is_active', true)->count() / $reviews->count() * 100 }}%"></span>
               </span>
-                        <span class="rating__value rating__value_1">0</span>
+                        <span class="rating__value rating__value_1">{{ $reviews->where('rating', 1)->where('is_active', true)->count() }}</span>
                     </div>
                 </div>
             </div>
@@ -342,7 +344,7 @@
         </div>
         <div class="reviews__items grid" id="rjax">
 
-            @foreach($product->reviews as $review)
+            @foreach($reviews as $review)
                 <div class="reviews__item grid-item" >
                     <div class="c-review">
                         <figure class="c-review__picture js-popup-gallery">
@@ -384,11 +386,9 @@
                 </div>
             @endforeach
 
-            <div class="reviews__bottom grid-item" >
-                <a class="button reviews__button-more button--ghost"  id="elsereview" role="button">
-                    <span class="button__caption">Показать еще</span>
-                </a>
-            </div>
+
+
+
 
         </div>
     </section>
@@ -406,5 +406,6 @@
 @endif
 
 <script type="text/javascript">
+
 </script>
 

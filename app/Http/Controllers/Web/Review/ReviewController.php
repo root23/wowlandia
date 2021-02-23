@@ -43,4 +43,15 @@ class ReviewController extends Controller {
         return redirect('/')->with('status', 'review-added');
 
     }
+
+    public function loadMore(Request $request) {
+        $productId = $request->get('product_id');
+        $reviews = Review::orderBy('created_at', 'desc')
+            ->where('product_id', $productId)
+            ->get();
+        return response()->json([
+            $reviews,
+        ],200);
+    }
+
 }
