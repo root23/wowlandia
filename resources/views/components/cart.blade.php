@@ -106,7 +106,7 @@
                             <input type="hidden" name="zone_id" value="0" id="form-order-region">
                             <input type="hidden" name="postcode" value="" id="form-order-postcode">
                             <input type="hidden" name="country_id" value="176" id="form-order-country">
-                            <input type="hidden" name="zipcode" id="city-zipcode">
+                            <input type="hidden" name="zipcode" value="101000" id="city-zipcode">
                         </div>
                     </div>
                     <div class="order__group">
@@ -177,6 +177,10 @@
                             <span>Общая стоимость товаров </span>
                             <span class="products-total-price">2980 руб.</span>
                         </div>
+                        <div class="order__total-delivery">
+                            <span>Стоимость доставки </span>
+                            <span class="products-total-price">350 руб.</span>
+                        </div>
                         <div class="order__total-item">
                             <div class="field__field">
                                 <input type="text" name="coupon" id="input-coupon" placeholder="Введите промо-код">
@@ -207,6 +211,7 @@
 <script>
     $('document').ready(function () {
         updateCartCount();
+        countTotal();
         let csrf = $('input[name=_token]').val();
 
         var deliveryDate = new Date();
@@ -350,10 +355,34 @@
                 'X-CSRF-TOKEN': csrf,
             },
             success: function (data) {
-                $('.products-total-price').text(data.total_final + ' руб.');
+                $('.order__total-item .products-total-price').text(data.total_final + ' руб.');
                 $('.all-total-price').text(data.total_final + ' руб.');
+
+                // alert with free delivery
+                var freeDeliveryTotal = 5900;
+                if (freeDeliveryTotal - data.total_final <= 0) {
+                    $('.order__alert').find('.alert__text').text('Доставка будет бесплатной!');
+                } else {
+                    let diff = freeDeliveryTotal - data.total_final;
+                    $('.order__alert').find('.alert__text').find('b').text(diff + ' руб.');
+                }
+                getFinal();
             },
         })
+    }
+
+    function getFinal() {
+        var final = 0;
+        var total = $('.order__total-item .products-total-price').text();
+        var delivery = $('.order__total-delivery .products-total-price').text();
+        total = total.replace(/[^0-9]/gim,'');
+        delivery = delivery.replace(/[^0-9]/gim,'');
+        if (total >= 5900) {
+            final = total;
+        } else {
+            final = parseInt(total) + parseInt(delivery);
+        }
+        $('.order__total-sum .all-total-price').text(final + ' руб.');
     }
 
     // Delivery city suggestion
@@ -408,6 +437,8 @@
                             $('.sdek-price').text(data.data[0].price + ' руб.');
                             $('.sdek-delivery-date').text(deliveryDate.toLocaleDateString('ru-RU', options));
 
+                            $('.order__total-delivery .products-total-price').text(data.data[0].price + ' руб.');
+                            getFinal();
                         },
                         fail: function (data) {
                             console.log(data);

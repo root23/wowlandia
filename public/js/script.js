@@ -159,7 +159,7 @@ $(document).ready(function(){
                                     'X-CSRF-TOKEN': csrf,
                                 },
                                 success: function(data) {
-                                    $('.products-total-price').text(data.total_final + ' руб.');
+                                    $('.order__total-item .products-total-price').text(data.total_final + ' руб.');
                                     $('.all-total-price').text(data.total_final + ' руб.');
                                 },
                                 error: function (data) {

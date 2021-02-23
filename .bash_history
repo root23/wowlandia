@@ -144,3 +144,43 @@ git status
 git add .
 git commit -m "front-end fixes"
 git push
+git status
+git add .
+git commit -m "front fixes"
+git push
+git status
+git pull
+git status
+git pull origin
+git status
+git pull 
+git add .
+git commit -m "?"
+git push
+git revert
+git reset
+git status
+git revert HEAD
+git status
+git pull
+git status
+git push
+git status
+git status
+git status
+git add .
+git commit -m "upd cart items count output"
+git push
+git status
+git status
+git status
+git add .
+git commit -m "add product add to cart popup functional"
+git push
+git status
+git status
+git status
+git status
+git add .
+git commit -m "upd cdek calculator"
+git push

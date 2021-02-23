@@ -69,7 +69,7 @@ class PaymentController extends Controller
                 'payment_id' => $payment->getInvoiceId(),
             ], 200);
         } elseif ($action == 'success') {
-            dd($request->all());
+            return redirect('/');
         } elseif ($action == 'result') {
 
         }
@@ -153,7 +153,7 @@ class PaymentController extends Controller
             $order = Order::where('invoice_id', $payment->getInvoiceId())->first();
 
             if (isset($order)) {
-                if ($payment->getSum() == $order->amount) {
+                if ($payment->getSum() == $order->total) {
                     $order->is_paid = true;
                     $order->save();
                 }

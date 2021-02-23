@@ -5375,7 +5375,7 @@ input:checked+ .radio-size__label::after {
     border-bottom: 1px solid #e6e6e6;
 }
 
-.order__total-item {
+.order__total-item, .order__total-delivery {
     display: -webkit-box;
     display: -webkit-flex;
     display:    -moz-box;
@@ -5407,7 +5407,7 @@ input:checked+ .radio-size__label::after {
     -webkit-justify-content: space-between;
 }
 
-.order__total-item span {
+.order__total-item span, .order__total-delivery span {
             flex: 0 1 auto;
     margin: 0 5px;
 
@@ -6655,14 +6655,14 @@ input:checked+ .radio-size__label::after {
     font-weight: 500;
 }
 
-.order__total-item i {
+.order__total-item i, .order__total-delivery i {
     margin-left: 5px;
     cursor: pointer;
     text-decoration: underline;
     color: #ff7607;
 }
 
-.order__total-item i.order__item-remove {
+.order__total-item i.order__item-remove, .order__total-delivery i.order__item-remove {
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -7691,7 +7691,7 @@ input:checked+ .radio-size__label::after {
         padding: 15px 0;
     }
 
-    .order__total-item {
+    .order__total-item, .order__total-delivery {
         margin: 8px -5px;
         font-size: 16px;
     }
