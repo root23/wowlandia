@@ -182,7 +182,7 @@
                     <div class="field field--type-radio order__field">
                         <input type="radio" name="payment_method" id="form-order-payment-cod" value="cod" checked="checked">
                         <label class="field__label" for="form-order-payment-cod">
-                            <span class="field__check"></span>Оплата при заказе
+                            <span class="field__check"></span>Оплата при заказе (комиссия 7%)
                         </label>
                     </div>
                     <div class="field field--type-radio order__field">

@@ -124,7 +124,8 @@ class ReviewEditScreen extends Screen
                     ->value(1)
                     ->title('Отображать')
                     ->placeholder('Отображать')
-                    ->help('Отображение на сайте'),
+                    ->help('Отображение на сайте')
+                    ->sendTrueOrFalse(),
 
                 Relation::make('review.product_id')
                     ->title('Товар')

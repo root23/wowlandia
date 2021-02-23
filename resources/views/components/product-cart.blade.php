@@ -42,10 +42,12 @@
                 <div class="product__header">
                     <h1 class="product__title">{{ $product->title }}</h1>
                     <div class="product__rate">
-                        <div class="star-rating product__star-rating" title="5">
-                            <span class="star-rating__rating" style="width:100%"></span>
+                        @if($reviews->count() > 0)
+                        <div class="star-rating product__star-rating" title="4">
+                            <span class="star-rating__rating" style="width:{{ round($reviews->avg('rating'), 1) / 5 * 100 }}%"></span>
                         </div>
-                        <a class="product__reviews-count" href="#reviews">Отзывы ({{ $product->reviews->count() }})</a>
+                        @endif
+                        <a class="product__reviews-count" href="#reviews">Отзывы ({{ $reviews->count() }})</a>
                     </div>
                 </div>
                 <p class="product__price">
@@ -69,7 +71,6 @@
                                     <figure class="radio-size__picture">
                                         <img src="{{ $item->cover_image }}" width="150" height="150" alt="S">
                                     </figure>
-                                    <span class="radio-size__ribbon">2x больше S</span>
                                     <div class="radio-size__content">
                                         <div class="radio-size__price">
                                             @if ($item->sale_price)
@@ -209,10 +210,12 @@
     </div>
     <section class="reviews product__reviews" id="reviews">
         <h2 class="reviews__title">Отзывы покупателей ({{ $reviews->count() }})</h2>
+
         <div class="reviews__top">
+            @if ($reviews->count() > 0)
             <div class="rating reviews__rating">
                 <div class="rating__rating">
-                    <div class="rating__average">{{ $reviews->where('is_active', true)->avg('rating') }}</div>
+                    <div class="rating__average">{{ round($reviews->where('is_active', true)->avg('rating'), 1) }}</div>
                     <div class="rating__base">На основе <b>{{ $reviews->count() }} отзывов</b></div>
                 </div>
                 <div class="rating__items">
@@ -255,10 +258,12 @@
                     </div>
                 </div>
             </div>
+            @endif
             <button class="button reviews__add-review-button button--black" type="button">
                 <span class="button__caption">Оставить отзыв</span>
             </button>
         </div>
+
         <div class="reviews__add-review" style="display: none;">
             <h3 class="reviews__add-review-title">Оставьте свой отзыв</h3>
             <div class="form-review reviews__form-review" id="form-review">
@@ -279,6 +284,7 @@
                                     <button class="field__star" type="button" onclick="$('#form-review-rating').val('3');"></button>
                                     <button class="field__star" type="button" onclick="$('#form-review-rating').val('4');"></button>
                                     <button class="field__star" type="button" onclick="$('#form-review-rating').val('5');"></button>
+                                    <span class="rating-value">(5)</span>
                                 </div>
                             </div>
                         </div>
@@ -406,6 +412,11 @@
 @endif
 
 <script type="text/javascript">
+    $(document).ready(function () {
+        $('.field__star').on('click', function () {
+            $('.rating-value').text('(' + $('input[name=rating]').val() + ')');
+        })
+    });
 
 </script>
 
