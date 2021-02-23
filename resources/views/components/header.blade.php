@@ -21,7 +21,7 @@
                 <li class="menu__item"><a class="js-scrollto position-link" href="#videos">Видео</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#faq">Faq</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#testimonials">Отзывы</a></li>
-                <li class="menu__item"><a class="js-scrollto position-link" href="#delivery">Доставка и оплата</a></li>
+                <li class="menu__item"><a class="js-scrollto position-link" href="#delivery-block">Доставка и оплата</a></li>
             </ul>
         </nav>
         <a class="email email--header header__email" href="mailto:info@wowlandia.ru">

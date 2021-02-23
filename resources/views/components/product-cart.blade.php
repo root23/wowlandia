@@ -83,9 +83,7 @@
                                             @endif
                                         </div>
                                         <ul class="radio-size__list">
-                                            <li>Размер - {{ $item->size }}</li>
                                             <li>Цвет - {{ $item->color }}</li>
-                                            <li>Тип - {{ $item->type }}</li>
                                         </ul>
                                     </div>
                                 </label>
@@ -99,19 +97,19 @@
                             <div class="popup--sizes__element">Размер</div>
                             <div class="popup--sizes__element popup--sizes__element_b">
                                 <div class="form_radio_btn">
-                                    <input class="sizes-radio" id="radio-1" type="radio" name="radio" value="xs-s" checked>
+                                    <input class="sizes-radio" id="radio-1" type="radio" name="radio-size" value="xs-s" checked>
                                     <label for="radio-1">xs - s</label>
                                 </div>
                             </div>
                             <div class="popup--sizes__element popup--sizes__element_b">
                                 <div class="form_radio_btn">
-                                    <input class="sizes-radio" id="radio-2" type="radio" name="radio" value="m-l" checked>
+                                    <input class="sizes-radio" id="radio-2" type="radio" name="radio-size" value="m-l" >
                                     <label for="radio-2">m - l</label>
                                 </div>
                             </div>
                             <div class="popup--sizes__element popup--sizes__element_b">
                                 <div class="form_radio_btn">
-                                    <input class="sizes-radio" id="radio-3" type="radio" name="radio" value="l-xl" checked>
+                                    <input class="sizes-radio" id="radio-3" type="radio" name="radio-size" value="l-xl" >
                                     <label for="radio-3">l - xl</label>
                                 </div>
                             </div>
@@ -392,10 +390,6 @@
                 </div>
             @endforeach
 
-
-
-
-
         </div>
     </section>
     <a class="product__link-top position-link" href="#popup--product">
@@ -416,6 +410,24 @@
         $('.field__star').on('click', function () {
             $('.rating-value').text('(' + $('input[name=rating]').val() + ')');
         })
+        var product_size = 'xs-s';
+
+        $('input[type=radio][name=radio-size]').change(function () {
+            $('input[type=radio][name=radio-size]').each(function () {
+                $(this).removeAttr('checked');
+            })
+            $(this).attr('checked', 'checked');
+        });
+
+        $('.form_radio_btn').click(function () {
+            $('input[type=radio][name=radio-size]').each(function () {
+                if ($(this).attr('checked') == 'checked') {
+                    product_size = $(this).val();
+                    return;
+                }
+            });
+        })
+
     });
 
 </script>

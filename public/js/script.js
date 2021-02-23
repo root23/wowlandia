@@ -269,12 +269,21 @@ $(document).ready(function(){
                 // Add to cart
                 let csrf = $('input[name=_token]').val();
                 $('#button-cart').on('click', function () {
+                    var productSize = 'xs-s';
+                    $('input[type=radio][name=radio-size]').each(function () {
+                        if ($(this).attr('checked') == 'checked') {
+                            productSize = $(this).val();
+                            return;
+                        }
+                    });
+                    console.log(productSize);
+
                     $.ajax({
                         url: '/cart/1',
                         method: 'put',
                         data: {
                             'product_id': productId,
-                            'size': 'm',
+                            'size': productSize,
                             'action': 'add',
                             'quantity': $('input[name=quantity]').val(),
                         },
