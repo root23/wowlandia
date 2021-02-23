@@ -12,11 +12,22 @@ $(window).on('scroll', function(){
 
 
 $(function(){
-    $("a[href^='#']").click(function(){
+
+
+    $(".position-link").click(function(){
+       var _href = $(this).attr("href");
+       $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+       return false;
+   });
+
+    $(".position-link").click(function(){
+
+
+
         var _href = $(this).attr("href");
-        if (_href == '#') {
+        /*if (_href == '#') {
             return;
-        }
+        }*/
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
         return false;
     });

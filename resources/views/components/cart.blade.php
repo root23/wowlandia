@@ -112,25 +112,43 @@
                     <div class="order__group">
 
                         <div class="field field--type-radio order__field">
-                            <input type="radio" name="shipping_method" id="form-order-delivery-cdek.tariff_137_0" value="cdek.tariff_137_0" checked="checked">
-                            <label class="field__label " for="form-order-delivery-cdek.tariff_137_0">
-                                <span class="field__check"></span>Доставка курьером СДЭК &nbsp;
+                            <input type="radio" name="shipping_method" id="cdek_check" value="cdek" checked="checked">
+                            <label class="field__label " for="cdek_check">
+                                <span class="field__check"></span>СДЭК &nbsp;
                                 <span class="color-orange sdek-price">350 руб.</span>
                             </label>
                         </div>
 
                         <div class="order__radio-extras">
-                            <p class="order__radio-hint"> Ориентировочная дата доставки <span class="sdek-delivery-date">27.02.2021</span></p>
-
-
+                            <p class="order__radio-hint"> Ориентировочная дата доставки <span class="sdek-delivery-date"></span></p>
                         </div>
 
 
                         <div class="field field--type-radio order__field">
-                            <input type="radio" name="shipping_method" id="form-order-delivery-russianpost2.rp1" value="russianpost2.rp1">
-                            <label class="field__label" for="form-order-delivery-russianpost2.rp1">
+                            <input type="radio" name="shipping_method" id="pochta_check" value="russianpost">
+                            <label class="field__label" for="pochta_check">
                                 <span class="field__check"></span>Почта России &nbsp;
-                                <span class="color-orange">186 руб.</span>
+                                <span class="color-orange pochta-price">186 руб.</span>
+                            </label>
+                        </div>
+
+                        <div class="order__radio-extras">
+                            <p class="order__radio-hint"> Ориентировочная дата доставки <span class="pochta-delivery-date"></span></p>
+                        </div>
+
+                        <div class="field field--type-radio order__field">
+                            <input type="radio" name="shipping_method" id="self_delivery" value="self">
+                            <label class="field__label" for="self_delivery">
+                                <span class="field__check"></span>Самовывоз с производства (район метро Новокосино, г. Москва)&nbsp;
+                                <span class="color-orange">0 руб.</span>
+                            </label>
+                        </div>
+
+                        <div class="field field--type-radio order__field">
+                            <input type="radio" name="shipping_method" id="bank_delivery" value="bank">
+                            <label class="field__label" for="bank_delivery">
+                                <span class="field__check"></span>Оплата переводом на Тиньков / Сбербанк (комиссия 0%)
+                                <span class="color-orange">0 руб.</span>
                             </label>
                         </div>
 
@@ -139,7 +157,6 @@
                             <div class="field__field"><input type="text" name="adres" value="" placeholder="Введите адрес доставки" id="form-order-adres"></div>
                         </div>
 
-                        <p>Стоимость доставки носит справочный характер, может незначительно измениться после подтверждения заказа</p>
 
                     </div>
 
@@ -227,6 +244,7 @@
         var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
         $('.sdek-delivery-date').text(deliveryDate.toLocaleDateString('ru-RU', options));
+        $('.pochta-delivery-date').text(deliveryDate.toLocaleDateString('ru-RU', options));
 
         // Minus item
         $('.order__item-quantity').find('.field__minus').on('click', function () {
@@ -453,9 +471,50 @@
                         }
                     })
 
+                    $.ajax({
+                        url: '/ajax/pochta-count?receiver_zip=' + $('#city-zipcode').val(),
+                        method: 'get',
+                        success: function (data) {
+                            var deliveryDate = new Date();
+                            deliveryDate.setDate(deliveryDate.getDate() + data.data[0].period_max);
+                            var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+                            $('.color-orange.pochta-price').text(data[0].price + ' руб.');
+                            $('.pochta-delivery-date').text(deliveryDate.toLocaleDateString('ru-RU', options));
+                        }
+                    });
+
                 })
             }
         })
+    })
+
+    // Delivery type change
+    $('input[type=radio][name=shipping_method]').change(function () {
+        if (this.value == 'russianpost') {
+            $.ajax({
+                url: '/ajax/pochta-count?receiver_zip=' + $('#city-zipcode').val(),
+                method: 'get',
+                success: function (data) {
+                    var deliveryDate = new Date();
+                    deliveryDate.setDate(deliveryDate.getDate() + data[0].maxDays);
+                    var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+
+                    $('.color-orange.pochta-price').text(data[0].price + ' руб.');
+                    $('.order__total-delivery .products-total-price').text(data[0].price + ' руб.');
+                    $('.pochta-delivery-date').text(deliveryDate.toLocaleDateString('ru-RU', options));
+                    getFinal();
+                }
+            });
+        }
+        if (this.value == 'self' || this.value == 'bank') {
+            $('.order__total-delivery .products-total-price').text('0 руб.');
+            getFinal();
+        }
+        if (this.value == 'cdek') {
+            $('.order__total-delivery .products-total-price').text($('.color-orange.sdek-price').text());
+            getFinal();
+        }
     })
 
     $('.validation-email').on('blur', function () {

@@ -10,7 +10,7 @@
     <button class="popup__btn-close js-popup-close" type="button" title="Закрыть"></button>
 </div>
 
-<article class="product popup__product">
+<article class="product popup__product" id="popup--product">
     <div class="product__main">
         <div class="product__left">
             <div class="product__slideshow-wrapper">
@@ -330,7 +330,7 @@
 
         </div>
     </section>
-    <a class="product__link-top" href="#popup--product">
+    <a class="product__link-top position-link" href="#popup--product">
         <svg class="svg-icon svg-icon--arrow-left">
             <use xlink:href="#arrow-left"></use>
         </svg>

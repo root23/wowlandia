@@ -62,11 +62,11 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
     <div class="header__nav">
         <nav class="menu header__menu">
             <ul class="menu__items">
-                <li class="menu__item"><a class="js-scrollto" href="#products">Деревянные пазлы</a></li>
-                <li class="menu__item"><a class="js-scrollto" href="#videos">Видео</a></li>
-                <li class="menu__item"><a class="js-scrollto" href="#faq">Faq</a></li>
-                <li class="menu__item"><a class="js-scrollto" href="#testimonials">Отзывы</a></li>
-                <li class="menu__item"><a class="js-scrollto" href="#delivery">Доставка и оплата</a></li>
+                <li class="menu__item"><a class="js-scrollto position-link" href="#products">Деревянные пазлы</a></li>
+                <li class="menu__item"><a class="js-scrollto position-link" href="#videos">Видео</a></li>
+                <li class="menu__item"><a class="js-scrollto position-link" href="#faq">Faq</a></li>
+                <li class="menu__item"><a class="js-scrollto position-link" href="#testimonials">Отзывы</a></li>
+                <li class="menu__item"><a class="js-scrollto position-link" href="#delivery">Доставка и оплата</a></li>
             </ul>
         </nav>
         <a class="email email--header header__email" href="mailto:info@wowlandia.ru">
