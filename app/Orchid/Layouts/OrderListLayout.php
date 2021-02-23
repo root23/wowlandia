@@ -36,8 +36,9 @@ class OrderListLayout extends Table
                         ->route('platform.order.edit', $order);
                 }),
 
+            TD::make('username', 'Заказчик'),
+            TD::make('delivery_type', 'Доставка'),
             TD::make('created_at', 'Создан'),
-            TD::make('updated_at', 'Последнее изменение'),
         ];
     }
 }

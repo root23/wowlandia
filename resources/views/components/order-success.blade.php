@@ -14,7 +14,7 @@
             @if ($paymentInfo['payment']['payment_type'] == 'bank')
                 <p>Для уточнения параметров заказа наши менеджеры свяжутся с Вами в ближайшее время</p>
             @else
-                <p>Для перехода к оплате пройдите по <a href="{{ $paymentInfo['payment']['payment_url'] }}">ссылке</a> </p>
+                <p>Для перехода к оплате пройдите по <a class="pay--link" href="{{ $paymentInfo['payment']['payment_url'] }}">ссылке</a> </p>
                 <p>Идентификатор заказа: <b>{{ $paymentInfo['payment']['payment_id'] }}</b></p>
             @endif
         </div>

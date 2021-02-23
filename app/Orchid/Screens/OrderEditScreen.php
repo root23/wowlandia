@@ -112,8 +112,20 @@ class OrderEditScreen extends Screen
                     ->title('Код операции')
                     ->disabled(),
 
-                Input::make('order.amount')
-                    ->title('Стоимость')
+                Input::make('order.username')
+                    ->title('Ф.И.О.')
+                    ->disabled(),
+
+                Input::make('order.email')
+                    ->title('Email')
+                    ->disabled(),
+
+                Input::make('order.phone')
+                    ->title('Телефон')
+                    ->disabled(),
+
+                Input::make('order.address')
+                    ->title('Адрес')
                     ->disabled(),
 
                 CheckBox::make('order.is_paid')
@@ -124,6 +136,14 @@ class OrderEditScreen extends Screen
 
                 Input::make('order.shopping_cart_id')
                     ->title('Корзина')
+                    ->disabled(),
+
+                Input::make('order.total')
+                    ->title('Сумма')
+                    ->disabled(),
+
+                Input::make('order.delivery_type')
+                    ->title('Доставка')
                     ->disabled(),
 
                 TextArea::make('order.description')
