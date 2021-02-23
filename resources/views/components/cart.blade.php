@@ -389,6 +389,8 @@
                 var freeDeliveryTotal = 5900;
                 if (freeDeliveryTotal - data.total_final <= 0) {
                     $('.order__alert').find('.alert__text').text('Доставка будет бесплатной!');
+                    $('.order__total-delivery .products-total-price').text('0 руб.');
+
                 } else {
                     let diff = freeDeliveryTotal - data.total_final;
                     $('.order__alert').find('.alert__text').find('b').text(diff + ' руб.');
@@ -465,6 +467,7 @@
                             $('.sdek-delivery-date').text(deliveryDate.toLocaleDateString('ru-RU', options));
 
                             $('.order__total-delivery .products-total-price').text(data.data[0].price + ' руб.');
+                            countTotal();
                             getFinal();
                         },
                         fail: function (data) {
@@ -531,6 +534,7 @@
                     $('.color-orange.pochta-price').text(data[0].price + ' руб.');
                     $('.order__total-delivery .products-total-price').text(data[0].price + ' руб.');
                     $('.pochta-delivery-date').text(deliveryDate.toLocaleDateString('ru-RU', options));
+                    countTotal();
                     getFinal();
                 }
             });
@@ -541,6 +545,7 @@
         }
         if (this.value == 'cdek') {
             $('.order__total-delivery .products-total-price').text($('.color-orange.sdek-price').text());
+            countTotal();
             getFinal();
         }
     })
