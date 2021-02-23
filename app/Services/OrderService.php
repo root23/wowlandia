@@ -7,6 +7,7 @@ use App\Repositories\Cart\CartRepositoryInterface;
 use GuzzleHttp\Client;
 use Idma\Robokassa\Payment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class OrderService {
 
@@ -44,9 +45,19 @@ class OrderService {
         $cartPrice = $this->cartRepository->getFinalTotalByToken($csrf);
         $zipcode = $request->get('zipcode');
         $deliveryType = $request->get('delivery');
-        $deliveryPrice = $this->calculateDeliveryPrice($cartPrice, $deliveryType, $zipcode, $csrf);
-        $finalPrice = $deliveryPrice + $cartPrice;
-        $paymentData = $this->getPayment($finalPrice);
+
+        if ($deliveryType == 'bank') {
+            $finalPrice = $cartPrice;
+            $paymentData = [
+                'payment_type' => 'bank',
+                'payment_info' => 'Наши менеджеры свяжутся с Вами в ближайшее время!',
+                'payment_id' => hexdec(uniqid()),
+            ];
+        } else {
+            $deliveryPrice = $this->calculateDeliveryPrice($cartPrice, $deliveryType, $zipcode, $csrf);
+            $finalPrice = $deliveryPrice + $cartPrice;
+            $paymentData = $this->getPayment($finalPrice);
+        }
 
         $order = new Order();
         $order->amount = 3;
@@ -89,17 +100,16 @@ class OrderService {
             env('ROBOKASSA_TEST_MODE')
         );
 
+        $id = DB::select("SHOW TABLE STATUS LIKE 'orders'");
+        $next_id = $id[0]->Auto_increment;
+
         $payment
-            ->setInvoiceId(uniqid())
+            ->setInvoiceId($next_id)
             ->setSum($price)
             ->setDescription('some description');
 
-        $sameOrders = Order::where('invoice_id', $payment->getInvoiceId())->get();
-        foreach ($sameOrders as $order) {
-            $order->delete();
-        }
-
         return [
+            'payment_type' => 'robokassa',
             'payment_url' => $payment->getPaymentUrl(),
             'payment_id' => $payment->getInvoiceId(),
         ];

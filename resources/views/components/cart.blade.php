@@ -554,7 +554,18 @@
             },
             data: data,
             success: function (data) {
-                console.log(data);
+                $.ajax({
+                    url: '/ajax/order-success',
+                    method: 'post',
+                    data: data,
+                    headers: {
+                        'X-CSRF-TOKEN': csrf,
+                    },
+                    success: function (data) {
+                        $('.mfp-content').empty();
+                        $('.mfp-content').append(data);
+                    }
+                })
             },
             fail: function (data) {
                 console.log(data);
