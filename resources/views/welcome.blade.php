@@ -125,7 +125,7 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 
 <section class="products page__products" id="products">
     <div class="products__container">
-        <h2 class="title products__title">Выберите свой пазл</h2>
+        <h2 class="title products__title">Выберите свой дизайн</h2>
         <div class="products__items">
             @include('components.product-list')
         </div>
@@ -236,26 +236,19 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
             <div class="testimonials__container">
                 <h2 class="title faq__title">Отзывы</h2>
                 <div class="testimonials__items">
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9328-1-310x590x.jpg" width="310" height="590" alt="Отзыв 1" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9333-1-310x590x.jpg" width="310" height="590" alt="Отзыв 10" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9320-1-310x590x.jpg" width="310" height="590" alt="Отзыв 5" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9341-2-310x590x.jpg" width="310" height="590" alt="Отзыв 17" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9322-1-310x590x.jpg" width="310" height="590" alt="Отзыв 3" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9323-1-310x590x.jpg" width="310" height="590" alt="Отзыв 18" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9324-1-310x590x.jpg" width="310" height="590" alt="Отзыв 2" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9326-1-310x590x.jpg" width="310" height="590" alt="Отзыв 19" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9327-1-310x590x.jpg" width="310" height="590" alt="Отзыв 4" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9329-1-310x590x.jpg" width="310" height="590" alt="Отзыв 6" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9330-1-310x590x.jpg" width="310" height="590" alt="Отзыв 7" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9331-1-310x590x.jpg" width="310" height="590" alt="Отзыв 8" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9332-1-310x590x.jpg" width="310" height="590" alt="Отзыв 9" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9334-1-310x590x.jpg" width="310" height="590" alt="Отзыв 11" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9335-1-310x590x.jpg" width="310" height="590" alt="Отзыв 12" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9336-1-310x590x.jpg" width="310" height="590" alt="Отзыв 13" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9337-1-310x590x.jpg" width="310" height="590" alt="Отзыв 14" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9338-1-310x590x.jpg" width="310" height="590" alt="Отзыв 15" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9339-1-310x590x.jpg" width="310" height="590" alt="Отзыв 16" /></figure>
-                    <figure class="testimonials__item"><img src="https://unidragon.ru/image/cache/catalog/reviews/otzivi/IMG_9341-2-310x590x.jpg" width="310" height="590" alt="Отзыв 20" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2474.PNG" width="310" height="590" alt="Отзыв 1" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2475.PNG" width="310" height="590" alt="Отзыв 2" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2476.PNG" width="310" height="590" alt="Отзыв 3" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2477.PNG" width="310" height="590" alt="Отзыв 4" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2478.PNG" width="310" height="590" alt="Отзыв 5" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2479.PNG" width="310" height="590" alt="Отзыв 6" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2480.PNG" width="310" height="590" alt="Отзыв 7" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2481.PNG" width="310" height="590" alt="Отзыв 8" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2482.PNG" width="310" height="590" alt="Отзыв 9" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2483.PNG" width="310" height="590" alt="Отзыв 10" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2484.PNG" width="310" height="590" alt="Отзыв 11" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2485.PNG" width="310" height="590" alt="Отзыв 12" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2486.PNG" width="310" height="590" alt="Отзыв 13" /></figure>
                 </div>
             </div>
         </section>
