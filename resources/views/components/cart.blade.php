@@ -144,13 +144,7 @@
                             </label>
                         </div>
 
-                        <div class="field field--type-radio order__field">
-                            <input type="radio" name="shipping_method" id="bank_delivery" value="bank">
-                            <label class="field__label" for="bank_delivery">
-                                <span class="field__check"></span>Оплата переводом на Тиньков / Сбербанк (комиссия 0%)
-                                <span class="color-orange">0 руб.</span>
-                            </label>
-                        </div>
+
 
                         <hr>
                         <div class="field field--type-text order__field-extra">
@@ -188,7 +182,13 @@
                     <div class="field field--type-radio order__field">
                         <input type="radio" name="payment_method" id="form-order-payment-cod" value="cod" checked="checked">
                         <label class="field__label" for="form-order-payment-cod">
-                            <span class="field__check"></span>Оплата при получении
+                            <span class="field__check"></span>Оплата при заказе
+                        </label>
+                    </div>
+                    <div class="field field--type-radio order__field">
+                        <input type="radio" name="payment_method" id="form-order-payment-bank" value="bank">
+                        <label class="field__label" for="form-order-payment-bank">
+                            <span class="field__check"></span>Оплата переводом на Тиньков / Сбербанк (комиссия 0%)
                         </label>
                     </div>
                 </section>
@@ -477,7 +477,15 @@
                         method: 'get',
                         success: function (data) {
                             var deliveryDate = new Date();
-                            deliveryDate.setDate(deliveryDate.getDate() + data.data[0].period_max);
+
+                            if (data[0].maxDays == 0) {
+                                data[0].maxDays = 7;
+                            }
+                            if (data[0].price == '0') {
+                                data[0].price = 390;
+                            }
+
+                            deliveryDate.setDate(deliveryDate.getDate() + data[0].maxDays);
                             var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
                             $('.color-orange.pochta-price').text(data[0].price + ' руб.');
@@ -489,6 +497,13 @@
             }
         })
     })
+
+    $('input[type=radio][name=payment_method]').change(function () {
+        $('input[type=radio][name=payment_method]').each(function () {
+            $(this).removeAttr('checked');
+        })
+        $(this).attr('checked', 'checked');
+    });
 
     // Delivery type change
     $('input[type=radio][name=shipping_method]').change(function () {
@@ -502,6 +517,14 @@
                 method: 'get',
                 success: function (data) {
                     var deliveryDate = new Date();
+
+                    if (data[0].maxDays == 0) {
+                        data[0].maxDays = 7;
+                    }
+                    if (data[0].price == '0') {
+                        data[0].price = 390;
+                    }
+
                     deliveryDate.setDate(deliveryDate.getDate() + data[0].maxDays);
                     var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
@@ -531,12 +554,19 @@
         let address = $('input[name=adres]').val();
         let city_name = $('input[name=city]').val();
         let delivery = 'cdek';
+        let payment = 'cod';
         $('input[type=radio][name=shipping_method]').each(function () {
             if ($(this).attr('checked') == 'checked') {
                 delivery = $(this).val();
                 return;
             }
-        })
+        });
+        $('input[type=radio][name=payment_method]').each(function () {
+            if ($(this).attr('checked') == 'checked') {
+                payment = $(this).val();
+                return;
+            }
+        });
         let data = {
             'username': username,
             'phone': phone,
@@ -545,6 +575,7 @@
             'city_name': city_name,
             'delivery': delivery,
             'zipcode': $('#city-zipcode').val(),
+            'payment_method': payment,
         };
         $.ajax({
             url: '/ajax/order',

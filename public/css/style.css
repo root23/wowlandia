@@ -10016,8 +10016,7 @@ input:checked+ .radio-size__label::after {
 }
 @media(max-width: 740px){
 	.popup__product, .popup__order{
-    	padding: 0 30px;
-    	padding-bottom: 30px;
+    	padding:  30px;
     }
     .product__size-radios{
     	margin: 0 0px 25px 0;
@@ -10067,6 +10066,9 @@ input:checked+ .radio-size__label::after {
 .sizes-radio:checked + label{
 	border:solid 1px #ff7607;
 	padding: 10px 8px;
+}
+.pay--link{
+    color:  #ff7607!important;    
 }
 .btn-sizes{
 	margin-bottom: 30px;

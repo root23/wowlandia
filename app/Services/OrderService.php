@@ -45,8 +45,9 @@ class OrderService {
         $cartPrice = $this->cartRepository->getFinalTotalByToken($csrf);
         $zipcode = $request->get('zipcode');
         $deliveryType = $request->get('delivery');
+        $paymentType = $request->get('payment_method');
 
-        if ($deliveryType == 'bank') {
+        if ($paymentType == 'bank') {
             $finalPrice = $cartPrice;
             $paymentData = [
                 'payment_type' => 'bank',

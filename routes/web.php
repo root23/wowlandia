@@ -42,6 +42,9 @@ Route::post('/cdek/get-delivery-price', 'App\Http\Controllers\Api\Cdek\CdekContr
 // Payment
 Route::post('/payment/result', 'App\Http\Controllers\Api\Payment\PaymentController@validateResult');
 
+// Reviews
+Route::post('reviews/add', 'App\Http\Controllers\Web\Review\ReviewController@store');
+
 // Ajax
 Route::get('/ajax/product', 'App\Http\Controllers\Web\Product\ProductController@getproductCartAjax');
 Route::get('/ajax/cart', 'App\Http\Controllers\Web\Cart\CartController@getCartAjax');
@@ -50,6 +53,7 @@ Route::get('/ajax/pochta-count', 'App\Http\Controllers\Api\Pochta\PochtaControll
 Route::post('/ajax/order', 'App\Http\Controllers\Api\Order\OrderController@makeOrder');
 Route::get('/ajax/sizes', 'App\Http\Controllers\MainController@getSizes');
 Route::post('/ajax/order-success', 'App\Http\Controllers\Web\Order\OrderController@showOrderSuccessPopup');
+Route::get('/ajax/review-success', 'App\Http\Controllers\Web\Order\OrderController@showOrderSuccessPopup');
 
 Route::get('/get-token', function () {
    return csrf_token();

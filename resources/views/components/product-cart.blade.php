@@ -260,61 +260,84 @@
         <div class="reviews__add-review" style="display: none;">
             <h3 class="reviews__add-review-title">Оставьте свой отзыв</h3>
             <div class="form-review reviews__form-review" id="form-review">
-                <div class="field field--type-rating form-review__rating" data-value="5">
-                    <label class="field__label" for="form-review-rating">Ваш рейтинг</label>
-                    <div class="field__field">
-                        <input type="hidden" name="rating" id="form-review-rating" value="5">
-                        <div class="field__stars">
-                            <button class="field__star" type="button" onclick="$('#form-review-rating').val('1');"></button>
-                            <button class="field__star" type="button" onclick="$('#form-review-rating').val('2');"></button>
-                            <button class="field__star" type="button" onclick="$('#form-review-rating').val('3');"></button>
-                            <button class="field__star" type="button" onclick="$('#form-review-rating').val('4');"></button>
-                            <button class="field__star" type="button" onclick="$('#form-review-rating').val('5');"></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-review__row">
-                    <div class="form-review__col">
-                        <div class="field field--type-text form-review__field">
-                            <div class="field__field"><input type="text" name="name" placeholder="Имя" id="form-review-name"></div>
-                        </div>
-                    </div>
-                    <div class="form-review__col">
-                        <div class="field field--type-email form-review__field">
+
+                <form method="post" id="review-form" action="/reviews/add" enctype="multipart/form-data">
+                    @csrf
+{{--                    @include('components.review-errors')--}}
+{{--                    @include('components.review-success')--}}
+                    <input type="hidden" name="product_id" id="form-product-id" value="{{ $product->id }}">
+                    <div class="form-group">
+                        <div class="field field--type-rating form-review__rating" data-value="5">
+                            <label class="field__label" for="form-review-rating">Ваш рейтинг</label>
                             <div class="field__field">
-                                <input type="email" name="email" placeholder="Email" id="form-review-email"  tor-email-message="Неправильный формат Email">
+                                <input type="hidden" name="rating" id="form-review-rating" value="5">
+                                <div class="field__stars">
+                                    <button class="field__star" type="button" onclick="$('#form-review-rating').val('1');"></button>
+                                    <button class="field__star" type="button" onclick="$('#form-review-rating').val('2');"></button>
+                                    <button class="field__star" type="button" onclick="$('#form-review-rating').val('3');"></button>
+                                    <button class="field__star" type="button" onclick="$('#form-review-rating').val('4');"></button>
+                                    <button class="field__star" type="button" onclick="$('#form-review-rating').val('5');"></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="field field--type-textarea form-review__field">
-                    <div class="field__field">
-                        <textarea name="text" placeholder="Ваш отзыв" id="form-review-review" data-validator-required-message="Обязательное поле"></textarea>
+                    <div class="form-group">
+                        <div class="form-review__row">
+                            <div class="form-review__col">
+                                <div class="field field--type-text form-review__field">
+                                    <div class="field__field">
+                                        <input type="text" name="name" placeholder="Имя" required id="form-review-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-review__col">
+                                <div class="field field--type-email form-review__field">
+                                    <div class="field__field">
+                                        <input type="email" name="email" placeholder="Email" id="form-review-email" required  tor-email-message="Неправильный формат Email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="field field--type-file form-review__field">
-                    <div class="field__field">
-                        <input class="fileupload" type="file" name="files[]" multiple="">
-                        <button class="field__btn-file" type="button" id="fileupload" onclick="$('.fileupload').trigger('click');">
-                            <svg class="svg-icon svg-icon--upload">
-                                <use xlink:href="#upload"></use>
-                            </svg>
-                            <span>Добавить фото</span>
+                    <div class="form-group">
+                        <div class="field field--type-textarea form-review__field">
+                            <div class="field__field">
+                                <textarea name="text" placeholder="Ваш отзыв" required id="form-review-review" data-validator-required-message="Обязательное поле"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="field field--type-file form-review__field">
+                            <div class="field__field">
+                                <input class="fileupload" type="file" name="file">
+                                <button class="field__btn-file" type="button" id="fileupload" onclick="$('.fileupload').trigger('click');">
+                                    <svg class="svg-icon svg-icon--upload">
+                                        <use xlink:href="#upload"></use>
+                                    </svg>
+                                    <span>Добавить фото</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fieldline">
+                        <div id="files"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="form-review__buttons">
+                        <button class="button form-review__button button--black" type="submit" id="button-review">
+                            <span class="button__caption">Отправить</span>
+                        </button>
+                        <button class="button form-review__button button--ghost" type="reset" id="button-reset">
+                            <span class="button__caption">Очистить</span>
                         </button>
                     </div>
-                </div>
-                <div class="fieldline">
-                    <div id="files"></div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="form-review__buttons">
-                    <button class="button form-review__button button--black" type="submit" id="button-review">
-                        <span class="button__caption">Отправить</span>
-                    </button>
-                    <button class="button form-review__button button--ghost" type="reset" id="button-reset">
-                        <span class="button__caption">Очистить</span>
-                    </button>
-                </div>
+                </form>
+
+
+
+
+
+
             </div>
         </div>
         <div class="reviews__items grid" id="rjax">

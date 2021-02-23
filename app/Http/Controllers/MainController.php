@@ -28,4 +28,9 @@ class MainController extends Controller
         $view = view('components.product-sizes')->render();
         return response()->json($view, 200);
     }
+
+    public function reviewSuccess() {
+        $view = view('components.review-success')->render();
+        return response()->json($view, 200);
+    }
 }
