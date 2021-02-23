@@ -69,4 +69,22 @@ class CartRepository implements CartRepositoryInterface {
             return null;
         }
     }
+
+    public function getFinalTotalByToken($token)
+    {
+        $cart = Cart::restore($token)->content();
+        if (isset($cart)) {
+            $sum = 0;
+            foreach ($cart as $cartItem) {
+                if ($cartItem->options['sale_price']) {
+                    $sum += $cartItem->options['sale_price'] * $cartItem->quantity;
+                } else {
+                    $sum += $cartItem->price * $cartItem->quantity;
+                }
+            }
+            return $sum;
+        } else {
+            return null;
+        }
+    }
 }

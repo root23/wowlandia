@@ -92,6 +92,45 @@
                             </div>
                         @endforeach
                     </div>
+                    <h2 class="product__title">Выбрать размер</h2>
+                    <div class="popup--sizes__sizes__table">
+                        <div class="popup--sizes__col">
+                            <div class="popup--sizes__element">Размер</div>
+                            <div class="popup--sizes__element popup--sizes__element_b">
+                                <div class="form_radio_btn">
+                                    <input class="sizes-radio" id="radio-1" type="radio" name="radio" value="xs-s" checked>
+                                    <label for="radio-1">xs - s</label>
+                                </div>
+                            </div>
+                            <div class="popup--sizes__element popup--sizes__element_b">
+                                <div class="form_radio_btn">
+                                    <input class="sizes-radio" id="radio-2" type="radio" name="radio" value="m-l" checked>
+                                    <label for="radio-2">m - l</label>
+                                </div>
+                            </div>
+                            <div class="popup--sizes__element popup--sizes__element_b">
+                                <div class="form_radio_btn">
+                                    <input class="sizes-radio" id="radio-3" type="radio" name="radio" value="l-xl" checked>
+                                    <label for="radio-3">l - xl</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup--sizes__col">
+                            <div class="popup--sizes__element popup--sizes__element_b">a</div>
+                            <div class="popup--sizes__element">66</div>
+                            <div class="popup--sizes__element">70</div>
+                            <div class="popup--sizes__element">74</div>
+                        </div>
+                        <div class="popup--sizes__col">
+                            <div class="popup--sizes__element popup--sizes__element_b">b</div>
+                            <div class="popup--sizes__element">52</div>
+                            <div class="popup--sizes__element">56</div>
+                            <div class="popup--sizes__element">60</div>
+                        </div>
+                    </div>
+                    <button class="button btn-sizes"  type="submit">
+                        <span class="button__caption">Посмотреть размеры</span>
+                    </button>
                 </div>
                 <div class="product__order">
                     <h3 class="product__title-3">Количество:</h3>
@@ -336,7 +375,13 @@
         </svg>
         <span>Наверх</span>
     </a>
+
+
 </article>
 <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
 @endif
+
+<script type="text/javascript">
+</script>
+

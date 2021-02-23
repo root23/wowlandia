@@ -54,7 +54,7 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 
 
     <a class="btn-cart js-popup header__btn-cart" href="#" role="button" title="Корзина">
-        <svg class="svg-icon svg-icon--cart">
+        <svg class="svg-icon svg-icon--cart"> 
             <use xlink:href="#cart"></use>
         </svg><span class="btn-cart__quantity"></span>
     </a>

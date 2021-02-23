@@ -64,7 +64,7 @@
                 <span class="first__feature-caption">Худи с начесом - трехниточный футер (хлопок) — 90 %, полиэстер — 10 %</span>
             </li>
         </ul>
-        <a class="button first__button js-scrollto button--bi position-linkg" href="#products" role="button">
+        <a class="button first__button js-scrollto button--bi position-link" href="#products" role="button">
             <span class="button__caption ">Подробнее о пазлах</span>
         </a>
     </div>
@@ -249,7 +249,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 </section>
 </main>
 

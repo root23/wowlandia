@@ -238,6 +238,7 @@
         updateCartCount();
         countTotal();
         let csrf = $('input[name=_token]').val();
+        var delivery_type = 'cdek';
 
         var deliveryDate = new Date();
         deliveryDate.setDate(deliveryDate.getDate() + 1);
@@ -491,6 +492,10 @@
 
     // Delivery type change
     $('input[type=radio][name=shipping_method]').change(function () {
+        $('input[type=radio][name=shipping_method]').each(function () {
+            $(this).removeAttr('checked');
+        })
+        $(this).attr('checked', 'checked');
         if (this.value == 'russianpost') {
             $.ajax({
                 url: '/ajax/pochta-count?receiver_zip=' + $('#city-zipcode').val(),
@@ -516,6 +521,49 @@
             getFinal();
         }
     })
+
+    // Send order
+    $('.order__button-submit').on('click', function () {
+        var csrf = $('input[name=_token]').val();
+        let username = $('input[name=name]').val();
+        let phone = $('input[name=phone]').val();
+        let email = $('input[name=email]').val();
+        let address = $('input[name=adres]').val();
+        let city_name = $('input[name=city]').val();
+        let delivery = 'cdek';
+        $('input[type=radio][name=shipping_method]').each(function () {
+            if ($(this).attr('checked') == 'checked') {
+                delivery = $(this).val();
+                return;
+            }
+        })
+        let data = {
+            'username': username,
+            'phone': phone,
+            'email': email,
+            'address': address,
+            'city_name': city_name,
+            'delivery': delivery,
+            'zipcode': $('#city-zipcode').val(),
+        };
+        $.ajax({
+            url: '/ajax/order',
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': csrf,
+            },
+            data: data,
+            success: function (data) {
+                console.log(data);
+            },
+            fail: function (data) {
+                console.log(data);
+            }
+        })
+
+    })
+
+
 
     $('.validation-email').on('blur', function () {
   let email = $(this).val();

@@ -254,6 +254,18 @@ $(document).ready(function(){
                     $('input[name=quantity]').val(parseInt($('input[name=quantity]').val()) + 1);
                 });
 
+                // Sizes
+                $('.btn-sizes').on('click', function () {
+                    $.ajax({
+                        url: '/ajax/sizes',
+                        method: 'get',
+                        success: function (data) {
+                            $('.mfp-content').empty();
+                            $('.mfp-content').append(data);
+                        }
+                    })
+                })
+
                 // Add to cart
                 let csrf = $('input[name=_token]').val();
                 $('#button-cart').on('click', function () {

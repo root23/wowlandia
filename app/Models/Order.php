@@ -16,5 +16,13 @@ class Order extends Model
         'is_paid',
         'description',
         'shopping_cart_id',
+        'username',
+        'phone',
+        'email',
+        'zip_code',
+        'city_name',
+        'address',
+        'total',
+        'delivery_type',
     ];
 }

@@ -47,6 +47,8 @@ Route::get('/ajax/product', 'App\Http\Controllers\Web\Product\ProductController@
 Route::get('/ajax/cart', 'App\Http\Controllers\Web\Cart\CartController@getCartAjax');
 Route::get('/ajax/cart-success', 'App\Http\Controllers\Web\Cart\CartController@getItemAddedToCartPopup');
 Route::get('/ajax/pochta-count', 'App\Http\Controllers\Api\Pochta\PochtaController@calcDelivery');
+Route::post('/ajax/order', 'App\Http\Controllers\Api\Order\OrderController@makeOrder');
+Route::get('/ajax/sizes', 'App\Http\Controllers\MainController@getSizes');
 
 Route::get('/get-token', function () {
    return csrf_token();

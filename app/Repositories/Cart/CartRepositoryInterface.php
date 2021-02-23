@@ -11,5 +11,7 @@ interface CartRepositoryInterface {
 
     public function getFinalTotal();
 
+    public function getFinalTotalByToken($token);
+
     public function getItemsCount(Request $request);
 }

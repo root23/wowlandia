@@ -23,4 +23,9 @@ class MainController extends Controller
         return view('welcome')
             ->with(compact('products'));
     }
+
+    public function getSizes() {
+        $view = view('components.product-sizes')->render();
+        return response()->json($view, 200);
+    }
 }
