@@ -118,6 +118,12 @@ Route::screen('product_variant/{product_variant?}', ProductVariantEditScreen::cl
 Route::screen('product_variants', ProductVariantListScreen::class)
     ->name('platform.product-variants.list');
 
+// Platform > Product types
+Route::screen('product_type/{product_type?}', \App\Orchid\Screens\ProductTypeEditScreen::class)
+    ->name('platform.product-type.edit');
+Route::screen('product_types', \App\Orchid\Screens\ProductTypeListScreen::class)
+    ->name('platform.product-types.list');
+
 // Platform > Product Reviews
 Route::screen('review/{review?}', ReviewEditScreen::class)
     ->name('platform.review.edit');
