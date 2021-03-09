@@ -184,3 +184,57 @@ git status
 git add .
 git commit -m "upd cdek calculator"
 git push
+git status
+git add .
+git commit -m "cart final price counting"
+git push
+git status
+git add .
+git commit -m "front fixes cart"
+git push
+git pull
+composer-php7.4 install
+git status
+git add .
+git commit -m "upd pochta calculator"
+git push
+php7.4 make:migration add_delivery_column_to_orders_table
+php7.4 artisan make:migration add_delivery_column_to_orders_table
+php7.4 artisan migrate
+git status
+git add .
+git commit -m "
+fix sizes popup and order backend"
+git push
+git status
+git add .
+git commit -m "add order success popup"
+git status
+git add .
+git commit -m "add fields to order admin"
+git push
+mc
+git status
+git add .
+git commit -m "review status message added"
+git push
+git status
+git add .
+git commit -m "review fixes front"
+git push
+git status
+git add .
+git commit -m "upd product-cart front"
+git push
+git status
+git add .
+git commit -m "front fix"
+git push
+git status
+git add .
+git commit -m "cart front fixes and index page"
+git push
+git status
+git add .
+git commit -m "add product size to order"
+git push

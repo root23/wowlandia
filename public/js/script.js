@@ -94,6 +94,14 @@ $(document).ready(function(){
         fixedContentPos: false
     });
 
+    $('.c-product__image-link').magnificPopup({
+         type: 'image',
+         zoom: {
+             enabled: true,
+             duration: 300 // продолжительность анимации. Не меняйте данный параметр также и в CSS
+         }
+    })
+
 	$('.c-product__images').slick({
 
 	  fade: true,
@@ -256,12 +264,15 @@ $(document).ready(function(){
 
                 // Sizes
                 $('.btn-sizes').on('click', function () {
+                    var productId = $(this).find('.button__caption').data('product-id');
+                    console.log(productId);
                     $.ajax({
-                        url: '/ajax/sizes',
+                        url: '/ajax/sizes?product_id=' + productId,
                         method: 'get',
                         success: function (data) {
                             $('.mfp-content').empty();
                             $('.mfp-content').append(data);
+
                         }
                     })
                 })

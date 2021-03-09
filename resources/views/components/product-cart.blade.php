@@ -128,7 +128,7 @@
                         </div>
                     </div>
                     <button class="button btn-sizes"  type="submit">
-                        <span class="button__caption">Посмотреть размеры</span>
+                        <span class="button__caption" data-product-id="{{ $product->id }}">Посмотреть размеры</span>
                     </button>
                 </div>
                 <div class="product__order">

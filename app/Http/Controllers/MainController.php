@@ -24,8 +24,11 @@ class MainController extends Controller
             ->with(compact('products'));
     }
 
-    public function getSizes() {
-        $view = view('components.product-sizes')->render();
+    public function getSizes(Request $request) {
+        $productId = $request->get('product_id');
+        $view = view('components.product-sizes')
+            ->with('product_id', $productId)
+            ->render();
         return response()->json($view, 200);
     }
 

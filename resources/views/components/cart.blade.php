@@ -36,7 +36,7 @@
 
                                     <div class="order__item-info">
                                         <h3 class="order__item-title">{{ $item->name }}</h3>
-                                        <p class="order__item-description">Размер: S (A5) – 15x26 см , Деталей: 101 шт.</p>
+                                        <p class="order__item-description">Размер: {{ $item->options['size'] }}</p>
                                     </div>
 
                                     <div class="order__item-price">
@@ -288,13 +288,15 @@
         $('.order__item-quantity').find('.field__plus').on('click', function () {
             let field = $(this).parent().find('input');
             let productId = field.data('product-id')
+            let productSize = $(this).parent().parent().parent().find('.order__item-description').text();
+            productSize = productSize.replace(/^.{7}/, '');
             $.ajax({
                 url: '/cart/1',
                 method: 'put',
                 data: {
                     'product_id': productId,
                     'action': 'add',
-                    'size': 'm',
+                    'size': productSize,
                     'quantity': 1,
                 },
                 headers: {

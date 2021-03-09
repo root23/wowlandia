@@ -1,4 +1,4 @@
-<div class="popup__top">
+<div class="popup__top" id="cart-success-popup">
     <button class="popup__btn-close js-popup-close" type="button" title="Закрыть"></button>
 </div>
 <article class="success popup--success">
@@ -24,5 +24,8 @@
         $.magnificPopup.close();
         $('.header__btn-cart').click();
 
+    })
+    $(document).ready(function () {
+        $("html, body").animate({scrollTop: $('#cart-success-popup').offset().top+"px"});
     })
 </script>

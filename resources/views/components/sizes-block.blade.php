@@ -25,9 +25,9 @@
                 <div class="c-size__main">
                     <p class="c-size__price">3 390 руб. <span class="c-size__price-unit">/ 1 шт.</span></p>
                     <ul class="c-size__list">
-                        <li>Состав ткани: трехниточный футер: 90 % — хлопок, 10 % — полиэстер</li>
+                        <li>Состав ткани: 90 % — премиальный хлопок, 10 % — полиэстер</li>
                         <li>Плотность ткани: 320 г/м²</li>
-                        <li>Цвета: черные и белые</li>
+                        <li>Цвет: черный</li>
                         <li>Срок изготовления: 1 день</li>
                     </ul>
                 </div>
@@ -49,15 +49,15 @@
             </div>
             <div class="c-size sizes__item">
                 <div class="c-size__header">
-                    <h3 class="c-size__title">Парные футболки</h3><span class="c-size__ribbon">Идеально для парочек</span>
+                    <h3 class="c-size__title">Парные худи</h3><span class="c-size__ribbon">Идеально для парочек</span>
                 </div>
                 <div class="c-size__main">
-                    <p class="c-size__price">2 990 руб. <span class="c-size__price-unit">/ 2 шт. (с одним дизайном, разных размеров и цветов)
+                    <p class="c-size__price">6 990 руб. <span class="c-size__price-unit">/ 2 шт. (с одним дизайном, разных размеров и цветов)
                     </span></p>
                     <ul class="c-size__list">
-                        <li>100% премиальный хлопок</li>
-                        <li>Плотность ткани: 180 г/м²</li>
-                        <li>Цвета: черные и белые</li>
+                        <li>Состав ткани: 90 % — премиальный хлопок, 10 % — полиэстер</li>
+                        <li>Плотность ткани: 320 г/м</li>
+                        <li>Цвет: черный</li>
                         <li>Срок изготовления: 1 день</li> 
                     </ul>
                 </div>

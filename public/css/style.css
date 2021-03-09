@@ -2580,6 +2580,13 @@ img.mfp-img {
     -webkit-flex-flow: row nowrap;
         -ms-flex-flow: row nowrap;
 }
+.field__stars::before {
+    display: inline-block;
+    content: "\73\73\73\73\73";
+    color: #ff7607;
+    position: absolute;
+    z-index: -1;
+}
 
 .field__star {
     display: inline-block;
@@ -2592,6 +2599,10 @@ img.mfp-img {
        -moz-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
+        transition: opacity .3s linear;
+}
+.field__star.not-active{
+    opacity: 0
 }
 
 .field__star::before {
@@ -2601,7 +2612,7 @@ img.mfp-img {
 }
 
 .field__star:not(:last-child) {
-    margin-right: 3px;
+    margin-right: 0px;
 }
 
 .field[data-value="1"] .field__star:nth-child(1)::before {
@@ -10072,4 +10083,7 @@ input:checked+ .radio-size__label::after {
 }
 .btn-sizes{
 	margin-bottom: 30px;
+}
+.mfp-image-holder .mfp-content{
+    background-color: transparent;
 }

@@ -115,7 +115,7 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 <section class="first page__first" id="first">
     <div class="first__container">
         <h1 class="first__title">Дизайны вышивок</h1>
-        <p class="first__pretitle">Есть доставка на дом. Индивидуальное изготовление 2 дня</p>
+        <p class="first__pretitle">Есть доставка на дом. Индивидуальное изготовление 1 день</p>
         <ul class="first__features">
             <li class="first__feature">
                 <img class="first__feature-img" src="img/first-feature-1.png" width="60" height="60" alt="Все детали уникальной формы" />
@@ -123,11 +123,11 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
             </li>
             <li class="first__feature">
                 <img class="first__feature-img" src="img/first-feature-2.png" width="60" height="60" alt="Прочные, толщиной 3мм" />
-                <span class="first__feature-caption"><b>изделия сшиты из премиальных материалов</b><br> (футболки 100% хлопок<br> и худи с начесом 80% хлопок, 20% полиэстер)</span>
+                <span class="first__feature-caption"><b>изделия сшиты из премиальных материалов</b><br> футболки 100% хлопок<br> и худи с начесом 80% хлопок, 20% полиэстер</span>
             </li>
         </ul>
         <a class="button first__button js-scrollto button--bi position-link" href="#products" role="button">
-            <span class="button__caption ">Подробнее о пазлах</span>
+            <span class="button__caption ">Подробнее о вышивках</span>
         </a>
     </div>
 </section>
@@ -150,20 +150,20 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
             <h2 class="title package__title">Сразу в&nbsp;подарочной упаковке</h2>
             <div class="package__images">
                 <figure class="package__image">
-                    <img src="img/package/package-1.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
+                    <img src="img/package/package-1.png" width="715" height="440" alt="Сразу в подарочной упаковке" />
                 </figure>
                 <figure class="package__image">
-                    <img src="img/package/package-2.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
+                    <img src="img/package/package-2.png" width="715" height="440" alt="Сразу в подарочной упаковке" />
                 </figure>
                 <figure class="package__image">
-                    <img src="img/package/package-3.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
+                    <img src="img/package/package-3.png" width="715" height="440" alt="Сразу в подарочной упаковке" />
                 </figure>
                 <figure class="package__image">
-                    <img src="img/package/package-4.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
+                    <img src="img/package/package-4.png" width="715" height="440" alt="Сразу в подарочной упаковке" />
                 </figure>
             </div>
             <div class="package__text">
-                <p>Подарок, который удивит и запомнится. Каждая головоломка упакована в подарочную деревянную коробку премиум-класса.</p>
+                <p>Подарок, который удивит и запомнится. Футболки и худи сделаны из премиальных материалов. А сама вышивка очень плотная и выполнена из шелка.</p>
             </div>
             <div class="package__button-wrapper"><a class="button package__button js-scrollto position-link" href="#products" role="button"><span class="button__caption" >Заказать подарок</span></a></div>
         </div>
@@ -172,7 +172,7 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 
 <section class="videos page__videos" id="videos">
     <div class="videos__container">
-        <h2 class="title videos__title">Видео наших пазлов</h2>
+        <h2 class="title videos__title">Видео наших вышивок</h2>
         <div class="videos__items">
             <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=0XktFb_pVCQ">
                 <img class="c-video__img" src="img/videos/video-1.jpg" width="358" height="238" alt="" />
@@ -235,7 +235,7 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
                     <div class="faq__item">
                         <h3 class="faq__question"><button>Работаете ли вы с юридическими лицами?</button></h3>
                         <div class="faq__answer" style="display: none;">
-                            <p>Да, мы работаем с юридическими лицами. Наши пазлы вы можете оплатить по безналичному расчету с юридического лица без НДС.</p>
+                            <p>Да, мы работаем с юридическими лицами. Наши футболки и худи с вышивками вы можете оплатить по безналичному расчету с юридического лица без НДС.</p>
                         </div>
                     </div>
                 </div>
@@ -245,12 +245,6 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
             <div class="testimonials__container">
                 <h2 class="title faq__title">Отзывы</h2>
                 <div class="testimonials__items">
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2474.PNG" width="310" height="590" alt="Отзыв 1" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2475.PNG" width="310" height="590" alt="Отзыв 2" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2476.PNG" width="310" height="590" alt="Отзыв 3" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2477.PNG" width="310" height="590" alt="Отзыв 4" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2478.PNG" width="310" height="590" alt="Отзыв 5" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2479.PNG" width="310" height="590" alt="Отзыв 6" /></figure>
                     <figure class="testimonials__item"><img src="/img/reviews/IMG_2480.PNG" width="310" height="590" alt="Отзыв 7" /></figure>
                     <figure class="testimonials__item"><img src="/img/reviews/IMG_2481.PNG" width="310" height="590" alt="Отзыв 8" /></figure>
                     <figure class="testimonials__item"><img src="/img/reviews/IMG_2482.PNG" width="310" height="590" alt="Отзыв 9" /></figure>
@@ -258,6 +252,12 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
                     <figure class="testimonials__item"><img src="/img/reviews/IMG_2484.PNG" width="310" height="590" alt="Отзыв 11" /></figure>
                     <figure class="testimonials__item"><img src="/img/reviews/IMG_2485.PNG" width="310" height="590" alt="Отзыв 12" /></figure>
                     <figure class="testimonials__item"><img src="/img/reviews/IMG_2486.PNG" width="310" height="590" alt="Отзыв 13" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2474.PNG" width="310" height="590" alt="Отзыв 1" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2475.PNG" width="310" height="590" alt="Отзыв 2" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2476.PNG" width="310" height="590" alt="Отзыв 3" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2477.PNG" width="310" height="590" alt="Отзыв 4" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2478.PNG" width="310" height="590" alt="Отзыв 5" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2479.PNG" width="310" height="590" alt="Отзыв 6" /></figure>
                 </div>
             </div>
         </section>
@@ -309,8 +309,7 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 </main>
 
 <footer class="footer page__footer">
-    <script>
-    </script>
+    @include('components.footer')
 </footer>
 
 <!-- Google Tag Manager (noscript) -->
