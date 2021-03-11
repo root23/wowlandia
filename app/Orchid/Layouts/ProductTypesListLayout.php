@@ -31,7 +31,7 @@ class ProductTypesListLayout extends Table
 
             TD::make('title', 'Имя')
                 ->render(function (ProductType $productType) {
-                    return Link::make('Перейти')
+                    return Link::make($productType->title)
                         ->route('platform.product-type.edit', $productType);
                 }),
 
