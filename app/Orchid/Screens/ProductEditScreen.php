@@ -106,11 +106,6 @@ class ProductEditScreen extends Screen
                     ->title('Выберите тэги')
                     ->multiple(),
 
-//                Input::make('product.tag')
-//                    ->title('Тег')
-//                    ->placeholder('Введите тег товара')
-//                    ->help('Тег товара'),
-
                 Group::make([
                     Input::make('product.delivery_width')
                         ->title('Ширина (доставка)')
