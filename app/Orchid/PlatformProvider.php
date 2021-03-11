@@ -39,6 +39,10 @@ class PlatformProvider extends OrchidServiceProvider
                 ->icon('grid')
                 ->route('platform.product-variants.list'),
 
+            ItemMenu::label('Тэги товаров')
+                ->icon('tag')
+                ->route('platform.product-types.list'),
+
             ItemMenu::label('Отзывы')
                 ->icon('star')
                 ->route('platform.reviews.list')

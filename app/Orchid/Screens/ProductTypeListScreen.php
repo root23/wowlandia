@@ -2,6 +2,9 @@
 
 namespace App\Orchid\Screens;
 
+use App\Models\ProductType;
+use App\Orchid\Layouts\ProductTypesListLayout;
+use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Screen;
 
 class ProductTypeListScreen extends Screen
@@ -11,14 +14,14 @@ class ProductTypeListScreen extends Screen
      *
      * @var string
      */
-    public $name = 'ProductTypeListScreen';
+    public $name = 'Тэги';
 
     /**
      * Display header description.
      *
      * @var string|null
      */
-    public $description = 'ProductTypeListScreen';
+    public $description = 'Все тэги';
 
     /**
      * Query data.
@@ -27,7 +30,9 @@ class ProductTypeListScreen extends Screen
      */
     public function query(): array
     {
-        return [];
+        return [
+            'productTypes' => ProductType::paginate()
+        ];
     }
 
     /**
@@ -37,7 +42,11 @@ class ProductTypeListScreen extends Screen
      */
     public function commandBar(): array
     {
-        return [];
+        return [
+            Link::make('Добавить')
+                ->icon('pencil')
+                ->route('platform.product-type.edit')
+        ];
     }
 
     /**
@@ -47,6 +56,8 @@ class ProductTypeListScreen extends Screen
      */
     public function layout(): array
     {
-        return [];
+        return [
+            ProductTypesListLayout::class,
+        ];
     }
 }
