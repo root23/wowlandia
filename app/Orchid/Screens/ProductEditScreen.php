@@ -3,9 +3,11 @@
 namespace App\Orchid\Screens;
 
 use App\Models\Product;
+use App\Models\ProductType;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Cropper;
 use Orchid\Screen\Fields\Group;
+use Orchid\Screen\Fields\Relation;
 use Orchid\Screen\Fields\Select;
 use Orchid\Screen\Fields\Upload;
 use Orchid\Support\Facades\Alert;
@@ -99,10 +101,15 @@ class ProductEditScreen extends Screen
                     ->width(430)
                     ->height(430),
 
-                Input::make('product.tag')
-                    ->title('Тег')
-                    ->placeholder('Введите тег товара')
-                    ->help('Тег товара'),
+                Relation::make('product_product_types')
+                    ->fromModel(ProductType::class, 'title')
+                    ->title('Выберите тэги')
+                    ->multiple(),
+
+//                Input::make('product.tag')
+//                    ->title('Тег')
+//                    ->placeholder('Введите тег товара')
+//                    ->help('Тег товара'),
 
                 Group::make([
                     Input::make('product.delivery_width')
