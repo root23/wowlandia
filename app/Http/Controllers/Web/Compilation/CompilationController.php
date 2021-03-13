@@ -21,7 +21,8 @@ class CompilationController extends Controller
     public function show(Request $request)
     {
         $tagId = $request->get('tag_id');
-        if ($request->get('tag_id')) {
+        $products = $this->productRepository->getByTagId($tagId);
+        if ($products->count() > 0) {
             $products = $this->productRepository->getByTagId($tagId);
             return view('compilation')
                 ->with([

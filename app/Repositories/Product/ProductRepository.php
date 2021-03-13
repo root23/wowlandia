@@ -39,7 +39,6 @@ class ProductRepository implements ProductRepositoryInterface {
             $q->where('id', $tagId);
         })
             ->get();
-
         return $products;
     }
 }
