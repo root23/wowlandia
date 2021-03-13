@@ -17,7 +17,7 @@
     <div class="header__nav">
         <nav class="menu header__menu">
             <ul class="menu__items">
-                <li class="menu__item"><a class="js-scrollto position-link" href="#products">Дизайны вышивок</a></li>
+                <li class="menu__item"><a class="js-scrollto position-link" href="#products">Все дизайны вышивок</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#videos">Видео</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#faq">Faq</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#testimonials">Отзывы</a></li>
