@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/', 'App\Http\Controllers\MainController@index');
+Route::get('/compilation/', 'App\Http\Controllers\Web\Compilation\CompilationController@show');
 
 Auth::routes();
 

@@ -32,4 +32,14 @@ class ProductRepository implements ProductRepositoryInterface {
             return null;
         }
     }
+
+    public function getByTagId(int $tagId)
+    {
+        $products = Product::whereHas('types', function($q) use ($tagId) {
+            $q->where('id', $tagId);
+        })
+            ->get();
+
+        return $products;
+    }
 }
