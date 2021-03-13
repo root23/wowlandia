@@ -98,9 +98,9 @@ class ProductTypeEditScreen extends Screen
                     ->help('Имя тэга'),
                 CheckBox::make('productType.is_active')
                     ->value(1)
-                    ->title('Отображать')
-                    ->placeholder('Отображать')
-                    ->help('Отображение на сайте')
+                    ->title('Отображать в меню')
+                    ->placeholder('Отображать в меню')
+                    ->help('Отображение в меню на сайте')
                     ->sendTrueOrFalse(),
             ]),
         ];
