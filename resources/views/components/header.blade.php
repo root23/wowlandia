@@ -22,6 +22,9 @@
                 <li class="menu__item"><a class="js-scrollto position-link" href="#faq">Faq</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#testimonials">Отзывы</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#delivery-block">Доставка и оплата</a></li>
+                @foreach($productTypes as $productType)
+                    <li class="menu__item"><a class="position-link" href="/compilation?tag_id={{ $productType->id }}">{{ $productType->title }}</a></li>
+                @endforeach
             </ul>
         </nav>
         <a class="email email--header header__email" href="mailto:info@wowlandia.ru">

@@ -23,6 +23,7 @@ class CompilationController extends Controller
     {
         $tagId = $request->get('tag_id');
         $productType = ProductType::where('id', $tagId)->first();
+        $productTypes = ProductType::where('is_active', 1)->get();
         $products = $this->productRepository->getByTagId($tagId);
         if ($products->count() > 0) {
             $products = $this->productRepository->getByTagId($tagId);
@@ -30,6 +31,7 @@ class CompilationController extends Controller
                 ->with([
                     'products' => $products,
                     'productType' => $productType,
+                    'productTypes' => $productTypes,
                 ]);
         } else {
             abort(404);

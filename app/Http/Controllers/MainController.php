@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProductType;
 use App\Repositories\Product\ProductRepositoryInterface;
 use Illuminate\Http\Request;
 
@@ -19,9 +20,10 @@ class MainController extends Controller
 
     public function index() {
         $products = $this->productRepository->getAll();
+        $productTypes = ProductType::where('is_active', 1)->get();
 
         return view('welcome')
-            ->with(compact('products'));
+            ->with(compact('products', 'productTypes'));
     }
 
     public function getSizes(Request $request) {
