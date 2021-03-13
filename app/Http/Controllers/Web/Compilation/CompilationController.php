@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web\Compilation;
 
 use App\Http\Controllers\Controller;
+use App\Models\ProductType;
 use App\Repositories\Product\ProductRepositoryInterface;
 use Illuminate\Http\Request;
 
@@ -21,12 +22,14 @@ class CompilationController extends Controller
     public function show(Request $request)
     {
         $tagId = $request->get('tag_id');
+        $productType = ProductType::where('id', $tagId)->first();
         $products = $this->productRepository->getByTagId($tagId);
         if ($products->count() > 0) {
             $products = $this->productRepository->getByTagId($tagId);
             return view('compilation')
                 ->with([
-                    'products' => $products
+                    'products' => $products,
+                    'productType' => $productType,
                 ]);
         } else {
             abort(404);

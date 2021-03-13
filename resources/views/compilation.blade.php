@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>wowlandia.ru</title>
+    <title>wowlandia.ru - Дизайн {{ $productType->title }}</title>
 
     <link rel="stylesheet" href="font/stylesheet.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -134,7 +134,7 @@
 
 <section class="products page__products" id="products">
     <div class="products__container">
-        <h2 class="title products__title">Выберите свой дизайн</h2>
+        <h2 class="title products__title">Дизайн {{ $productType->title }}</h2>
         <div class="products__items">
             @include('components.product-list')
         </div>
