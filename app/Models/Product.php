@@ -34,6 +34,6 @@ class Product extends Model
 
     public function types()
     {
-        return $this->belongsToMany(ProductType::class);
+        return $this->belongsToMany(ProductType::class, 'product_product_types', 'product_id', 'product_type_id');
     }
 }

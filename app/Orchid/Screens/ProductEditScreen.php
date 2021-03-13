@@ -50,6 +50,7 @@ class ProductEditScreen extends Screen
         }
 
         $product->load('attachment');
+        $product->load('types');
 
         return [
             'product' => $product,
@@ -101,7 +102,7 @@ class ProductEditScreen extends Screen
                     ->width(430)
                     ->height(430),
 
-                Relation::make('product_product_types')
+                Select::make('product.types.')
                     ->fromModel(ProductType::class, 'title')
                     ->title('Выберите тэги')
                     ->multiple(),
@@ -143,6 +144,8 @@ class ProductEditScreen extends Screen
      */
     public function createOrUpdate(Product $product, Request $request) {
         $product->fill($request->get('product'))->save();
+        $product->types()->sync($request->get('product')['types'], true);
+        $product->save();
 
         $product->attachment()->syncWithoutDetaching(
             $request->input('product.attachment', [])
