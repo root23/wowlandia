@@ -1,5 +1,6 @@
 @if ($product)
 @csrf
+
 <div class="popup__top">-
     <a class="popup__link-back js-popup-close" href="#">
         <svg class="svg-icon svg-icon--arrow-left">
