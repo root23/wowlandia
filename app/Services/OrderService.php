@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Http\Controllers\Mail\OrderMailController;
 use App\Models\Order;
 use App\Repositories\Cart\CartRepositoryInterface;
 use GuzzleHttp\Client;
@@ -75,6 +76,8 @@ class OrderService {
         $order->total = $finalPrice;
         $order->delivery_type = $request->get('delivery');
         $order->save();
+
+        OrderMailController::sendEmail($order->id);
 
         return $paymentData;
     }

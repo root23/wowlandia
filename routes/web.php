@@ -56,7 +56,6 @@ Route::get('/ajax/sizes', 'App\Http\Controllers\MainController@getSizes');
 Route::post('/ajax/order-success', 'App\Http\Controllers\Web\Order\OrderController@showOrderSuccessPopup');
 Route::get('/ajax/reviews', 'App\Http\Controllers\Web\Review\ReviewController@loadMore');
 
-
 Route::get('/get-token', function () {
    return csrf_token();
 });
