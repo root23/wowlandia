@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Mail;
 
 class OrderMailController extends Controller
 {
-    public static function sendEmail(int $orderId)
+    public static function sendEmail(Request $request)
     {
         $data = [
-            'orderId' => $orderId
+            'orderId' => $request->get('order_id'),
         ];
 
         Mail::to(env('ORDER_MAIL_ADDRESS'))->send(new OrderMail($data));

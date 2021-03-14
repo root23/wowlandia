@@ -9,6 +9,7 @@ use GuzzleHttp\Client;
 use Idma\Robokassa\Payment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 
 class OrderService {
 
@@ -76,6 +77,11 @@ class OrderService {
         $order->total = $finalPrice;
         $order->delivery_type = $request->get('delivery');
         $order->save();
+
+        // Send email
+        $response = Http::get('http://wowlandia.test/send-mail-order', [
+            'order_id' => $order->id,
+        ]);
 
         return $paymentData;
     }
