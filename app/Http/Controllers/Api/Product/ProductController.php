@@ -26,6 +26,7 @@ class ProductController extends Controller
     public function index()
     {
         $products = $this->repository->getAll();
+        $products->load('attachment');
         if (!$products) {
             return response()->json(null, 204);
         } else {
