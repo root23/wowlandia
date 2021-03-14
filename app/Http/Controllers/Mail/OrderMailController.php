@@ -16,6 +16,6 @@ class OrderMailController extends Controller
             'orderId' => $orderId
         ];
 
-        Mail::to('Artyom.bubnoff@gmail.com')->send(new OrderMail($data));
+        Mail::to(env('ORDER_MAIL_ADDRESS'))->send(new OrderMail($data));
     }
 }
