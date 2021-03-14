@@ -8384,7 +8384,7 @@ input:checked+ .radio-size__label::after {
     }
 
     .sizes__main::before {
-        position: absolute; 
+        position: absolute;
         top: 62px;
         right: 0;
         bottom: 0;
@@ -10079,11 +10079,29 @@ input:checked+ .radio-size__label::after {
 	padding: 10px 8px;
 }
 .pay--link{
-    color:  #ff7607!important;    
+    color:  #ff7607!important;
 }
 .btn-sizes{
 	margin-bottom: 30px;
 }
 .mfp-image-holder .mfp-content{
     background-color: transparent;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 7px;
+}
+.link-dropdown:hover .dropdown-content {display: block;}
+.dropdown-content:hover {display: block;}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }

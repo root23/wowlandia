@@ -17,14 +17,21 @@
     <div class="header__nav">
         <nav class="menu header__menu">
             <ul class="menu__items">
-                <li class="menu__item"><a class="js-scrollto position-link" href="#products">Все дизайны вышивок</a></li>
+                <li class="menu__item link-dropdown">
+                    <a class="js-scrollto position-link " href="#products">
+                        Все дизайны вышивок
+                        <div class="dropdown-content">
+                            @foreach($productTypes as $productType)
+                                <a href="/compilation?tag_id={{ $productType->id }}">{{ $productType->title }}</a>
+                            @endforeach
+                        </div>
+                    </a>
+
+                </li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#videos">Видео</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#faq">Faq</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#testimonials">Отзывы</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#delivery-block">Доставка и оплата</a></li>
-                @foreach($productTypes as $productType)
-                    <li class="menu__item"><a class="position-link" href="/compilation?tag_id={{ $productType->id }}">{{ $productType->title }}</a></li>
-                @endforeach
             </ul>
         </nav>
         <a class="email email--header header__email" href="mailto:info@wowlandia.ru">
