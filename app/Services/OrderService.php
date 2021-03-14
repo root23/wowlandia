@@ -77,8 +77,6 @@ class OrderService {
         $order->delivery_type = $request->get('delivery');
         $order->save();
 
-        OrderMailController::sendEmail($order->id);
-
         return $paymentData;
     }
 
