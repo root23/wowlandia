@@ -342,8 +342,10 @@ $(document).ready(function(){
                 })
                 $('.slideshow__items').slick({
                     slidesToShow: 1,
-                    fade: false
+                    fade: false,
+                    infinite: true,
                 });
+                $('.slideshow__items').slick('refresh');
 
             },
             close: function() {
