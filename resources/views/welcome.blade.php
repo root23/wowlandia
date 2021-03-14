@@ -175,15 +175,15 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
         <h2 class="title videos__title">Видео наших вышивок</h2>
         <div class="videos__items">
             <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=0XktFb_pVCQ">
-                <img class="c-video__img" src="img/videos/video-1.jpg" width="358" height="238" alt="" />
+                <img class="c-video__img" src="img/videos/video-1.png" width="358" height="238" alt="" />
                 <span class="c-video__icon"></span>
             </a>
             <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=nbgu5mVR-_I">
-                <img class="c-video__img" src="img/videos/video-2.jpg" width="358" height="238" alt="" />
+                <img class="c-video__img" src="img/videos/video-2.png" width="358" height="238" alt="" />
                 <span class="c-video__icon"></span>
             </a>
             <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=7AhRAsd0xUc">
-                <img class="c-video__img" src="img/videos/video-3.jpg" width="358" height="238" alt="" />
+                <img class="c-video__img" src="img/videos/video-3.png" width="358" height="238" alt="" />
                 <span class="c-video__icon"></span>
             </a>
             <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=NuFn4nTrZSY">

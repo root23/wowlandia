@@ -20,13 +20,13 @@
 {{--                            <a href="" tabindex="0">--}}
 {{--                                <img src="{{ $product->cover_image }}" alt="{{ $product->title }}">--}}
 {{--                            </a>--}}
-{{--                        </div--}}
+{{--                        </div>--}}
                         @foreach($product->attachment as $item)
                             <div class="slideshow__item">
                                 <a href="" tabindex="0">
                                     <img src="/storage/{{ $item->path }}{{ $item->name }}.{{ $item->extension }}" alt="{{ $product->title }}">
                                 </a>
-                            </div
+                            </div>
                         @endforeach
                     </div>
 

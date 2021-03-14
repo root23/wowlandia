@@ -238,3 +238,33 @@ git status
 git add .
 git commit -m "add product size to order"
 git push
+ls
+clear
+php7.4 artisan --version
+git status
+git add .
+git commit -m "upd"
+git push
+git status
+git pull
+php7.4 artisan migrate
+git pull
+git pull
+php7.4 artisan migrate
+git pull
+git pull
+git pull
+mcedit
+mc
+git pull
+git pull
+git pull
+git pull
+git pull
+mc
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
