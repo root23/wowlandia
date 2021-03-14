@@ -79,7 +79,7 @@ class OrderService {
         $order->save();
 
         // Send email
-        $response = Http::get('http://wowlandia.test/send-mail-order', [
+        $response = Http::get('https://wowlandia.ru/send-mail-order', [
             'order_id' => $order->id,
         ]);
 
