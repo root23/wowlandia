@@ -78,11 +78,6 @@ class OrderService {
         $order->delivery_type = $request->get('delivery');
         $order->save();
 
-        // Send email
-        $response = Http::get('https://wowlandia.ru/send-mail-order', [
-            'order_id' => $order->id,
-        ]);
-
         return $paymentData;
     }
 
