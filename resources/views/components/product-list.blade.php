@@ -2,7 +2,7 @@
     <article class="c-product products__item">
         <div class="c-product__images">
             <figure class="c-product__image">
-                <a class="c-product__image-link" href="/ajax/product?id={{ $product->id }}"><img src="{{ $product->cover_image }}" alt="{{ $product->title }}" /></a>
+                <a class="js-popup open-cart" href="/ajax/product?id={{ $product->id }}"><img src="{{ $product->cover_image }}" alt="{{ $product->title }}" /></a>
             </figure>
         </div>
         <h3 class="c-product__title">
