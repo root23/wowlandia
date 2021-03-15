@@ -126,21 +126,8 @@ class ProductVariantEditScreen extends Screen
                         ->title('Цвет')
                         ->help('Цвет товара')
                         ->options([
-                            'black' => 'Черный',
-                            'white' => 'Белый',
-                        ])
-                        ->empty('not_defined'),
-
-                    Select::make('product.size')
-                        ->title('Размер')
-                        ->help('Размер товара')
-                        ->options([
-                            's' => 'S',
-                            'm' => 'M',
-                            'l' => 'L',
-                            'xl' => 'XL',
-                            'xxl' => 'XXL',
-                            '3xl' => '3XL',
+                            'Черный' => 'Черный',
+                            'Белый' => 'Белый',
                         ])
                         ->empty('not_defined'),
 
