@@ -18,7 +18,7 @@
         <nav class="menu header__menu">
             <ul class="menu__items">
                 <li class="menu__item link-dropdown">
-                    <a class="js-scrollto position-link " href="#products">
+                    <a class="js-scrollto position-link " href="/">
                         Все дизайны вышивок
                         <div class="dropdown-content">
                             @foreach($productTypes as $productType)
