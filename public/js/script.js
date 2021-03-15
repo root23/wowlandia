@@ -94,13 +94,13 @@ $(document).ready(function(){
         fixedContentPos: false
     });
 
-    $('.c-product__image-link').magnificPopup({
-         type: 'image',
-         zoom: {
-             enabled: true,
-             duration: 300 // продолжительность анимации. Не меняйте данный параметр также и в CSS
-         }
-    })
+    // $('.c-product__image-link').magnificPopup({
+    //      type: 'image',
+    //      zoom: {
+    //          enabled: true,
+    //          duration: 300 // продолжительность анимации. Не меняйте данный параметр также и в CSS
+    //      }
+    // })
 
 	$('.c-product__images').slick({
 
@@ -193,6 +193,9 @@ $(document).ready(function(){
     }
 
     $('.btn-cart').click(function () {
+        loadCart();
+    });
+    $('.c-product__image-link').click(function () {
         loadCart();
     });
 
