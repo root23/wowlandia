@@ -3,6 +3,7 @@
 namespace App\Notifications;
 
 use App\Models\Order;
+use App\Repositories\Cart\CartRepository;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -46,13 +47,19 @@ class OrderCreatedNotification extends Notification
      */
     public function toMail($notifiable)
     {
+        $cartRepository = new CartRepository();
+        $cart = $cartRepository->getByToken($this->order->shopping_cart_id);
         $data = [
             'orderId' => $this->order->id,
         ];
         return (new MailMessage)
             ->from(env('MAIL_USERNAME'), 'order@wowlandia.ru')
             ->theme("Информация о новом заказе на wowlandia.ru")
-            ->view('mail.order-mail', ['mailData' => $data]);
+            ->view('mail.order-mail',
+                [
+                    'mailData' => $data,
+                    'cart' => $cart->content(),
+                ]);
     }
 
     /**
