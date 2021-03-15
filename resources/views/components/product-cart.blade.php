@@ -103,6 +103,12 @@
                     <div class="popup--sizes__sizes__table">
                         <div class="popup--sizes__col">
                             <div class="popup--sizes__element">Размер</div>
+                            <select>
+                                <option value="2xs">2xs</option>
+                                <option value="2xs">2xs</option>
+                                <option value="2xs">2xs</option>
+                                <option value="2xs">2xs</option>
+                            </select>
                             <div class="popup--sizes__element popup--sizes__element_b">
                                 <div class="form_radio_btn">
                                     <input class="sizes-radio" id="radio-1" type="radio" name="radio-size" value="xs-s" checked>
