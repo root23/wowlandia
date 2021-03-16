@@ -69,7 +69,8 @@ class PaymentController extends Controller
                 'payment_id' => $payment->getInvoiceId(),
             ], 200);
         } elseif ($action == 'success') {
-            return redirect('/');
+            return redirect('/')
+                ->with('order_payment', 'ok');
         } elseif ($action == 'result') {
 
         }

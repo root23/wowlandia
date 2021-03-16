@@ -112,6 +112,11 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 @if (session('status'))
     @include('components.review-success')
 @endif
+@if (session('order_payment'))
+    <script>
+        ym(72610810,'reachGoal','order-ok');
+    </script>
+@endif
 <section class="first page__first" id="first">
     <div class="first__container">
         <h1 class="first__title">Дизайны вышивок</h1>
