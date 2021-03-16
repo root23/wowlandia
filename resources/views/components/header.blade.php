@@ -3,7 +3,7 @@
 
 <div class="header__container"><button class="btn-menu header__btn-menu" type="button" title="Меню"><span class="btn-menu__in"></span></button>
     <div class="logo logo--header header__logo">
-        <img src="img/Logo.png"  height="50" alt="unidragon.ru" />
+        <img src="img/Logo.png" class="mob-logo" width="220px" alt="unidragon.ru" />
         <img src="img/Logo.png" height="61" alt="unidragon.ru" />
     </div>
 

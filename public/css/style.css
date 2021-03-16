@@ -6733,6 +6733,9 @@ input:checked+ .radio-size__label::after {
         padding-right: 45px;
         padding-left: 45px;
     }
+    .logo img:first-child {
+        width: 220px;
+    }
 }
 
 @media only screen and (min-width: 740px) {
