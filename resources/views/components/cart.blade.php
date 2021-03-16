@@ -554,6 +554,7 @@
 
     // Send order
     $('.order__button-submit').on('click', function () {
+        ym(72610810,'reachGoal','order-created');
         var csrf = $('input[name=_token]').val();
         let username = $('input[name=name]').val();
         let phone = $('input[name=phone]').val();
