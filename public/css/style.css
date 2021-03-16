@@ -6733,7 +6733,7 @@ input:checked+ .radio-size__label::after {
         padding-right: 45px;
         padding-left: 45px;
     }
-    .logo img:first-child {
+    .logo--header img:first-child {
         width: 220px;
     }
 }
