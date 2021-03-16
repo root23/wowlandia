@@ -10100,8 +10100,12 @@ input:checked+ .radio-size__label::after {
     z-index: 1;
     margin-top: 7px;
 }
-.link-dropdown:hover .dropdown-content {display: block;}
-.dropdown-content:hover {display: block;}
+.link-dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-content:hover {
+    display: block;
+}
 .dropdown-content a {
     color: black;
     padding: 12px 16px;

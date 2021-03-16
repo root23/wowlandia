@@ -18,13 +18,15 @@
         <nav class="menu header__menu">
             <ul class="menu__items">
                 <li class="menu__item link-dropdown">
+                    <ul class="dropdown-menu">
+                        @foreach($productTypes as $productType)
+                            <li>
+                                <a href="/compilation?tag_id={{ $productType->id }}">{{ $productType->title }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
                     <a class="js-scrollto position-link " href="/">
                         Все дизайны вышивок
-                        <div class="dropdown-content">
-                            @foreach($productTypes as $productType)
-                                <a href="/compilation?tag_id={{ $productType->id }}">{{ $productType->title }}</a>
-                            @endforeach
-                        </div>
                     </a>
 
                 </li>
