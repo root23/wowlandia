@@ -93,6 +93,7 @@
                                         <ul class="radio-size__list">
                                             <li>Цвет - {{ $item->color }}</li>
                                         </ul>
+                                        <span class="product-variant_title">{{ $item->title }}</span>
                                     </div>
                                 </label>
 
@@ -102,44 +103,52 @@
                     <h2 class="product__title">Выбрать размер</h2>
                     <div class="popup--sizes__sizes__table">
                         <div class="popup--sizes__col">
-                            <div class="popup--sizes__element">Размер</div>
-                            <select>
-                                <option value="2xs">2xs</option>
-                                <option value="2xs">2xs</option>
-                                <option value="2xs">2xs</option>
-                                <option value="2xs">2xs</option>
-                            </select>
-                            <div class="popup--sizes__element popup--sizes__element_b">
-                                <div class="form_radio_btn">
-                                    <input class="sizes-radio" id="radio-1" type="radio" name="radio-size" value="xs-s" checked>
-                                    <label for="radio-1">xs - s</label>
-                                </div>
+                            <div class="sizes-select">
+                                <select name="product-size" class="product-size-select">
+                                    <option value="2XS">2XS</option>
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="2XL">2XL</option>
+                                    <option value="3XL">3XL</option>
+                                </select>
                             </div>
-                            <div class="popup--sizes__element popup--sizes__element_b">
-                                <div class="form_radio_btn">
-                                    <input class="sizes-radio" id="radio-2" type="radio" name="radio-size" value="m-l" >
-                                    <label for="radio-2">m - l</label>
-                                </div>
-                            </div>
-                            <div class="popup--sizes__element popup--sizes__element_b">
-                                <div class="form_radio_btn">
-                                    <input class="sizes-radio" id="radio-3" type="radio" name="radio-size" value="l-xl" >
-                                    <label for="radio-3">l - xl</label>
-                                </div>
-                            </div>
+
+{{--                            <div class="popup--sizes__element">Размер</div>--}}
+
+{{--                            <div class="popup--sizes__element popup--sizes__element_b">--}}
+{{--                                <div class="form_radio_btn">--}}
+{{--                                    <input class="sizes-radio" id="radio-1" type="radio" name="radio-size" value="xs-s" checked>--}}
+{{--                                    <label for="radio-1">xs - s</label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="popup--sizes__element popup--sizes__element_b">--}}
+{{--                                <div class="form_radio_btn">--}}
+{{--                                    <input class="sizes-radio" id="radio-2" type="radio" name="radio-size" value="m-l" >--}}
+{{--                                    <label for="radio-2">m - l</label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="popup--sizes__element popup--sizes__element_b">--}}
+{{--                                <div class="form_radio_btn">--}}
+{{--                                    <input class="sizes-radio" id="radio-3" type="radio" name="radio-size" value="l-xl" >--}}
+{{--                                    <label for="radio-3">l - xl</label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
-                        <div class="popup--sizes__col">
-                            <div class="popup--sizes__element popup--sizes__element_b">a</div>
-                            <div class="popup--sizes__element">66</div>
-                            <div class="popup--sizes__element">70</div>
-                            <div class="popup--sizes__element">74</div>
-                        </div>
-                        <div class="popup--sizes__col">
-                            <div class="popup--sizes__element popup--sizes__element_b">b</div>
-                            <div class="popup--sizes__element">52</div>
-                            <div class="popup--sizes__element">56</div>
-                            <div class="popup--sizes__element">60</div>
-                        </div>
+{{--                        <div class="popup--sizes__col">--}}
+{{--                            <div class="popup--sizes__element popup--sizes__element_b">a</div>--}}
+{{--                            <div class="popup--sizes__element">66</div>--}}
+{{--                            <div class="popup--sizes__element">70</div>--}}
+{{--                            <div class="popup--sizes__element">74</div>--}}
+{{--                        </div>--}}
+{{--                        <div class="popup--sizes__col">--}}
+{{--                            <div class="popup--sizes__element popup--sizes__element_b">b</div>--}}
+{{--                            <div class="popup--sizes__element">52</div>--}}
+{{--                            <div class="popup--sizes__element">56</div>--}}
+{{--                            <div class="popup--sizes__element">60</div>--}}
+{{--                        </div>--}}
                     </div>
                     <button class="button btn-sizes"  type="submit">
                         <span class="button__caption" data-product-id="{{ $product->id }}">Посмотреть размеры</span>

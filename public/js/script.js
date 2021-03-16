@@ -283,7 +283,8 @@ $(document).ready(function(){
                 // Add to cart
                 let csrf = $('input[name=_token]').val();
                 $('#button-cart').on('click', function () {
-                    var productSize = 'xs-s';
+                    var productSize = $('.product-size-select').val();
+
                     $('input[type=radio][name=radio-size]').each(function () {
                         if ($(this).attr('checked') == 'checked') {
                             productSize = $(this).val();
