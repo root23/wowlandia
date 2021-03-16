@@ -6736,6 +6736,9 @@ input:checked+ .radio-size__label::after {
     .logo--header img:first-child {
         width: 220px;
     }
+    .mobile-compilation {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 740px) {

@@ -165,7 +165,7 @@
                             </div>
                         </div>
 
-                        <button class="button product__button-cart add-to-cart" id="button-cart" type="submit">
+                        <button class="button product__button-cart add-to-cart" id="button-cart" type="submit" onclick="ym(72610810,'reachGoal','added-to-cart'); return true;">
                                 <span class="button__caption">Добавить в корзину</span>
                         </button>
 

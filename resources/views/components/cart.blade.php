@@ -220,7 +220,7 @@
                         <span class="all-total-price">2980 руб.</span>
                     </div>
 
-                    <button class="button order__button-submit" id="checkout_button" type="submit">
+                    <button class="button order__button-submit" id="checkout_button" type="submit" onclick="ym(72610810,'reachGoal','order-created'); return true;">
                         <span class="button__caption">Оформить заказ</span>
                     </button>
                     <div class="alert smp alert-danger alert-dismissible mail-error"></div>

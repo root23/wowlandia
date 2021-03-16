@@ -30,6 +30,13 @@
                     </a>
 
                 </li>
+
+                @foreach($productTypes as $productType)
+                    <li class="mobile-compilation" style="display: none">
+                        <a href="/compilation?tag_id={{ $productType->id }}">{{ $productType->title }}</a>
+                    </li>
+                @endforeach
+
                 <li class="menu__item"><a class="js-scrollto position-link" href="#videos">Видео</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#faq">Faq</a></li>
                 <li class="menu__item"><a class="js-scrollto position-link" href="#testimonials">Отзывы</a></li>
