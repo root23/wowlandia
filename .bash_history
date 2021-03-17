@@ -268,3 +268,37 @@ git pull
 git pull
 git pull
 git pull
+пше ыеф
+git status
+git add .
+git commit -m "product slider fix"
+git push
+git push
+git pull
+git status
+git pull
+git push
+mc
+git status
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+mc
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull

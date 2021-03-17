@@ -6,7 +6,7 @@
         <div class="sizes__items">
             <div class="c-size sizes__item">
                 <div class="c-size__header">
-                    <h3 class="c-size__title">Хлопковые футболки</h3>
+                    <h3 class="c-size__title">Премиальные хлопковые футболки</h3>
                 </div>
                 <div class="c-size__main">
                     <p class="c-size__price">1 690 руб. <span class="c-size__price-unit">/ 1 шт.</span></p>
@@ -20,10 +20,10 @@
             </div>
             <div class="c-size sizes__item">
                 <div class="c-size__header">
-                    <h3 class="c-size__title">Худи</h3>
+                    <h3 class="c-size__title">Премиальные худи с начесом</h3>
                 </div>
                 <div class="c-size__main">
-                    <p class="c-size__price">3 390 руб. <span class="c-size__price-unit">/ 1 шт.</span></p>
+                    <p class="c-size__price">3 590 руб. <span class="c-size__price-unit">/ 1 шт.</span></p>
                     <ul class="c-size__list">
                         <li>Состав ткани: 90 % — премиальный хлопок, 10 % — полиэстер</li>
                         <li>Плотность ткани: 320 г/м²</li>

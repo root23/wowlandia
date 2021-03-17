@@ -18,7 +18,7 @@
                 <div class="slideshow product__slideshow">
                     <div class="slideshow__items js-popup-gallery">
 {{--                        <div class="slideshow__item">--}}
-{{--                            <a href="" tabindex="0">--}}
+{{--                            <a href="{{ $product->cover_image }}" data-fancybox="images" tabindex="0">--}}
 {{--                                <img src="{{ $product->cover_image }}" alt="{{ $product->title }}">--}}
 {{--                            </a>--}}
 {{--                        </div>--}}
@@ -105,8 +105,6 @@
                         <div class="popup--sizes__col">
                             <div class="sizes-select">
                                 <select name="product-size" class="product-size-select">
-                                    <option value="2XS">2XS</option>
-                                    <option value="XS">XS</option>
                                     <option value="S">S</option>
                                     <option value="M">M</option>
                                     <option value="L">L</option>
@@ -151,7 +149,7 @@
 {{--                        </div>--}}
                     </div>
                     <button class="button btn-sizes"  type="submit">
-                        <span class="button__caption" data-product-id="{{ $product->id }}">Посмотреть размеры</span>
+                        <span class="button__caption" data-product-id="{{ $product->id }}">Посмотреть размерную сетку</span>
                     </button>
                 </div>
                 <div class="product__order">
