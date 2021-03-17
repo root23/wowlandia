@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 
 
-
+<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){VK.Retargeting.Init("VK-RTRG-864112-iaj8d"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-864112-iaj8d" style="position:fixed; left:-999px;" alt=""/></noscript>
         <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -329,6 +330,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/Masonry.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/jquery.maskedinput.js"></script>
 

@@ -302,3 +302,10 @@ git pull
 git pull
 git pull
 git pull
+пше ыефегы
+git status
+git add .
+git commit -m "front fixes"
+git push
+git status
+git pull

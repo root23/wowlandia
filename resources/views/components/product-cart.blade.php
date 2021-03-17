@@ -18,13 +18,13 @@
                 <div class="slideshow product__slideshow">
                     <div class="slideshow__items js-popup-gallery">
 {{--                        <div class="slideshow__item">--}}
-{{--                            <a href="{{ $product->cover_image }}" data-fancybox="images" tabindex="0">--}}
+{{--                            <a href="" tabindex="0">--}}
 {{--                                <img src="{{ $product->cover_image }}" alt="{{ $product->title }}">--}}
 {{--                            </a>--}}
 {{--                        </div>--}}
                         @foreach($product->attachment as $item)
                             <div class="slideshow__item">
-                                <a href="" tabindex="0">
+                                <a data-fancybox="images"  href="/storage/{{ $item->path }}{{ $item->name }}.{{ $item->extension }}" alt="{{ $product->title }}" tabindex="0">
                                     <img src="/storage/{{ $item->path }}{{ $item->name }}.{{ $item->extension }}" alt="{{ $product->title }}">
                                 </a>
                             </div>

@@ -2802,6 +2802,7 @@ img.mfp-img {
 .menu__item a {
     text-decoration: none;
     color: inherit;
+    padding-bottom: 10px;
 }
 
 .menu__item a:hover,
@@ -10131,4 +10132,21 @@ input:checked+ .radio-size__label::after {
 .sizes-select select {
     width: 100%;
     height: 50px;
+}
+
+
+@media(max-width: 979px){
+    .dropdown-menu{
+        position: static;
+        overflow-y: hidden;
+        height: 0px;
+        width: 100%;
+        text-align: center;
+        border: none;
+        box-shadow: none;
+        transition: height linear .3s;
+    }
+    .link-dropdown:hover .dropdown-menu{
+        height: 62px;
+    }
 }
