@@ -18,11 +18,11 @@
         <nav class="menu header__menu">
             <ul class="menu__items">
                 <li class="menu__item main-page-link">
-                    <a class="js-scrollto position-link" href="#videos">Главная</a>
+                    <a class="js-scrollto position-link" href="/">Главная</a>
                 </li>
                 <li class="menu__item link-dropdown">
 
-                    <a class="js-scrollto position-link " href="/">
+                    <a class="js-scrollto position-link " href="">
                         Все дизайны вышивок
                     </a>
                     <ul class="dropdown-menu">
