@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -324,6 +325,7 @@
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/Masonry.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/jquery.maskedinput.js"></script>
 

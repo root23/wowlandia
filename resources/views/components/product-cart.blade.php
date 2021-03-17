@@ -33,11 +33,14 @@
 
                     <div class="slideshow__nav-items">
 {{--                        <div class="slideshow__nav-item current" tabindex="0">--}}
+        
 {{--                            <img src="{{ $product->cover_image }}" alt="{{ $product->title }}">--}}
 {{--                        </div>--}}
                         @foreach($product->attachment as $item)
                             <div class="slideshow__nav-item" tabindex="0">
+                                <a data-fancybox="images"  href="/storage/{{ $item->path }}{{ $item->name }}.{{ $item->extension }}" alt="{{ $product->title }}" alt="{{ $product->title }}" tabindex="0">
                                 <img src="/storage/{{ $item->path }}{{ $item->name }}.{{ $item->extension }}" alt="{{ $product->title }}">
+                                </a>
                             </div>
                         @endforeach
 
