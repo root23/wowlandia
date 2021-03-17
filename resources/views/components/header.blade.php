@@ -17,6 +17,9 @@
     <div class="header__nav">
         <nav class="menu header__menu">
             <ul class="menu__items">
+                <li class="menu__item main-page-link">
+                    <a class="js-scrollto position-link" href="#videos">Главная</a>
+                </li>
                 <li class="menu__item link-dropdown">
                     
                     <a class="js-scrollto position-link ">
