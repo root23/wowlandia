@@ -388,7 +388,7 @@
                 $('.all-total-price').text(data.total_final + ' руб.');
 
                 // alert with free delivery
-                var freeDeliveryTotal = 5900;
+                var freeDeliveryTotal = 4990;
                 if (freeDeliveryTotal - data.total_final <= 0) {
                     $('.order__alert').find('.alert__text').text('Доставка будет бесплатной!');
                     $('.order__total-delivery .products-total-price').text('0 руб.');
