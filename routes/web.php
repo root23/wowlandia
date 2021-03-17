@@ -62,3 +62,5 @@ Route::get('/send-mail-order', 'App\Http\Controllers\Mail\OrderMailController@se
 Route::get('/get-token', function () {
    return csrf_token();
 });
+
+Route::get('/privacy', 'App\Http\Controllers\MainController@getPrivacyPage');

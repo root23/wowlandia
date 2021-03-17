@@ -38,4 +38,12 @@ class MainController extends Controller
         $view = view('components.review-success')->render();
         return response()->json($view, 200);
     }
+
+    public function getPrivacyPage()
+    {
+        $productTypes = ProductType::where('is_active', 1)->get();
+        return view('privacy')->with([
+            'productTypes' => $productTypes,
+        ]);
+    }
 }

@@ -27,7 +27,7 @@
             </a>
             <div class="footer__legal">
                 <p class="footer__copyright">&copy;2021 wowlandia.ru</p>
-                <p class="footer__privacy"><a href="/privacy/">Политика конфиденциальности</a></p>
+                <p class="footer__privacy"><a href="/privacy">Политика конфиденциальности</a></p>
             </div>
         </div>
     </div>
