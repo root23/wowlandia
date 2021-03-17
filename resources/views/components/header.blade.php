@@ -21,8 +21,8 @@
                     <a class="js-scrollto position-link" href="#videos">Главная</a>
                 </li>
                 <li class="menu__item link-dropdown">
-                    
-                    <a class="js-scrollto position-link ">
+
+                    <a class="js-scrollto position-link " href="/">
                         Все дизайны вышивок
                     </a>
                     <ul class="dropdown-menu">
