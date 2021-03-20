@@ -125,12 +125,10 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
         <ul class="first__features">
             <li class="first__feature">
                 <div class="image-box image-form"></div>
-{{--                <img class="first__feature-img" src="img/first-feature-1.png" alt="Все детали уникальной формы" />--}}
                 <span class="first__feature-caption">шелковая машинная вышивка</span>
             </li>
             <li class="first__feature">
                 <div class="image-box image-size"></div>
-{{--                <img class="first__feature-img" src="img/first-feature-2.png" alt="Прочные, толщиной 3мм" />--}}
                 <span class="first__feature-caption"><b>Футболки и худи сшиты из премиальных материалов</b> </span>
             </li>
         </ul>

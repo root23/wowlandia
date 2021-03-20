@@ -119,12 +119,12 @@
         <p class="first__pretitle">Есть доставка на дом. Индивидуальное изготовление 1 день</p>
         <ul class="first__features">
             <li class="first__feature">
-                <img class="first__feature-img" src="img/first-feature-1.png" width="60" height="60" alt="Все детали уникальной формы" />
+                <div class="image-box image-form"></div>
                 <span class="first__feature-caption">шелковая машинная вышивка</span>
             </li>
             <li class="first__feature">
-                <img class="first__feature-img" src="img/first-feature-2.png" width="60" height="60" alt="Прочные, толщиной 3мм" />
-                <span class="first__feature-caption"><b>изделия сшиты из премиальных материалов</b><br> футболки 100% хлопок<br> и худи с начесом 80% хлопок, 20% полиэстер</span>
+                <div class="image-box image-size"></div>
+                <span class="first__feature-caption"><b>Футболки и худи сшиты из премиальных материалов</b> </span>
             </li>
         </ul>
         <a class="button first__button js-scrollto button--bi position-link" href="#products" role="button">
