@@ -124,11 +124,13 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
         <p class="first__pretitle">Есть доставка на дом. Индивидуальное изготовление 1 день</p>
         <ul class="first__features">
             <li class="first__feature">
-                <img class="first__feature-img" src="img/first-feature-1.png" width="60" height="60" alt="Все детали уникальной формы" />
+                <div class="image-box image-form"></div>
+{{--                <img class="first__feature-img" src="img/first-feature-1.png" alt="Все детали уникальной формы" />--}}
                 <span class="first__feature-caption">шелковая машинная вышивка</span>
             </li>
             <li class="first__feature">
-                <img class="first__feature-img" src="img/first-feature-2.png" width="60" height="60" alt="Прочные, толщиной 3мм" />
+                <div class="image-box image-size"></div>
+{{--                <img class="first__feature-img" src="img/first-feature-2.png" alt="Прочные, толщиной 3мм" />--}}
                 <span class="first__feature-caption"><b>Футболки и худи сшиты из премиальных материалов</b> </span>
             </li>
         </ul>

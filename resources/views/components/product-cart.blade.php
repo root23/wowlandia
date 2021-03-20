@@ -33,7 +33,7 @@
 
                     <div class="slideshow__nav-items">
 {{--                        <div class="slideshow__nav-item current" tabindex="0">--}}
-        
+
 {{--                            <img src="{{ $product->cover_image }}" alt="{{ $product->title }}">--}}
 {{--                        </div>--}}
                         @foreach($product->attachment as $item)
@@ -404,7 +404,7 @@
                                     @endif
 
                                 </div>
-                                <time class="c-review__date" datetime="19.06.2020">19 июня 2020</time>
+                                <time class="c-review__date" datetime="19.06.2020">{{ $review->created_at }}</time>
                             </div>
                             <div class="c-review__text">
                                 <p>{{ $review->message }}</p>
