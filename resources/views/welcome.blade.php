@@ -120,7 +120,7 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 @endif
 <section class="first page__first" id="first">
     <div class="first__container">
-        <h1 class="first__title">Дизайны вышивок</h1>
+        <h1 class="first__title">Вышивки на футболках и худи</h1>
         <p class="first__pretitle">Есть доставка на дом. Индивидуальное изготовление 1 день</p>
         <ul class="first__features">
             <li class="first__feature">
@@ -129,11 +129,11 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
             </li>
             <li class="first__feature">
                 <img class="first__feature-img" src="img/first-feature-2.png" width="60" height="60" alt="Прочные, толщиной 3мм" />
-                <span class="first__feature-caption"><b>изделия сшиты из премиальных материалов</b><br> футболки 100% хлопок<br> и худи с начесом 80% хлопок, 20% полиэстер</span>
+                <span class="first__feature-caption"><b>Футболки и худи сшиты из премиальных материалов</b> </span>
             </li>
         </ul>
         <a class="button first__button js-scrollto button--bi position-link" href="#products" role="button">
-            <span class="button__caption ">Подробнее о вышивках</span>
+            <span class="button__caption ">Посмотреть дизайны</span>
         </a>
     </div>
 </section>
@@ -180,27 +180,27 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
     <div class="videos__container">
         <h2 class="title videos__title">Видео наших вышивок</h2>
         <div class="videos__items">
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=0XktFb_pVCQ">
-                <img class="c-video__img" src="img/videos/video-1.png" width="358" height="238" alt="" />
+            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=l3YwcrzYU9c">
+                <img class="c-video__img" src="img/videos/video-1.jpg" width="358" height="238" alt="" />
                 <span class="c-video__icon"></span>
             </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=nbgu5mVR-_I">
-                <img class="c-video__img" src="img/videos/video-2.png" width="358" height="238" alt="" />
+            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=X7OUe7dEB2w">
+                <img class="c-video__img" src="img/videos/video-2.jpg" width="358" height="238" alt="" />
                 <span class="c-video__icon"></span>
             </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=7AhRAsd0xUc">
-                <img class="c-video__img" src="img/videos/video-3.png" width="358" height="238" alt="" />
+            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=W6AV3TUABDA">
+	            <img class="c-video__img" src="img/videos/video-3.jpg" width="358" height="238" alt="" />
                 <span class="c-video__icon"></span>
             </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=NuFn4nTrZSY">
+            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=Vj3i7R1CzpY">
                 <img class="c-video__img" src="img/videos/video-4.jpg" width="358" height="238" alt="" />
                 <span class="c-video__icon"></span>
             </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=0XktFb_pVCQ">
+            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=-JEJkjeOsYM">
                 <img class="c-video__img" src="img/videos/video-5.jpg" width="358" height="238" alt="" />
                 <span class="c-video__icon"></span>
             </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=1iiVzgpuxug">
+            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=-5FCN5EiIm0">
                 <img class="c-video__img" src="img/videos/video-6.jpg" width="358" height="238" alt="" />
                 <span class="c-video__icon"></span>
             </a>

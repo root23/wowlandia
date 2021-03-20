@@ -309,3 +309,44 @@ git commit -m "front fixes"
 git push
 git status
 git pull
+git status
+git add .
+git commit -m "upd frontend"
+git push
+git status
+git pull
+git status
+git add .
+git commit -m "upd front fixes"
+git push
+git status
+git pull
+mc
+git pull
+git pull
+php7.4 artisan migrate
+mc
+git status
+git add .
+git commit -m "changed privacy text"
+git push
+git status
+git pull
+git status
+git add .
+git commit -m "uod front"
+git push
+git pull
+git pull
+git pull
+git push
+git pull
+git reset --hard
+git pull
+git push
+php7.4 artisan migrate
+git status
+git add .
+git commit -m "gallery fi"
+git push
+git pull

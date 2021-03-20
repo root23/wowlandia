@@ -190,7 +190,7 @@
                         <svg class="svg-icon svg-icon--no-money">
                             <use xlink:href="#no-money"></use>
                         </svg>
-                        <p>Заказ без <br>предоплаты</p>
+                        <p>Возврат 100% средств, <br>если не устроит качество или не подойдет размер.</p>
                     </div>
                 </div>
                 <div class="product__gift">
@@ -208,19 +208,19 @@
                         <figure class="product__feature-picture">
                             <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/2_f6490716-596f-4801-b-382e54801b2c_1024x1024_2x_3b9b6ed5-f565-4f0f-b8ad-0738ddadac35-380x190x.jpg" alt="">
                         </figure>
-                        <div class="product__feature-text">Каждый кусочек пазла имеет свою неповторимую форму - это высокая сложность сборки (200 пазлов уникальных форм по сложности соответствуют 1000 обычных картонных пазлов)</div>
+                        <div class="product__feature-text">Каждая вышивка имеет свой неповторимый застил и будет оценена даже самыми требовательными к качеству покупателями</div>
                     </div>
                     <div class="product__feature">
                         <figure class="product__feature-picture">
                             <img src="https://unidragon.ru/image/cache/catalog/additional/feature-2-380x190x.jpg" alt="">
                         </figure>
-                        <div class="product__feature-text">Интересно для взрослых и детей</div>
+                        <div class="product__feature-text">Подойдет в качестве подарка для девушки, жены, парня или мужа. Поскольку мы производство, мы легко можем добавить ваши имена или даты в дизайн вышивки.</div>
                     </div>
                     <div class="product__feature">
                         <figure class="product__feature-picture">
                             <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/SAP_9114_1024x1024_5882bdb7-224b-4c16-a048-9b80df7bda61-380x190x.jpg" alt="">
                         </figure>
-                        <div class="product__feature-text">Все детали вырезаны из ХДФ, так что вы можете почувствовать древесный аромат</div>
+                        <div class="product__feature-text">Худи и футболки выполнены из премиальных материалов (плотность футболок 180 г/м2, плотность худи 360 г/м2). Вышиваем мы шелком.</div>
                     </div>
                 </div>
                 <div class="product__description">
