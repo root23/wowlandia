@@ -197,7 +197,7 @@
                     <div class="product__gift-content">
                         <h3 class="product__gift-title">Сразу в подарочной упаковке</h3>
                         <figure class="product__gift-picture">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/unidragon-wooden-puzzle-jigsaw-puzzle-for-adult-alluring-fox-m-7-4620755023343-380x380x.png" width="380" height="380" alt="">
+                            <img src="/img/product-features/feature1.png" width="380" height="380" alt="">
                         </figure>
                         <p>Подарок, который удивит и запомнится. Каждая головоломка упакована в подарочную деревянную коробку премиум-класса.</p>
                     </div>
@@ -206,19 +206,19 @@
                 <div class="product__features">
                     <div class="product__feature">
                         <figure class="product__feature-picture">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/2_f6490716-596f-4801-b-382e54801b2c_1024x1024_2x_3b9b6ed5-f565-4f0f-b8ad-0738ddadac35-380x190x.jpg" alt="">
+                            <img src="/img/product-features/feature1.png" alt="">
                         </figure>
                         <div class="product__feature-text">Каждая вышивка имеет свой неповторимый застил и будет оценена даже самыми требовательными к качеству покупателями</div>
                     </div>
                     <div class="product__feature">
                         <figure class="product__feature-picture">
-                            <img src="https://unidragon.ru/image/cache/catalog/additional/feature-2-380x190x.jpg" alt="">
+                            <img src="/img/product-features/feature1.png" alt="">
                         </figure>
                         <div class="product__feature-text">Подойдет в качестве подарка для девушки, жены, парня или мужа. Поскольку мы производство, мы легко можем добавить ваши имена или даты в дизайн вышивки.</div>
                     </div>
                     <div class="product__feature">
                         <figure class="product__feature-picture">
-                            <img src="https://unidragon.ru/image/cache/catalog/products2/fox2/SAP_9114_1024x1024_5882bdb7-224b-4c16-a048-9b80df7bda61-380x190x.jpg" alt="">
+                            <img src="/img/product-features/feature1.png" alt="">
                         </figure>
                         <div class="product__feature-text">Худи и футболки выполнены из премиальных материалов (плотность футболок 180 г/м2, плотность худи 360 г/м2). Вышиваем мы шелком.</div>
                     </div>
