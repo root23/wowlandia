@@ -197,28 +197,28 @@
                     <div class="product__gift-content">
                         <h3 class="product__gift-title">Сразу в подарочной упаковке</h3>
                         <figure class="product__gift-picture">
-                            <img src="/img/product-features/feature1.png" width="380" height="380" alt="">
+                            <img src="/img/product-features/feature1.jpg" width="380" height="380" alt="">
                         </figure>
-                        <p>Подарок, который удивит и запомнится. Каждая головоломка упакована в подарочную деревянную коробку премиум-класса.</p>
+                        <p>Подарок, который удивит и запомнится. Каждое изделие с вышивкой упаковано в подарочную коробку.</p>
                     </div>
                 </div>
 
                 <div class="product__features">
                     <div class="product__feature">
                         <figure class="product__feature-picture">
-                            <img src="/img/product-features/feature1.png" alt="">
+                            <img src="/img/product-features/feature2.jpg" alt="">
                         </figure>
                         <div class="product__feature-text">Каждая вышивка имеет свой неповторимый застил и будет оценена даже самыми требовательными к качеству покупателями</div>
                     </div>
                     <div class="product__feature">
                         <figure class="product__feature-picture">
-                            <img src="/img/product-features/feature1.png" alt="">
+                            <img src="/img/product-features/feature3.jpg" alt="">
                         </figure>
                         <div class="product__feature-text">Подойдет в качестве подарка для девушки, жены, парня или мужа. Поскольку мы производство, мы легко можем добавить ваши имена или даты в дизайн вышивки.</div>
                     </div>
                     <div class="product__feature">
                         <figure class="product__feature-picture">
-                            <img src="/img/product-features/feature1.png" alt="">
+                            <img src="/img/product-features/feature4.jpg" alt="">
                         </figure>
                         <div class="product__feature-text">Худи и футболки выполнены из премиальных материалов (плотность футболок 180 г/м2, плотность худи 360 г/м2). Вышиваем мы шелком.</div>
                     </div>

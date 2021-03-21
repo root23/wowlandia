@@ -350,3 +350,11 @@ git add .
 git commit -m "gallery fi"
 git push
 git pull
+git status
+git add .
+git commit -m "front updates"
+git push
+git status
+mc
+git pull
+git pull
