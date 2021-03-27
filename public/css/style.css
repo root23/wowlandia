@@ -10162,12 +10162,12 @@ input:checked+ .radio-size__label::after {
     display: table;
 }
 .image-form {
-    background: url('/img/first-feature-1.png');
+    background: url('/img/first-feature-1.jpg');
     background-position-x: -5px;
     background-position-y: -5px;
 }
 .image-size {
-    background: url('/img/first-feature-2.png');
+    background: url('/img/first-feature-2.jpg');
     background-position-x: -5px;
     background-position-y: -5px;
 }

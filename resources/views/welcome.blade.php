@@ -66,6 +66,13 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
+
+<!-- Facebook domain Verification -->
+<meta name="facebook-domain-verification" content="103c1w560eq2q5hc3kus2kvycn4mor" />
+
+<!-- END Facebook domain Verification -->
+
+
     <script>
         !function (w, d, t) {
             w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
@@ -156,16 +163,16 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
             <h2 class="title package__title">Сразу в&nbsp;подарочной упаковке</h2>
             <div class="package__images">
                 <figure class="package__image">
-                    <img src="img/package/package-1.png" width="715" height="440" alt="Сразу в подарочной упаковке" />
+                    <img src="img/package/package-1.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
                 </figure>
                 <figure class="package__image">
-                    <img src="img/package/package-2.png" width="715" height="440" alt="Сразу в подарочной упаковке" />
+                    <img src="img/package/package-2.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
                 </figure>
                 <figure class="package__image">
-                    <img src="img/package/package-3.png" width="715" height="440" alt="Сразу в подарочной упаковке" />
+                    <img src="img/package/package-1.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
                 </figure>
                 <figure class="package__image">
-                    <img src="img/package/package-4.png" width="715" height="440" alt="Сразу в подарочной упаковке" />
+                    <img src="img/package/package-2.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
                 </figure>
             </div>
             <div class="package__text">
@@ -251,19 +258,18 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
             <div class="testimonials__container">
                 <h2 class="title faq__title">Отзывы</h2>
                 <div class="testimonials__items">
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2480.PNG" width="310" height="590" alt="Отзыв 7" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2481.PNG" width="310" height="590" alt="Отзыв 8" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2482.PNG" width="310" height="590" alt="Отзыв 9" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2483.PNG" width="310" height="590" alt="Отзыв 10" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2484.PNG" width="310" height="590" alt="Отзыв 11" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2485.PNG" width="310" height="590" alt="Отзыв 12" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2486.PNG" width="310" height="590" alt="Отзыв 13" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2474.PNG" width="310" height="590" alt="Отзыв 1" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2475.PNG" width="310" height="590" alt="Отзыв 2" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2476.PNG" width="310" height="590" alt="Отзыв 3" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2477.PNG" width="310" height="590" alt="Отзыв 4" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2478.PNG" width="310" height="590" alt="Отзыв 5" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2479.PNG" width="310" height="590" alt="Отзыв 6" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2480.jpg" width="310" height="590" alt="Отзыв 7" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2481.jpg" width="310" height="590" alt="Отзыв 8" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2482.jpg" width="310" height="590" alt="Отзыв 9" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2483.jpg" width="310" height="590" alt="Отзыв 10" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2484.jpg" width="310" height="590" alt="Отзыв 11" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2486.jpg" width="310" height="590" alt="Отзыв 13" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2474.jpg" width="310" height="590" alt="Отзыв 1" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2475.jpg" width="310" height="590" alt="Отзыв 2" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2476.jpg" width="310" height="590" alt="Отзыв 3" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2477.jpg" width="310" height="590" alt="Отзыв 4" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2478.jpg" width="310" height="590" alt="Отзыв 5" /></figure>
+                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2479.jpg" width="310" height="590" alt="Отзыв 6" /></figure>
                 </div>
             </div>
         </section>

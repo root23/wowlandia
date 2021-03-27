@@ -358,3 +358,9 @@ git status
 mc
 git pull
 git pull
+git status
+gita
+ git add . 
+git commit -m "front update"
+git push
+git pull
