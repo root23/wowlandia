@@ -7,7 +7,6 @@ use App\Models\ProductType;
 use Illuminate\Http\Request;
 use Orchid\Screen\Fields\Cropper;
 use Orchid\Screen\Fields\Group;
-use Orchid\Screen\Fields\Picture;
 use Orchid\Screen\Fields\Relation;
 use Orchid\Screen\Fields\Select;
 use Orchid\Screen\Fields\Upload;
@@ -97,9 +96,11 @@ class ProductEditScreen extends Screen
                     ->placeholder('Введите название товара')
                     ->help('Название товара'),
 
-                Picture::make('product.cover_image')
+                Cropper::make('product.cover_image')
                     ->title('Изображение')
-                    ->targetRelativeUrl(),
+                    ->targetRelativeUrl()
+                    ->width(430)
+                    ->height(430),
 
                 Select::make('product.types.')
                     ->fromModel(ProductType::class, 'title')
