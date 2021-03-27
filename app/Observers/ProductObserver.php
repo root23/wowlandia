@@ -9,15 +9,15 @@ class ProductObserver
 {
     public function created(Product $product)
     {
-        $this->MakeJpgImage($product);
+        $this->makeJpgImage($product);
     }
 
     public function updated(Product $product)
     {
-        $this->MakeJpgImage($product);
+        $this->makeJpgImage($product);
     }
 
-    private function MakeJpgImage(Product $product)
+    private function makeJpgImage(Product $product)
     {
         if (pathinfo($product->cover_image)['extension'] != 'jpg') {
             $imageName = pathinfo($product->cover_image)['basename'] . '.jpg';

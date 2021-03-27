@@ -63,5 +63,6 @@ Route::get('/get-token', function () {
    return csrf_token();
 });
 Route::get('/products/convert', 'App\Http\Controllers\Web\Product\ProductController@encodeImagesToJpg');
+Route::get('/product-variants/convert', 'App\Http\Controllers\Web\ProductVariant\ProductVariantController@encodeImagesToJpg');
 
 Route::get('/privacy', 'App\Http\Controllers\MainController@getPrivacyPage');
