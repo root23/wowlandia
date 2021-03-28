@@ -145,6 +145,15 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
     </div>
 </section>
 
+    <div class="mobile-buttons">
+        <a class="button c-product__button-size" href="/whatsapp_msg" data-productid="1" role="button" onclick="">
+            <span class="button__caption">Написать в WhatsApp</span>
+        </a>
+        <a class="button c-product__button-size" href="/tg_msg" data-productid="1" role="button" onclick="">
+            <span class="button__caption">Написать в telegram</span>
+        </a>
+    </div>
+
 <section class="products page__products" id="products">
     <div class="products__container">
         <h2 class="title products__title">Выберите свой дизайн</h2>
