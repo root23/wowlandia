@@ -3806,7 +3806,7 @@ input:checked+ .radio-size__label::after {
     padding-top: 35px;
     padding-bottom: 225px;
     background-color: #fff;
-    background-image: url("/img/first-bg@mob.jpg");
+    background-image: url("/img/first-bg@mob.webp");
     background-repeat: no-repeat;
     background-position: center bottom;
     -webkit-background-size: 320px 205px;

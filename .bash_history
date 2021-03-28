@@ -364,3 +364,12 @@ gita
 git commit -m "front update"
 git push
 git pull
+git status
+git add .
+git commit -m "front fixes"
+git push
+git pull
+composer7.4 install
+composer install
+composer-php7.4 install
+git pull
