@@ -122,7 +122,7 @@
         ym(72610810,'reachGoal','order-ok');
     </script>
 @endif
-<section class="first page__first" id="first">
+<section class="first page__first tiktok" id="first">
     <div class="first__container">
         <h1 class="first__title">Вышивки на футболках и худи</h1>
         <p class="first__pretitle">Есть доставка на дом. Индивидуальное изготовление 1 день</p>
