@@ -17,60 +17,60 @@
 
 
 
-<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){VK.Retargeting.Init("VK-RTRG-864112-iaj8d"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-864112-iaj8d" style="position:fixed; left:-999px;" alt=""/></noscript>
-        <!-- Google Tag Manager -->
+    <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){VK.Retargeting.Init("VK-RTRG-864112-iaj8d"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-864112-iaj8d" style="position:fixed; left:-999px;" alt=""/></noscript>
+    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NMR2XS7');</script>
-<!-- End Google Tag Manager -->
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NMR2XS7');</script>
+    <!-- End Google Tag Manager -->
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(72610810, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true,
-        ecommerce:"dataLayer"
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/72610810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
+        ym(72610810, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            ecommerce:"dataLayer"
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/72610810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
 
 
 
-<!-- Facebook Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '247935773602331');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
 
 
-<!-- Facebook domain Verification -->
-<meta name="facebook-domain-verification" content="103c1w560eq2q5hc3kus2kvycn4mor" />
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '247935773602331');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- End Facebook Pixel Code -->
 
-<!-- END Facebook domain Verification -->
+
+    <!-- Facebook domain Verification -->
+    <meta name="facebook-domain-verification" content="103c1w560eq2q5hc3kus2kvycn4mor" />
+
+    <!-- END Facebook domain Verification -->
 
 
     <script>
@@ -86,8 +86,8 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 
 
 </head>
-<body class="page">
-    @csrf
+<body class="page" style="padding-top:0">
+@csrf
 <svg display="none">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 10" id="arrow-left"><path d="M11.3 4.1h-8l2.5-2.5c.2-.2.2-.4.2-.5 0-.2 0-.4-.2-.5L5.4.2C5.3.1 5.2 0 5 0s-.4.1-.5.2L.2 4.5c-.1.2-.2.3-.2.5s.1.3.2.5l4.3 4.3c.1.1.3.2.5.2s.3-.1.5-.2l.4-.4c.1-.1.1-.3.1-.5 0-.1 0-.3-.2-.4L3.3 5.9h8c.4 0 .7-.3.7-.7v-.5c0-.4-.3-.6-.7-.6z"/></symbol>
     <symbol xmlns="http://www.w3.org/2000/svg" id="bill" viewBox="0 0 56 53" xml:space="preserve"><path class="bst0" d="M42 11.9c-1 0-1.9-.8-1.9-1.8s.7-1.9 1.7-2h.2c1 0 1.9.9 1.9 1.9 0 .6.5 1 1 1s1-.5 1-1c0-1.8-1.2-3.4-3-3.8v-.8c0-.6-.5-1-1-1s-1 .5-1 1v.8c-1.9.5-3.1 2.4-2.8 4.3.3 1.9 1.9 3.4 3.9 3.4 1.1 0 1.9.8 1.9 1.9 0 1-.9 1.9-1.9 1.9s-1.9-.8-1.9-1.9c0-.6-.5-1-1-1s-1 .5-1 1c0 1.7 1.2 3.3 2.8 3.8v.9c0 .6.5 1 1 1s1-.5 1-1v-.9c1.9-.5 3.2-2.3 3-4.2-.2-2-1.9-3.5-3.9-3.5z"/><path class="bst0" d="M42.1 0c-5.4 0-10.3 3.4-12.2 8.4H7.6c-.5 0-1 .5-1 1.1l-.3 31.4H0c-.6 0-1 .4-1 1v4c0 3.8 3 6.9 6.8 7.1h28.4c4 0 7.2-3.2 7.2-7.2V25.7h.6c7.2.1 13-5.7 13-12.8C55 5.8 49.2 0 42.1 0zM28.8 41.1c-.2-.2-.4-.3-.7-.3H8.4l.2-30.4h20.8c-.1.8-.2 1.6-.2 2.4 0 1.7.3 3.4 1 5h-8.4c-.6 0-1 .5-1 1 0 .6.5 1 1 1h9.5c1.9 2.9 4.8 4.9 8.2 5.6v20.3c0 2.8-2.3 5.1-5.2 5.1-2.9 0-5.2-2.3-5.2-5.2v-4s-.1-.3-.3-.5zm.3 9.8c.1 0 .1.1 0 0L6.2 51v.1-.1C3.4 51 1 48.7 1 45.8v-2.9h26v2.9c0 1.9.8 3.8 2.1 5.1zm13-27.2c-2.9 0-5.7-1.1-7.7-3.2-2.1-2-3.2-4.8-3.2-7.7C31.1 6.9 36 2 42.1 2 48.1 2 53 6.9 53 12.9s-4.9 10.8-10.9 10.8z"/><path class="bst0" d="M16 23.8c-1.7 0-3 1.3-3 2.9 0 1.6 1.3 2.9 3 2.9s3-1.3 3-2.9c0-1.6-1.4-2.9-3-2.9zm1 2.9c0 .5-.4.9-1 .9-.5 0-1-.4-1-.9s.4-.9 1-.9c.5.1 1 .5 1 .9zm4.8 1h12c.6 0 1-.5 1-1 0-.6-.5-1-1-1h-12c-.6 0-1 .5-1 1 0 .6.4 1 1 1zM16 16c-1.7 0-3 1.3-3 2.9 0 1.6 1.3 2.9 3 2.9s3-1.3 3-2.9c0-1.6-1.4-2.9-3-2.9zm1 2.9c0 .5-.4.9-.9.9s-1-.4-1-.9.4-.9 1-.9c.4.1.9.4.9.9zm-1 12.7c-1.7 0-3 1.3-3 2.9 0 1.6 1.3 2.9 3 2.9s3-1.3 3-2.9c0-1.6-1.4-2.9-3-2.9zm1 2.9c0 .5-.4.9-1 .9-.5 0-1-.4-1-.9s.4-.9 1-.9c.5.1 1 .5 1 .9zm17.8.1c0-.6-.5-1-1-1h-12c-.6 0-1 .5-1 1 0 .6.5 1 1 1h12c.6 0 1-.5 1-1z"/></symbol>
@@ -114,9 +114,6 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
 </svg>
 
 
-<header class="header page__header">
-    @include('components.header')
-</header>
 @if (session('status'))
     @include('components.review-success')
 @endif
@@ -145,188 +142,18 @@ src="https://www.facebook.com/tr?id=247935773602331&ev=PageView&noscript=1"
     </div>
 </section>
 
-<section class="products page__products" id="products">
-    <div class="products__container">
-        <h2 class="title products__title">Выберите свой дизайн</h2>
-        <div class="products__items">
-            @include('components.product-list')
-        </div>
-    </div>
-</section>
-
-<section class="sizes page__sizes" id="sizes">
-    @include('components.sizes-block')
-</section>
-<section class="package page__package" id="package">
-    <div class="package__container">
-        <div class="package__content">
-            <h2 class="title package__title">Сразу в&nbsp;подарочной упаковке</h2>
-            <div class="package__images">
-                <figure class="package__image">
-                    <img src="img/package/package-1.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
-                </figure>
-                <figure class="package__image">
-                    <img src="img/package/package-2.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
-                </figure>
-                <figure class="package__image">
-                    <img src="img/package/package-1.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
-                </figure>
-                <figure class="package__image">
-                    <img src="img/package/package-2.jpg" width="715" height="440" alt="Сразу в подарочной упаковке" />
-                </figure>
-            </div>
-            <div class="package__text">
-                <p>Подарок, который удивит и запомнится. Футболки и худи сделаны из премиальных материалов. А сама вышивка очень плотная и выполнена из шелка.</p>
-            </div>
-            <div class="package__button-wrapper"><a class="button package__button js-scrollto position-link" href="#products" role="button"><span class="button__caption" >Заказать подарок</span></a></div>
-        </div>
-    </div>
-</section>
-
-<section class="videos page__videos" id="videos">
-    <div class="videos__container">
-        <h2 class="title videos__title">Видео наших вышивок</h2>
-        <div class="videos__items">
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=l3YwcrzYU9c">
-                <img class="c-video__img" src="img/videos/video-1.jpg" width="358" height="238" alt="" />
-                <span class="c-video__icon"></span>
-            </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=X7OUe7dEB2w">
-                <img class="c-video__img" src="img/videos/video-2.jpg" width="358" height="238" alt="" />
-                <span class="c-video__icon"></span>
-            </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=W6AV3TUABDA">
-	            <img class="c-video__img" src="img/videos/video-3.jpg" width="358" height="238" alt="" />
-                <span class="c-video__icon"></span>
-            </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=Vj3i7R1CzpY">
-                <img class="c-video__img" src="img/videos/video-4.jpg" width="358" height="238" alt="" />
-                <span class="c-video__icon"></span>
-            </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=-JEJkjeOsYM">
-                <img class="c-video__img" src="img/videos/video-5.jpg" width="358" height="238" alt="" />
-                <span class="c-video__icon"></span>
-            </a>
-            <a class="c-video js-popup-video videos__item" href="https://www.youtube.com/watch?v=-5FCN5EiIm0">
-                <img class="c-video__img" src="img/videos/video-6.jpg" width="358" height="238" alt="" />
-                <span class="c-video__icon"></span>
-            </a>
-        </div>
-    </div>
-</section>
-
-<div class="page__group">
-    <div class="page__group-container">
-        <section class="faq page__faq" id="faq">
-            <div class="faq__container">
-                <h2 class="title faq__title">FAQ</h2>
-                <div class="faq__items">
-                    <div class="faq__item">
-                        <h3 class="faq__question"><button>Сколько стоит доставка и как осуществляется оплата?</button></h3>
-                        <div class="faq__answer" style="display: none;">
-                            <p>Мы работаем в основном с компанией СДЭК. В удаленные города и села доставка осуществляется Почтой России. Стоимость курьерской доставки в крупные города стоит примерно от 450 рублей, до пункта выдачи заказов также от 400 рублей. </p>
-                            <p>При заказе более 4900 рублей, доставку курьером или доставку до пункта выдачи заказов мы осуществляем за свой счет.</p>
-                            <p>Более подробную информацию вы получите после оформления заявки. И, конечно, у вас всегда есть возможность отказаться от оставленной заявки, если стоимость доставки вас не устроит.</p>
-                        </div>
-                    </div>
-                    <div class="faq__item">
-                        <h3 class="faq__question"><button>Какие у вас еще есть дизайны или Когда появятся новые дизайны?</button></h3>
-                        <div class="faq__answer" style="display: none;">
-                            <p>Мы выпускаем примерно по 3 новых дизайна в месяц. Если вам понравились наши вышивки и вы хотите узнавать о их выходе первыми, а также влиять на то, какие дизайны мы будем разрабатывать следующими.</p><p>Вы можете участвовать в специальных опросах, когда мы только начинаем производить, напишите нам в Директ Инстаграма @wowlandia.ru "Хочу в клуб wowlandia" и вы вступите в наш закрытый клуб в телеграмме.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq__item">
-                        <h3 class="faq__question"><button>Можете ли вы изготовить вышивку по моей картине или фотографии?
-                            </button></h3>
-                        <div class="faq__answer" style="display: none;">
-                            <p>Для розничных покупателей мы предлагаем делать контурные дизайны (вышивка линиями) и вышивка текста.</p>
-                            <p>В случае если вы хотите сделать именно свою цветную вышивку, то мы можем разработать для вас этот дизайн бесплатно при заказе партии от 50 шт. Поскольку наши вышивки - это кропотливая работа команды (включая своего иллюстратора, дизайнера-программиста, технолога), то стоимость разработки одного цветного дизайна довольно дорога.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq__item">
-                        <h3 class="faq__question"><button>Работаете ли вы с юридическими лицами?</button></h3>
-                        <div class="faq__answer" style="display: none;">
-                            <p>Да, мы работаем с юридическими лицами. Наши футболки и худи с вышивками вы можете оплатить по безналичному расчету с юридического лица без НДС.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="testimonials page__testimonials" id="testimonials">
-            <div class="testimonials__container">
-                <h2 class="title faq__title">Отзывы</h2>
-                <div class="testimonials__items">
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2480.jpg" width="310" height="590" alt="Отзыв 7" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2481.jpg" width="310" height="590" alt="Отзыв 8" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2482.jpg" width="310" height="590" alt="Отзыв 9" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2483.jpg" width="310" height="590" alt="Отзыв 10" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2484.jpg" width="310" height="590" alt="Отзыв 11" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2486.jpg" width="310" height="590" alt="Отзыв 13" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2474.jpg" width="310" height="590" alt="Отзыв 1" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2475.jpg" width="310" height="590" alt="Отзыв 2" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2476.jpg" width="310" height="590" alt="Отзыв 3" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2477.jpg" width="310" height="590" alt="Отзыв 4" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2478.jpg" width="310" height="590" alt="Отзыв 5" /></figure>
-                    <figure class="testimonials__item"><img src="/img/reviews/IMG_2479.jpg" width="310" height="590" alt="Отзыв 6" /></figure>
-                </div>
-            </div>
-        </section>
-
-    </div>
+<div class="mobile-buttons">
+    <a class="button c-product__button-size" href="/whatsapp_msg" data-productid="1" role="button" onclick="">
+        <span class="button__caption">Написать в WhatsApp</span>
+    </a>
+    <a class="button c-product__button-size" href="/tg_msg" data-productid="1" role="button" onclick="">
+        <span class="button__caption">Написать в telegram</span>
+    </a>
 </div>
-<section class="delivery page__delivery" id="delivery-block">
-    <div class="delivery__container">
-        <div class="delivery__main">
-            <div class="delivery__header">
-                <p class="delivery__pretitle">Бесплатная доставка от 4 900 руб.!</p>
-                <h2 class="title delivery__title">Доставка и оплата</h2>
-            </div>
-            <div class="delivery__text">
-                <p>Доставка в любой город России от 2-3 дней! Мы отправляем пазлы из Самары. Есть склад в Москве для срочных заказов. Работаем в основном с компанией СДЭК и Почтой России. Примерная стоимость доставки до пункта выдачи заказов компании СДЭК стоит 250 рублей. Стоимость курьерской доставки для европейской части России - 350-400 рублей. В остальные города мы стараемся отправлять Почтой России - она дешевле и быстрее доставляет. Курьерская доставка в основном осуществляется в рабочее время с понедельника по пятницу.</p>
-                <h3 class="delivery__title-2">Доставка в другие страны</h3>
-                <p>Доставка в Республику Беларусь и Казахстан пока осуществляется только по предоплате.</p>
-                <p>Если вам нужна доставка в другие страны, то у нас есть PayPal для оплаты и DHL для доставки в любую точку мира. Вы можете сообщить нам об этом в комментариях к заказу.</p>
-            </div>
-        </div>
-        <div class="delivery__items">
-            <div class="delivery__item"><svg class="svg-icon svg-icon--cash delivery__item-icon">
-                    <use xlink:href="#cash"></use>
-                </svg>
-                <h3 class="delivery__item-title">Наличный расчет</h3>
-                <div class="delivery__item-text">
-                    <p>Вы можете оплатить заказ наличными или картой при получении. На каждый заказ выдаётся кассовый чек.</p>
-                </div>
-            </div>
-            <div class="delivery__item"><svg class="svg-icon svg-icon--bill delivery__item-icon">
-                    <use xlink:href="#bill"></use>
-                </svg>
-                <h3 class="delivery__item-title">Предоплата</h3>
-                <div class="delivery__item-text">
-                    <p>Вы можете оплатить заказ наличными или картой при получении. На каждый заказ выдаётся кассовый чек.Скажите оператору колл-центра о желании сделать предоплату и наш менеджер выставит вам счет в системе Яндекс Касса, а после оплаты вышлет Ваш заказ.</p>
-                </div>
-            </div>
-            <div class="delivery__item"><svg class="svg-icon svg-icon--cards delivery__item-icon">
-                    <use xlink:href="#cards"></use>
-                </svg>
-                <h3 class="delivery__item-title">Безналичный расчет</h3>
-                <div class="delivery__item-text">
-                    <p>Вы так же можете произвести оплату на расчетный счет нашей компании в России по счету. Для этого необходимо прислать реквизиты вашей компании по почте info@wowlandia.ru</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-</main>
-
-<footer class="footer page__footer">
-    @include('components.footer')
-</footer>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMR2XS7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
