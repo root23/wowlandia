@@ -136,20 +136,21 @@
                 <span class="first__feature-caption"><b>Футболки и худи из премиальных материалов</b> </span>
             </li>
         </ul>
+        <div class="mobile-buttons">
+            <a class="button c-product__button-size shiny-button" href="/whatsapp_msg" data-productid="1" role="button" onclick="">
+                <span class="button__caption">Спросить в WhatsApp 🤗</span>
+            </a>
+            <a class="button c-product__button-size button--black shiny-button-insta" href="/tg_msg" data-productid="1" role="button" onclick="">
+                <span class="button__caption">Смотреть работы в Инстаграм 📥</span>
+            </a>
+        </div>
         <a class="button first__button button--black js-scrollto button--bi position-link" href="https://wowlandia.ru/" role="button">
             <span class="button__caption ">👉 Все дизайны 👈</span>
         </a>
     </div>
 </section>
 
-<div class="mobile-buttons">
-    <a class="button c-product__button-size" href="/whatsapp_msg" data-productid="1" role="button" onclick="">
-        <span class="button__caption">Спросить в WhatsApp 🤗</span>
-    </a>
-    <a class="button c-product__button-size button--black" href="/tg_msg" data-productid="1" role="button" onclick="">
-        <span class="button__caption">Смотреть работы в Инстаграм 📥</span>
-    </a>
-</div>
+
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMR2XS7"
