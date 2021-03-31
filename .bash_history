@@ -383,3 +383,8 @@ git pull
 git pull
 git stash
 git pull
+git status\
+git add .
+git commit -m "front fix"
+git status
+git pull

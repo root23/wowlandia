@@ -78,5 +78,5 @@ Route::get('/whatsapp_msg', function () {
 });
 Route::get('/tg_msg', function () {
     return view('tg_redirect');
-//    return redirect('https://t.me/Wowlandiaru');
+//    return redirect('https://tg.telepult.pro/Wowlandia.ru');
 });

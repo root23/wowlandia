@@ -169,7 +169,7 @@
 
 <script>
     setTimeout(function () {
-        window.location.href = "https://t.me/Wowlandiaru"; //will redirect to your blog page (an ex: blog.html)
+        window.location.href = "https://www.instagram.com/wowlandia.ru/"; //will redirect to your blog page (an ex: blog.html)
     }, 500); //will call the function after 2 secs.
 </script>
 
