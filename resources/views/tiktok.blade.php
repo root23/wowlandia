@@ -125,7 +125,7 @@
 <section class="first page__first tiktok" id="first">
     <div class="first__container">
         <h1 class="first__title">Самые крутые вышивки на футболках и худи</h1>
-        <p class="first__pretitle">Спроси в WhatsApp, какие у нас есть дизайны.</p>
+        <p class="first__pretitle"><a href="/whatsapp_msg">Спроси в WhatsApp, какие у нас есть дизайны.</a></p>
         <ul class="first__features">
             <li class="first__feature">
                 <div class="image-box image-form"></div>
@@ -138,10 +138,10 @@
         </ul>
         <div class="mobile-buttons">
             <a class="button c-product__button-size shiny-button" href="/whatsapp_msg" data-productid="1" role="button" onclick="">
-                <span class="button__caption">Спросить в WhatsApp 🤗</span>
+                <span class="button__caption"><img src="/img/wa64.png" width="30" style="margin-right: 5px;"> Спросить в WhatsApp 🤗</span>
             </a>
-            <a class="button c-product__button-size button--black shiny-button-insta" href="/tg_msg" data-productid="1" role="button" onclick="">
-                <span class="button__caption">Смотреть работы в Инстаграм 📥</span>
+            <a class="button c-product__button-size shiny-button" href="/tg_msg" data-productid="1" role="button" onclick="">
+                <span class="button__caption"><img src="/img/insta64.png" width="30" style="margin-right: 5px;">Смотреть работы в Инстаграм 📥</span>
             </a>
         </div>
         <a class="button first__button button--black js-scrollto button--bi position-link" href="https://wowlandia.ru/" role="button">

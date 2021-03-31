@@ -10201,34 +10201,27 @@ input:checked+ .radio-size__label::after {
 
 
 .shiny-button {
-    display: inline-block;
-    text-align: center;
-    border-width: 1px;
-    border-style: solid;
-    text-transform: uppercase;
+    border-top: 1px solid #fc7651;
+    background: #e6763e;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff7707), to(#e6763e));
+    background: -webkit-linear-gradient(top, #ff7707, #e6763e);
+    background: -moz-linear-gradient(top, #ff7707, #e6763e);
+    background: -ms-linear-gradient(top, #ff7707, #e6763e);
+    background: -o-linear-gradient(top, #ff7707, #e6763e);
+    padding: 6px 12px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 16px;
+    font-family: Georgia, Serif;
     text-decoration: none;
-    line-height: 1.1;
-    font-weight: normal;
-    font-family: sans-serif;
-    color: #FFFFFF;
-    font-size: 12px;
-    background-color: #FF7607;
-    background-image: -webkit-linear-gradient(top, #ff790c 0%, #ea8f44 48%, #FF7607 49%, #FF7607 82%, #ff8523 100%);
-    background-image: -moz-linear-gradient(top, #ff790c 0%, #ea8f44 48%, #FF7607 49%, #FF7607 82%, #ff8523 100%);
-    background-image: -o-linear-gradient(top, #ff790c 0%, #ea8f44 48%, #FF7607 49%, #FF7607 82%, #ff8523 100%);
-    background-image: linear-gradient(top, #ff790c 0%, #ea8f44 48%, #FF7607 49%, #FF7607 82%, #ff8523 100%);
-    border-color: hsl(27, 43%, 47%);
-    -webkit-box-shadow: inset 0 0 1px 1px #ff9844, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: inset 0 0 1px 1px #ff9844, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-    box-shadow: inset 0 0 1px 1px #ff9844, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-    -webkit-text-shadow: 1px 1px 1px #a04800;
-    -moz-text-shadow: 1px 1px 1px #a04800;
-    -o-text-shadow: 1px 1px 1px #a04800;
-    text-shadow: 1px 1px 1px #a04800;
-    -webkit-border-radius: 31px;
-    -moz-border-radius: 31px;
-    border-radius: 31px;
-    padding: 12px 30px 12px 30px;
+    vertical-align: middle;
+
 }
 
 .shiny-button strong {
@@ -10237,30 +10230,14 @@ input:checked+ .radio-size__label::after {
 }
 
 .shiny-button:hover {
-    color: #FFFFFF;
-    background-color: #ff7e16;
-    background-image: -webkit-linear-gradient(top, #ff811b 0%, #ec9752 48%, #ff7e16 49%, #ff7e16 82%, #ff8e32 100%);
-    background-image: -moz-linear-gradient(top, #ff811b 0%, #ec9752 48%, #ff7e16 49%, #ff7e16 82%, #ff8e32 100%);
-    background-image: -o-linear-gradient(top, #ff811b 0%, #ec9752 48%, #ff7e16 49%, #ff7e16 82%, #ff8e32 100%);
-    background-image: linear-gradient(top, #ff811b 0%, #ec9752 48%, #ff7e16 49%, #ff7e16 82%, #ff8e32 100%);
-    border-color: hsl(27, 43%, 50%);
-    -webkit-box-shadow: inset 0 0 1px 1px #ffa053, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: inset 0 0 1px 1px #ffa053, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-    box-shadow: inset 0 0 1px 1px #ffa053, 0 0 1px 3px rgba(0, 0, 0, 0.15);
-    -webkit-text-shadow: 1px 1px 1px #af4e00;
-    -moz-text-shadow: 1px 1px 1px #af4e00;
-    -o-text-shadow: 1px 1px 1px #af4e00;
-    text-shadow: 1px 1px 1px #af4e00;
+    border-top-color: #e8723c;
+    background: #e8723c;
+    color: #ffffff;
 }
 
 .shiny-button:active {
-    color: #FFFFFF;
-    background-color: #f76e00;
-    background-image: -webkit-linear-gradient(top, #ed6900 0%, #FF7607 100%);
-    background-image: -moz-linear-gradient(top, #ed6900 0%, #FF7607 100%);
-    background-image: -o-linear-gradient(top, #ed6900 0%, #FF7607 100%);
-    background-image: linear-gradient(top, #ed6900 0%, #FF7607 100%);
-    padding: 13px 30px 11px 30px;
+    border-top-color: #fe4450;
+    background: #fe4450;
 }
 
 
@@ -10332,4 +10309,6 @@ input:checked+ .radio-size__label::after {
 }
 .shiny-button, .shiny-button-insta {
     width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
