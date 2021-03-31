@@ -373,3 +373,13 @@ composer7.4 install
 composer install
 composer-php7.4 install
 git pull
+git status
+git add .
+git commit -m "front fixes"
+git push
+git pull
+git pull
+git pull
+git pull
+git stash
+git pull

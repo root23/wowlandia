@@ -124,30 +124,30 @@
 @endif
 <section class="first page__first tiktok" id="first">
     <div class="first__container">
-        <h1 class="first__title">Вышивки на футболках и худи</h1>
-        <p class="first__pretitle">Есть доставка на дом. Индивидуальное изготовление 1 день</p>
+        <h1 class="first__title">Реалистичные вышивки на футболках и худи</h1>
+        <p class="first__pretitle">Спроси в мессенджерах, какие у нас есть дизайны.</p>
         <ul class="first__features">
             <li class="first__feature">
                 <div class="image-box image-form"></div>
-                <span class="first__feature-caption">шелковая машинная вышивка</span>
+                <span class="first__feature-caption">шелковая вышивка</span>
             </li>
             <li class="first__feature">
                 <div class="image-box image-size"></div>
-                <span class="first__feature-caption"><b>Футболки и худи сшиты из премиальных материалов</b> </span>
+                <span class="first__feature-caption"><b>Футболки и худи из премиальных материалов</b> </span>
             </li>
         </ul>
-        <a class="button first__button js-scrollto button--bi position-link" href="#products" role="button">
-            <span class="button__caption ">Посмотреть дизайны</span>
+        <a class="button first__button js-scrollto button--bi position-link" href="https://wowlandia.ru/" role="button">
+            <span class="button__caption ">Посмотреть все дизайны</span>
         </a>
     </div>
 </section>
 
 <div class="mobile-buttons">
     <a class="button c-product__button-size" href="/whatsapp_msg" data-productid="1" role="button" onclick="">
-        <span class="button__caption">Написать в WhatsApp</span>
+        <span class="button__caption">Спросить в WhatsApp</span>
     </a>
     <a class="button c-product__button-size" href="/tg_msg" data-productid="1" role="button" onclick="">
-        <span class="button__caption">Написать в telegram</span>
+        <span class="button__caption">Спросить в Telegram</span>
     </a>
 </div>
 
