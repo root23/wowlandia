@@ -388,3 +388,9 @@ git add .
 git commit -m "front fix"
 git status
 git pull
+git status
+git add .
+git commit -m "fix"
+git push
+git pull
+git pull
